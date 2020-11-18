@@ -6,9 +6,9 @@ class cfgPatches
 	class 187th_aux
 	{
 		author 	= "PraetorPanda";
-		dlc 	= "187th aux mod";
-		units[] = {"187th_TEST_THING"};
-		weapons = {"187th_Clone_Recruit",};
+		dlc 	= "187th Aux Mod";
+		units[] = {"187th_Legion"};
+		weapons = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = 
         {
