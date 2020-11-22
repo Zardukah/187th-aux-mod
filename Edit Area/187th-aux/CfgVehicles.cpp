@@ -2,9 +2,9 @@ class CfgVehicles
 {
     class UniformItem;
 	
-//////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////Start Uniforms//////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////
+/***********************************************************************************************************
+--------------------------------------------------------------Uniforms------------------------------------------
+************************************************************************************************************/
 	class O_Soldier_F;
 
 	class 187_Base_Uniform: O_Soldier_F
@@ -18,7 +18,7 @@ class CfgVehicles
                 name = "face_hub";
                 passThrough = 0.8;
                 radius = 0.08;
-                explosionShielding = 0.1;
+                explosionShielding = 0.5;
                 minimalHit = 0.01;
             };
             class HitNeck: HitFace
@@ -49,7 +49,7 @@ class CfgVehicles
                 name = "pelvis";
                 passThrough = 0.6;
                 radius = 0.24;
-                explosionShielding = .1;
+                explosionShielding = 0.5;
                 visual = "injury_body";
                 minimalHit = 0.01;
                 depends = "0";
@@ -61,7 +61,7 @@ class CfgVehicles
                 name = "spine1";
                 passThrough = 0.6;
                 radius = 0.16;
-                explosionShielding = .1;
+                explosionShielding = 0.5;
                 visual = "injury_body";
                 minimalHit = 0.01;
             };
@@ -72,7 +72,7 @@ class CfgVehicles
                 name = "spine2";
                 passThrough = 0.6;
                 radius = 0.18;
-                explosionShielding = .25;
+                explosionShielding = 0.5;
                 visual = "injury_body";
                 minimalHit = 0.01;
             };
@@ -83,7 +83,7 @@ class CfgVehicles
                 name = "spine3";
                 passThrough = 0.6;
                 radius = 0.18;
-                explosionShielding = .25;
+                explosionShielding = 0.5;
                 visual = "injury_body";
                 minimalHit = 0.01;
             };
@@ -94,7 +94,7 @@ class CfgVehicles
                 name = "body";
                 passThrough = 1;
                 radius = 0;
-                explosionShielding = .25;
+                explosionShielding = 0.5;
                 visual = "injury_body";
                 minimalHit = 0.01;
                 depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
@@ -106,7 +106,7 @@ class CfgVehicles
                 name = "arms";
                 passThrough = 0.6;
                 radius = 0.1;
-                explosionShielding = 0.3;
+                explosionShielding = 0.5;
                 visual = "injury_hands";
                 minimalHit = 0.01;
                 depends = "0";
@@ -118,7 +118,7 @@ class CfgVehicles
                 name = "hands";
                 passThrough = 0.6;
                 radius = 0.1;
-                explosionShielding = 0.3;
+                explosionShielding = 0.5;
                 visual = "injury_hands";
                 minimalHit = 0.01;
                 depends = "HitArms";
@@ -130,7 +130,7 @@ class CfgVehicles
                 name = "legs";
                 passThrough = 0.6;
                 radius = 0.14;
-                explosionShielding = 0.3;
+                explosionShielding = 0.5;
                 visual = "injury_legs";
                 minimalHit = 0.01;
                 depends = "0";
@@ -142,7 +142,7 @@ class CfgVehicles
                 name = "body";
                 passThrough = 1;
                 radius = 0;
-                explosionShielding = .1;
+                explosionShielding = 0.5;
                 visual = "";
                 minimalHit = 0;
                 depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
@@ -155,7 +155,7 @@ class CfgVehicles
                 name = "hand_l";
                 passThrough = 0.6;
                 radius = 0.08;
-                explosionShielding = .1;
+                explosionShielding = 0.5;
                 visual = "injury_hands";
                 minimalHit = 0.01;
             };
@@ -170,7 +170,7 @@ class CfgVehicles
                 name = "leg_l";
                 passThrough = 0.6;
                 radius = 0.1;
-                explosionShielding = .1;
+                explosionShielding = 0.5;
                 visual = "injury_legs";
                 minimalHit = 0.01;
             };
@@ -185,7 +185,7 @@ class CfgVehicles
                 name = "head";
                 passThrough = 0;
                 radius = 1;
-                explosionShielding = .1;
+                explosionShielding = 0.5;
                 visual = "";
                 minimalHit = 0;
                 depends = "HitHead";
@@ -322,7 +322,7 @@ class CfgVehicles
         tf_range = 100000;
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
         tf_hasLRradio = 1;
-        maximumLoad = 220;
+        maximumLoad = 500;
     };
 	
     class 187_Radio_Pack: JLTS_Clone_backpack_RTO
@@ -336,7 +336,7 @@ class CfgVehicles
         tf_range = 30000;
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
         tf_hasLRradio = 1;
-        maximumLoad = 220;
+        maximumLoad = 280;
     };
 	
 	class 187_MiniRadio_Pack: JLTS_Clone_RTO_pack
@@ -350,14 +350,14 @@ class CfgVehicles
         tf_range = 30000;
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
         tf_hasLRradio = 1;
-        maximumLoad = 220;
+        maximumLoad = 180;
     };
 	
 	class 187_Clone_Backpack : JLTS_Clone_backpack
     {
         author = "PraetorPanda";
         displayName = "[187th] Clone Trooper Backpack";
-        maximumLoad = 250;
+        maximumLoad = 280;
 		mass = 50;
 		hiddenSelections[] = {"camo1"};
     };
@@ -366,7 +366,7 @@ class CfgVehicles
     {
         author = "PraetorPanda";
         displayName = "[187th] Clone Trooper Backpack (EOD)";
-        maximumLoad = 250;
+        maximumLoad = 280;
 		mass = 50;
 		hiddenSelections[] = {"camo1"};
     };
@@ -375,7 +375,7 @@ class CfgVehicles
     {
         author = "PraetorPanda";
         displayName = "[187th] Clone Trooper Backpack (Medic)";
-        maximumLoad = 250;
+        maximumLoad = 280;
 		mass = 50;
 		hiddenSelections[] = {"camo1"};
     };
@@ -384,8 +384,15 @@ class CfgVehicles
     {
         author = "PraetorPanda";
         displayName = "[187th] Clone Trooper Belt Bag";
-        maximumLoad = 250;
+        maximumLoad = 180;
 		mass = 50;
 		hiddenSelections[] = {"camo1"};
     };
+	
+/***********************************************************************************************************
+--------------------------------------------------------------AI Comps--------------------------------------
+************************************************************************************************************/
+
+
+
 };

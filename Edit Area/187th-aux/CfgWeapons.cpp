@@ -313,7 +313,7 @@ class CfgWeapons
 				};
 			};
 		};
-		
+		allowedFacewear[] = {};
 	};
 
 	class 187_Pilot_HelmetP2: 187_Clone_Helmet
@@ -355,6 +355,7 @@ class CfgWeapons
 				};
 			};
 		};
+		allowedFacewear[] = {};
 	};
 	class 187_Pilot_HelmetP1: 187_Pilot_HelmetP2
 	{
@@ -394,6 +395,7 @@ class CfgWeapons
 				};
 			};
 		};
+		allowedFacewear[] = {};
 	};
 
 
