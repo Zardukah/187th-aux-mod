@@ -394,13 +394,97 @@ class CfgVehicles
 ************************************************************************************************************/
 	class 3as_LAAT_Mk2;
 	
+	
+	
 	class 187th_LAAT : 3as_LAAT_Mk2
 	{
 		displayname="Test LAAT for 187th";
 		faction="3as_rep";
 		vehicleclass="Helicopter";
+		armor=600;
+		fuelCapacity=3000;
 		scope=2;
+		scopeCurator = 2;
 		side=1;
+		weapons[]=
+		{
+			"3as_ARC_Missile_AGM",
+			"3as_LAAT_Missile_AA",
+			"ParticleBeamCannon_F",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+			"3as_PylonMissile_ARC_8Rnd_Missile_AA",
+			"3as_PylonMissile_ARC_8Rnd_Missile_AA",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"Laser_Battery_F",
+			"Laser_Battery_F",
+			"Laser_Battery_F"
+		};
+		class UserActions
+		{
+			class rampOpen
+			{
+				available=0;
+				showWindow=0;
+				displayName="Ramp Open";
+				position="pilotview";
+				radius=9;
+				condition="this animationphase 'ramp' ==0";
+				statement="this animateSource ['ramp',1,1];";
+				onlyforplayer=0;
+			};
+			class rampClose
+			{
+				available=0;
+				showWindow=0;
+				displayName="Ramp Close";
+				position="pilotview";
+				radius=9;
+				condition="this animationphase 'ramp' ==1";
+				statement="this animateSource ['ramp',0,1];";
+				onlyforplayer=0;
+			};
+			class afterburnerMk1_turn_on
+			{ //this no worky...
+				showWindow=0;
+				hideOnUse=0;
+				priority=9;
+				role=0;
+				displayName="Activate Impulse";
+				position="pilotview";
+				radius=6;
+				onlyforplayer=1;
+				condition="(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_on;";
+			};
+			class afterburnerMk1_turn_off
+			{ //this no worky...
+				showWindow=0;
+				hideOnUse=0;
+				priority=9;
+				role=0;
+				displayName="Deactivate Impulse";
+				position="pilotview";
+				radius=6;
+				onlyforplayer=1;
+				condition="(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_off;";
+			};
+		};
 	};
 	
 	
@@ -413,3 +497,4 @@ class CfgVehicles
 
 
 };
+
