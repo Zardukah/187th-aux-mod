@@ -1,11 +1,12 @@
 #include "CfgWeapons.cpp"
 #include "CfgVehicles.cpp"
+#include "CfgFactions.cpp"
 
 class cfgPatches
 {
 	class 187th_Aux_Mod
 	{
-		author 	= "PraetorPanda#0962 and 187th Mod Team";
+		author 	= "PraetorPanda#0962 and the 187th Mod Team";
 		dlc 	= "187th Aux Mod";
 		units[] = {"187th_Legion", "187th_LAAT"};
 		weapons = {};
@@ -13,7 +14,8 @@ class cfgPatches
 		requiredAddons[] = 
         {
 			"SWOP_Main",
-			"3AS"
+			"3AS",
+			"JLTS"
         };
 	}
 }
