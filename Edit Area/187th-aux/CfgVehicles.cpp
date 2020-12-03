@@ -394,13 +394,25 @@ class CfgVehicles
 ************************************************************************************************************/
 	class 3as_LAAT_Mk2;
 	
-	
+	class cfgFunctions
+{
+	class 187_functions
+	{
+		class afterburner_functions
+		{
+			file = "187th-aux\functions\afterburners";
+			class afterburners_turn_on;
+			class afterburners_turn_off;
+		};
+	};
+};
 	
 	class 187th_LAAT : 3as_LAAT_Mk2
 	{
 		displayname="Test LAAT for 187th";
-		faction="3as_rep";
-		vehicleclass="Helicopter";
+		faction="187th_Republic";
+		editorCategory = "187th_Rep_Assets";
+		editorSubcategory = "187th_Helicopter";
 		armor=600;
 		fuelCapacity=3000;
 		scope=2;
@@ -469,7 +481,7 @@ class CfgVehicles
 				radius=6;
 				onlyforplayer=1;
 				condition="(alive this) AND (player == driver this) AND (isEngineOn this)";
-				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_on;";
+				statement="0 = this spawn fnc_afterburners_turn_on;";
 			};
 			class afterburnerMk1_turn_off
 			{ //this no worky...
@@ -482,7 +494,7 @@ class CfgVehicles
 				radius=6;
 				onlyforplayer=1;
 				condition="(alive this) AND ((speed this) > 50) AND (player == driver this)";
-				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_off;";
+				statement="0 = this spawn fnc_afterburners_turn_off;";
 			};
 		};
 	};

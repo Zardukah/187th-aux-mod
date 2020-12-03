@@ -1,6 +1,6 @@
-class CfgFactionClasses
+class CfgFactions
 {//This stuff is broke right now :)
-  class 187th_rep
+  class 187th_Republic
    {
     displayName="187th_Republic";
     priority=2;
@@ -12,6 +12,18 @@ class CfgFactionClasses
   priority=2;
   Icon="";
   };
+};
+class CfgEditorCategories
+{
+	class 187th_Rep_Assets
+	{
+		displayName="187th Republic Assets";
+	};
+	class 187th_CIS_Assets
+	{
+		displayName="187th CIS Assets";
+	};
+	
 };
 class CfgEditorSubcategories
 {
@@ -26,6 +38,22 @@ class CfgEditorSubcategories
     class 187th_Helicopter
 	{
 		displayName="Helicopter";
+	};
+	class 187th_Special
+	{
+		displayName="Special Units";
+	};
+	class 187th_Plane
+	{
+		displayName="Plane";
+	};
+	class 187th_Turret
+	{
+		displayName="Turret";
+	};
+	class 187th_Car
+	{
+		displayName="Car";
 	};
 	
 };
