@@ -479,7 +479,7 @@ class CfgVehicles
 				displayName="Activate Impulse";
 				position="pilotview";
 				radius=6;
-				onlyforplayer=1;
+				onlyforplayer=0;
 				condition="(alive this) AND (player == driver this) AND (isEngineOn this)";
 				statement="0 = this spawn fnc_afterburners_turn_on;";
 			};
@@ -492,7 +492,7 @@ class CfgVehicles
 				displayName="Deactivate Impulse";
 				position="pilotview";
 				radius=6;
-				onlyforplayer=1;
+				onlyforplayer=0;
 				condition="(alive this) AND ((speed this) > 50) AND (player == driver this)";
 				statement="0 = this spawn fnc_afterburners_turn_off;";
 			};
@@ -503,8 +503,18 @@ class CfgVehicles
 	
 	
 /***********************************************************************************************************
---------------------------------------------------------------AI Comps--------------------------------------
+--------------------------------------------------------------Supply Crates--------------------------------------
 ************************************************************************************************************/
+    class ls_carrybox_base;
+
+    class 187th_Base_Crate : ls_carrybox_base
+    {
+    scope=2;
+    displayName= "187th Crate";
+    faction= "187th_Republic";
+    editorCategory = "187th_Rep_Assets";
+    editorSubcategory = "187th_Crates";
+    };
 
 
 
