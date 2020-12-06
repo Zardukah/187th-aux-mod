@@ -1,5 +1,5 @@
 class CfgFactions
-{//This stuff is broke right now :)
+{
   class 187th_Republic
    {
     displayName="187th_Republic";
