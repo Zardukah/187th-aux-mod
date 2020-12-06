@@ -395,17 +395,17 @@ class CfgVehicles
 	class 3as_LAAT_Mk2;
 	
 	class cfgFunctions
-{
-	class 187_functions
 	{
-		class afterburner_functions
+		class 187_functions
 		{
-			file = "187th-aux\functions\afterburners";
-			class afterburners_turn_on;
-			class afterburners_turn_off;
+			class afterburner_functions
+			{
+				file = "187th-aux\Functions\afterburners";
+				class afterburners_turn_on;
+				class afterburners_turn_off;
+			};
 		};
 	};
-};
 	
 	class 187th_LAAT : 3as_LAAT_Mk2
 	{
@@ -470,7 +470,7 @@ class CfgVehicles
 				statement="this animateSource ['ramp',0,1];";
 				onlyforplayer=0;
 			};
-			class afterburnerMk1_turn_on
+			class afterburners_turn_on
 			{ //this no worky...
 				showWindow=0;
 				hideOnUse=0;
@@ -483,7 +483,7 @@ class CfgVehicles
 				condition="(alive this) AND (player == driver this) AND (isEngineOn this)";
 				statement="0 = this spawn fnc_afterburners_turn_on;";
 			};
-			class afterburnerMk1_turn_off
+			class afterburners_turn_off
 			{ //this no worky...
 				showWindow=0;
 				hideOnUse=0;

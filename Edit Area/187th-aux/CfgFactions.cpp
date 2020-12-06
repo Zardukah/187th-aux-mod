@@ -55,5 +55,9 @@ class CfgEditorSubcategories
 	{
 		displayName="Car";
 	};
+	class 187th_Crates
+	{
+		displayName="Crates";
+	};
 	
 };
