@@ -468,7 +468,7 @@ class CfgVehicles
     
     class 187th_B1_Unit: JLTS_Droid_B1_E5
 	{
-		displayName = "Droid B1";
+		displayName = "Droid B1 (Testing)";
 		author = "187th Mod Team";
 		scope = 2;
 		scopeCurator = 2;
