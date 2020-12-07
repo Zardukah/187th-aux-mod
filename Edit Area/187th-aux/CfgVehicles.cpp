@@ -388,11 +388,287 @@ class CfgVehicles
 		mass = 50;
 		hiddenSelections[] = {"camo1"};
     };
+    
+    /***************************************************************************************
+    ----------------------------------CIS Stuff---------------------------------------------
+    ****************************************************************************************/
+    class JLTS_B1_backpack;
+	class JLTS_B1_backpack_prototype;
+	class JLTS_B1_antenna;
+    class 187th_B1_Backpack: JLTS_B1_backpack
+	{
+		author = "187th Mod Team";
+		scope = 1;
+	};
+	class 187th_B1_Prototype_Backpack: JLTS_B1_backpack_prototype
+	{
+		author = "187th Mod Team";
+		scope = 1;
+	};
+	class 187th_B1_antenna_backpack: JLTS_B1_antenna
+	{
+		author = "187th Mod Team";
+		scope = 1;
+	};
+	class 187th_B1_Heavy_AT_Backpack: JLTS_B1_backpack
+	{
+		author = "187th Mod Team";
+		scope = 1;
+		class TransportMagazines
+		{
+			class _xx_at_heavy_mag
+			{
+				count = 3;
+				magazine = "JLTS_E60R_AT_mag";
+			};
+		};
+	};
+	class 187th_B1_Light_AT_Backpack: JLTS_B1_backpack
+	{
+		author = "187th Mod Team";
+		scope = 1;
+		class TransportMagazines
+		{
+			class _xx_at_light_mag
+			{
+				count = 2;
+				magazine = "JLTS_RPS6_mag";
+			};
+			class _xx_at_light_he_mag
+			{
+				count = 2;
+				magazine = "JLTS_RPS6_HE_mag";
+			};
+		};
+	};
+	class 187th_B1_AA_Backpack: JLTS_B1_backpack
+	{
+		author = "187th Mod Team";
+		scope = 1;
+		class TransportMagazines
+		{
+			class _xx_aa_mag
+			{
+				count = 3;
+				magazine = "Titan_AA";
+			};
+		};
+	};
+    /***************************************************************************************
+    ----------------------------------CIS Units---------------------------------------------
+    ****************************************************************************************/
+    
+    class JLTS_Droid_B1_E5;
+	class JLTS_Droid_B1_Marine;
+	class JLTS_Droid_B1_Security;
+	class JLTS_Droid_B1_Commander;
+	class JLTS_Droid_B1_Pilot;
+	class JLTS_Droid_B1_Crew;
+	class JLTS_Droid_B1_Prototype;
+    
+    class 187th_B1_Unit: JLTS_Droid_B1_E5
+	{
+		displayName = "Droid B1";
+		author = "187th Mod Team";
+		scope = 2;
+		scopeCurator = 2;
+		faction = "187th_CIS";
+        editorCategory = "187th_CIS_Assets";
+		editorSubcategory = "187th_Infantry";
+		linkeditems[] = {"ItemGPS","ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink","JLTS_NVG_droid_chip_1"};
+		respawnlinkeditems[] = {"ItemGPS","ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink","JLTS_NVG_droid_chip_1"};
+		class HitPoints
+		{
+			class HitAbdomen
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "spine1";
+				passThrough = 0.5;
+				radius = 0.15;
+				visual = "injury_body";
+			};
+			class HitArms
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class HitBody
+			{
+				armor = 1000;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				explosionShielding = 2;
+				material = -1;
+				minimalHit = 0.01;
+				name = "body";
+				passThrough = 0.5;
+				radius = 0.16;
+				visual = "injury_body";
+			};
+			class HitChest
+			{
+				armor = 8;
+				explosionShielding = 2;
+				material = -1;
+				minimalHit = 0.01;
+				name = "spine3";
+				passThrough = 0.5;
+				radius = 0.15;
+				visual = "injury_body";
+			};
+			class HitDiaphragm
+			{
+				armor = 8;
+				explosionShielding = 2;
+				material = -1;
+				minimalHit = 0.01;
+				name = "spine2";
+				passThrough = 0.5;
+				radius = 0.15;
+				visual = "injury_body";
+			};
+			class HitFace
+			{
+				armor = 2;
+				explosionShielding = 0.1;
+				material = -1;
+				minimalHit = 0.01;
+				name = "face_hub";
+				passThrough = 0.5;
+				radius = 0.08;
+			};
+			class HitHands
+			{
+				armor = 8;
+				depends = "HitArms";
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class HitHead
+			{
+				armor = 2;
+				depends = "HitFace max HitNeck";
+				explosionShielding = 0.1;
+				material = -1;
+				minimalHit = 0.01;
+				name = "head";
+				passThrough = 0.5;
+				radius = 0.2;
+			};
+			class HitLeftArm
+			{
+				armor = 1;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "hand_l";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class HitLeftLeg
+			{
+				armor = 1;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "leg_l";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class HitLegs
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.12;
+				visual = "injury_legs";
+			};
+			class HitNeck
+			{
+				armor = 5;
+				explosionShielding = 0.1;
+				material = -1;
+				minimalHit = 0.01;
+				name = "neck";
+				passThrough = 0.5;
+				radius = 0.1;
+			};
+			class HitPelvis
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "pelvis";
+				passThrough = 0.25;
+				radius = 0.2;
+				visual = "injury_body";
+			};
+			class HitRightArm
+			{
+				armor = 1;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "hand_r";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class HitRightLeg
+			{
+				armor = 1;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "leg_r";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class Incapacitated
+			{
+				armor = 1000;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+				explosionShielding = 1;
+				material = -1;
+				minimalHit = 0;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				visual = "";
+			};
+		};
+		weapons[] = {"JLTS_E5","Throw","Put"};
+		respawnWeapons[] = {"JLTS_E5","Throw","Put"};
+		magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_SmokeShell"};
+		respawnMagazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_SmokeShell"};
+		backpack = "187th_B1_Backpack";
+		cost = 1;
+	};
 	
 /***********************************************************************************************************
 --------------------------------------------------------------Vehicles--------------------------------------
 ************************************************************************************************************/
-	class 3as_LAAT_Mk2;
+	class 615th_LAAT_MK2;
 	
 	class cfgFunctions
 	{
@@ -407,7 +683,7 @@ class CfgVehicles
 		};
 	};
 	
-	class 187th_LAAT : 3as_LAAT_Mk2
+	class 187th_LAAT : 615th_LAAT_MK2
 	{
 		displayname="Test LAAT for 187th";
 		faction="187th_Republic";
@@ -518,5 +794,5 @@ class CfgVehicles
 
 
 
-};
+};// END
 

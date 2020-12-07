@@ -1,17 +1,19 @@
 class CfgFactions
 {
-  class 187th_Republic
-   {
-    displayName="187th_Republic";
-    priority=2;
-    Icon="";
-  };
-  class 187th_CIS
-{
-  displayName="187th_CIS";
-  priority=2;
-  Icon="";
-  };
+    class 187th_Republic
+    {
+        displayName="187th Republic";
+        priority=2;
+        side = 1;
+        Icon="";
+    };
+    class 187th_CIS
+    {
+        displayName="187th CIS";
+        priority=2;
+        side = 0;
+        Icon="";
+    };
 };
 class CfgEditorCategories
 {
