@@ -8,7 +8,7 @@ class cfgPatches
 	{
 		author 	= "PraetorPanda#0962 and the 187th Mod Team";
 		dlc 	= "187th Aux Mod";
-		units[] = {"187th_Legion", "187th_LAAT"};
+		units[] = {"187th_Legion", "187th_LAAT", "187th_B1_Unit"};
 		weapons = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = 
