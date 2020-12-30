@@ -19,11 +19,11 @@ class CfgEditorCategories
 {
 	class 187th_Rep_Assets
 	{
-		displayName="187th Republic Assets";
+		displayName="187th Republic Test Assets";
 	};
 	class 187th_CIS_Assets
 	{
-		displayName="187th CIS Assets";
+		displayName="187th CIS Test Assets";
 	};
 	
 };
@@ -36,6 +36,10 @@ class CfgEditorSubcategories
 	class 187th_Armor
 	{
 		displayName="Armor";
+	};
+    class 187th_Boat
+	{
+		displayName="Boats";
 	};
     class 187th_Helicopter
 	{
@@ -53,9 +57,25 @@ class CfgEditorSubcategories
 	{
 		displayName="Turret";
 	};
+    class 187th_Transport
+	{
+		displayName="Transport";
+	};
+    class 187th_Sith
+	{
+		displayName="Sith";
+	};
 	class 187th_Car
 	{
 		displayName="Car";
+	};
+    class 187th_Artillery
+	{
+		displayName="Artillery";
+	};
+    class 187th_AntiAir
+	{
+		displayName="Anti Air";
 	};
 	class 187th_Crates
 	{

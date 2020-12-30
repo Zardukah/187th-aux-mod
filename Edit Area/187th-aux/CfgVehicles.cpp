@@ -13,7 +13,7 @@ class CfgVehicles
 		{
             class HitFace
             {
-                armor = 5; //Default Value
+                armor = 6; //Default Value
                 material = -1;
                 name = "face_hub";
                 passThrough = 0.8;
@@ -23,7 +23,7 @@ class CfgVehicles
             };
             class HitNeck: HitFace
             {
-                armor = 5; //Default=1
+                armor = 6; //Default=1
                 material = -1;
                 name = "neck";
                 passThrough = 0.8;
@@ -33,7 +33,7 @@ class CfgVehicles
             };
             class HitHead: HitNeck
             {
-                armor = 5; //Default Value
+                armor = 6; //Default Value
                 material = -1;
                 name = "head";
                 passThrough = 0.8;
@@ -389,301 +389,13 @@ class CfgVehicles
 		hiddenSelections[] = {"camo1"};
     };
     
-    /***************************************************************************************
-    ----------------------------------CIS Stuff---------------------------------------------
-    ****************************************************************************************/
-    class JLTS_B1_backpack;
-	class JLTS_B1_backpack_prototype;
-	class JLTS_B1_antenna;
-    class 187th_B1_Backpack: JLTS_B1_backpack
-	{
-		author = "187th Mod Team";
-		scope = 1;
-	};
-	class 187th_B1_Prototype_Backpack: JLTS_B1_backpack_prototype
-	{
-		author = "187th Mod Team";
-		scope = 1;
-	};
-	class 187th_B1_antenna_backpack: JLTS_B1_antenna
-	{
-		author = "187th Mod Team";
-		scope = 1;
-	};
-	class 187th_B1_Heavy_AT_Backpack: JLTS_B1_backpack
-	{
-		author = "187th Mod Team";
-		scope = 1;
-		class TransportMagazines
-		{
-			class _xx_at_heavy_mag
-			{
-				count = 3;
-				magazine = "JLTS_E60R_AT_mag";
-			};
-		};
-	};
-	class 187th_B1_Light_AT_Backpack: JLTS_B1_backpack
-	{
-		author = "187th Mod Team";
-		scope = 1;
-		class TransportMagazines
-		{
-			class _xx_at_light_mag
-			{
-				count = 2;
-				magazine = "JLTS_RPS6_mag";
-			};
-			class _xx_at_light_he_mag
-			{
-				count = 2;
-				magazine = "JLTS_RPS6_HE_mag";
-			};
-		};
-	};
-	class 187th_B1_AA_Backpack: JLTS_B1_backpack
-	{
-		author = "187th Mod Team";
-		scope = 1;
-		class TransportMagazines
-		{
-			class _xx_aa_mag
-			{
-				count = 3;
-				magazine = "Titan_AA";
-			};
-		};
-	};
-    /***************************************************************************************
-    ----------------------------------CIS Units---------------------------------------------
-    ****************************************************************************************/
-    
-    class JLTS_Droid_B1_E5;
-	class JLTS_Droid_B1_Marine;
-	class JLTS_Droid_B1_Security;
-	class JLTS_Droid_B1_Commander;
-	class JLTS_Droid_B1_Pilot;
-	class JLTS_Droid_B1_Crew;
-	class JLTS_Droid_B1_Prototype;
-    
-    class 187th_B1_Unit: JLTS_Droid_B1_E5
-	{
-		displayName = "Droid B1 (Testing)";
-		author = "187th Mod Team";
-		scope = 2;
-		scopeCurator = 2;
-		faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
-		editorSubcategory = "187th_Infantry";
-		linkeditems[] = {"ItemGPS","ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink","JLTS_NVG_droid_chip_1"};
-		respawnlinkeditems[] = {"ItemGPS","ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink","JLTS_NVG_droid_chip_1"};
-		class HitPoints
-		{
-			class HitAbdomen
-			{
-				armor = 8;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "spine1";
-				passThrough = 0.5;
-				radius = 0.15;
-				visual = "injury_body";
-			};
-			class HitArms
-			{
-				armor = 8;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "arms";
-				passThrough = 1;
-				radius = 0.1;
-				visual = "injury_hands";
-			};
-			class HitBody
-			{
-				armor = 1000;
-				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-				explosionShielding = 2;
-				material = -1;
-				minimalHit = 0.01;
-				name = "body";
-				passThrough = 0.5;
-				radius = 0.16;
-				visual = "injury_body";
-			};
-			class HitChest
-			{
-				armor = 8;
-				explosionShielding = 2;
-				material = -1;
-				minimalHit = 0.01;
-				name = "spine3";
-				passThrough = 0.5;
-				radius = 0.15;
-				visual = "injury_body";
-			};
-			class HitDiaphragm
-			{
-				armor = 8;
-				explosionShielding = 2;
-				material = -1;
-				minimalHit = 0.01;
-				name = "spine2";
-				passThrough = 0.5;
-				radius = 0.15;
-				visual = "injury_body";
-			};
-			class HitFace
-			{
-				armor = 2;
-				explosionShielding = 0.1;
-				material = -1;
-				minimalHit = 0.01;
-				name = "face_hub";
-				passThrough = 0.5;
-				radius = 0.08;
-			};
-			class HitHands
-			{
-				armor = 8;
-				depends = "HitArms";
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "hands";
-				passThrough = 1;
-				radius = 0.1;
-				visual = "injury_hands";
-			};
-			class HitHead
-			{
-				armor = 2;
-				depends = "HitFace max HitNeck";
-				explosionShielding = 0.1;
-				material = -1;
-				minimalHit = 0.01;
-				name = "head";
-				passThrough = 0.5;
-				radius = 0.2;
-			};
-			class HitLeftArm
-			{
-				armor = 1;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "hand_l";
-				passThrough = 0.1;
-				radius = 0.1;
-				visual = "injury_hands";
-			};
-			class HitLeftLeg
-			{
-				armor = 1;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "leg_l";
-				passThrough = 0.1;
-				radius = 0.1;
-				visual = "injury_hands";
-			};
-			class HitLegs
-			{
-				armor = 8;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "legs";
-				passThrough = 1;
-				radius = 0.12;
-				visual = "injury_legs";
-			};
-			class HitNeck
-			{
-				armor = 5;
-				explosionShielding = 0.1;
-				material = -1;
-				minimalHit = 0.01;
-				name = "neck";
-				passThrough = 0.5;
-				radius = 0.1;
-			};
-			class HitPelvis
-			{
-				armor = 8;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "pelvis";
-				passThrough = 0.25;
-				radius = 0.2;
-				visual = "injury_body";
-			};
-			class HitRightArm
-			{
-				armor = 1;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "hand_r";
-				passThrough = 0.1;
-				radius = 0.1;
-				visual = "injury_hands";
-			};
-			class HitRightLeg
-			{
-				armor = 1;
-				explosionShielding = 0.25;
-				material = -1;
-				minimalHit = 0.01;
-				name = "leg_r";
-				passThrough = 0.1;
-				radius = 0.1;
-				visual = "injury_hands";
-			};
-			class Incapacitated
-			{
-				armor = 1000;
-				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-				explosionShielding = 1;
-				material = -1;
-				minimalHit = 0;
-				name = "body";
-				passThrough = 1;
-				radius = 0;
-				visual = "";
-			};
-		};
-		weapons[] = {"JLTS_E5","Throw","Put"};
-		respawnWeapons[] = {"JLTS_E5","Throw","Put"};
-		magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_SmokeShell"};
-		respawnMagazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_SmokeShell"};
-		backpack = "187th_B1_Backpack";
-		cost = 1;
-	};
 	
 /***********************************************************************************************************
 --------------------------------------------------------------Vehicles--------------------------------------
 ************************************************************************************************************/
 	class 615th_LAAT_MK2;
-	
-	class cfgFunctions
-	{
-		class 187_functions
-		{
-			class afterburner_functions
-			{
-				file = "187th-aux\Functions\afterburners";
-				class afterburners_turn_on;
-				class afterburners_turn_off;
-			};
-		};
-	};
-	
-	class 187th_LAAT : 615th_LAAT_MK2
+    
+    class 187th_LAAT : 615th_LAAT_MK2
 	{
 		displayname="Test LAAT for 187th";
 		faction="187th_Republic";
@@ -696,13 +408,16 @@ class CfgVehicles
 		side=1;
 		weapons[]=
 		{
+            "Gatling_30mm_Plane_CAS_01_F",
 			"3as_ARC_Missile_AGM",
 			"3as_LAAT_Missile_AA",
-			"ParticleBeamCannon_F",
+			"ParticleBeamCannon",
+            "ParticleBeamCannon_R",
 			"CMFlareLauncher"
 		};
 		magazines[]=
 		{
+            "1000Rnd_Gatling_30mm_Plane_CAS_01_F",
 			"3as_PylonMissile_ARC_8Rnd_Missile_AA",
 			"3as_PylonMissile_ARC_8Rnd_Missile_AA",
 			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
@@ -718,62 +433,12 @@ class CfgVehicles
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
-			"Laser_Battery_F",
-			"Laser_Battery_F",
-			"Laser_Battery_F"
-		};
-		class UserActions
-		{
-			class rampOpen
-			{
-				available=0;
-				showWindow=0;
-				displayName="Ramp Open";
-				position="pilotview";
-				radius=9;
-				condition="this animationphase 'ramp' ==0";
-				statement="this animateSource ['ramp',1,1];";
-				onlyforplayer=0;
-			};
-			class rampClose
-			{
-				available=0;
-				showWindow=0;
-				displayName="Ramp Close";
-				position="pilotview";
-				radius=9;
-				condition="this animationphase 'ramp' ==1";
-				statement="this animateSource ['ramp',0,1];";
-				onlyforplayer=0;
-			};
-			class afterburners_turn_on
-			{ //this no worky...
-				showWindow=0;
-				hideOnUse=0;
-				priority=9;
-				role=0;
-				displayName="Activate Impulse";
-				position="pilotview";
-				radius=6;
-				onlyforplayer=0;
-				condition="(alive this) AND (player == driver this) AND (isEngineOn this)";
-				statement="0 = this spawn fnc_afterburners_turn_on;";
-			};
-			class afterburners_turn_off
-			{ //this no worky...
-				showWindow=0;
-				hideOnUse=0;
-				priority=9;
-				role=0;
-				displayName="Deactivate Impulse";
-				position="pilotview";
-				radius=6;
-				onlyforplayer=0;
-				condition="(alive this) AND ((speed this) > 50) AND (player == driver this)";
-				statement="0 = this spawn fnc_afterburners_turn_off;";
-			};
+			"B_65x39_Case",
+            "laserAmmo",
+            "laserAmmo_F"
 		};
 	};
+	
 	
 	
 	
@@ -792,7 +457,1167 @@ class CfgVehicles
     editorSubcategory = "187th_Crates";
     };
 
+    //--------------------------------------------------------------------------------------------
+    //-----------------------------------CIS Stuff------------------------------------------------
+    //--------------------------------------------------------------------------------------------
+    
+    
+  class JLTS_Droid_B1_E5;
+  class JLTS_B1_backpack;
+  class JLTS_Droid_B1_AT;
+  class JLTS_B1_backpack_at_predef;
+  class JLTS_Droid_B1_Crew;
+  class JLTS_Droid_B1_Prototype;
+  class RD501_opfor_eweb_bag_backpack;
+  class JLTS_Droid_B1_Sniper;
+  class JLTS_Droid_B1_Commander;
+  class JLTS_B1_antenna;
+  class JLTS_Droid_B1_Marine;
+  class JLTS_B1_backpack_marine_predef;
+  class JLTS_Droid_B1_Pilot;
+  class JLTS_Droid_B1_Security;
+  class SWOP_CIS_superdroid_B2;
+  class SWOP_CIS_droid_tactic_blue;
+  class SWOP_CIS_droid_tactic_black;
+  class SWOP_CIS_droid_tactic_green;
+  class SWOP_CIS_droid_tactic_red;
+  class RD501_opfor_unit_B1_jammer;
+  class SWOP_B_CargoBackpack;
+  class SWOP_CIS_magnaguard;
+  class RD501_opfor_unit_IG_88;
+  class O_soldier_Melee_SW;
+  class O_Kalani_BX_Commando_Droid_Citadel_01;
+  class O_Kalani_BX_Commando_Droid_Diplomat_01;
+  class 3AS_AAT_tan;
+  class 3AS_AAT;
+  class 3AS_AAT_Tropic;
+  class 3AS_AAT_urban;
+  class 3AS_AAT_snow;
+  class 3AS_GAT;
+  class 3AS_GAT_Olive;
+  class 3AS_GAT_tan;
+  class 3AS_GAT_urban;
+  class 3AS_GAT_Light;
+  class 3AS_GAT_Light_tan;
+  class 3AS_GAT_Light_Olive;
+  class 3AS_GAT_Light_urban;
+  class 3AS_Hailfire_AT;
+  class 3as_MTT;
+  class RD501_dwarf_spider_droid_MkII;
+  class RD501_e_web_cis;
+  class RD501_homing_spider_droid_MKII;
+  class 3AS_Hailfire_SAM;
+  class 3AS_Hailfire_Rocket;
+  class 3as_SAC_Trade;
+  class 3as_CIS_Mortar;
+  class 3as_ParticleCannon;
+  class 3AS_FieldCannon;
+  class 3as_Vulture_dynamicLoadout;
+  class ls_cis_hmp;
+  class ls_cis_hmp_transport;
+  class ls_ground_bawhag;
+  class 3AS_HeavyRepeater_Unarmoured;
+  class 3AS_HeavyRepeater_Armoured;
+  class 3AS_StationaryTurret;
+  class SW_SpeederBikeCIV;
+  class SWOP_Droideka;
+  class SWOP_DroidekaCamo;
+  class SWOP_DroidekaSupport;
+  class RD501_Praetorian_Variant_normal;
+  class RD501_Tarantula_CIS;
+  class RD501_marid_MkII_CIS;
+  class RD501_rocket_ordinance_tank_CIS;
+  class RD501_heavy_ordinance_tank_CIS;
+  class RD501_speedboat_cis;
+  class RD501_light_infantry_transport_CIS_MkII;
+    
+    //--------------------------------------------------------------------------------------------
+    //---------------------------------infantry---------------------------------------------------
+    //--------------------------------------------------------------------------------------------
+
+  class 187th_B1_Droid: JLTS_Droid_B1_E5
+  {
+    faction="187th_Republic";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid";
+    uniformClass="JLTS_DroidB1";
+    weapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_pack";
+  };
+
+  class 187th_B1_Droid_AT: JLTS_Droid_B1_AT
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (AT)";
+    uniformClass="JLTS_DroidB1";
+    weapons[]={"187th_JLTS_E5","187th_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_RPS6_mag","JLTS_RPS6_mag"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_RPS6_mag","JLTS_RPS6_mag"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_AT_pack";
+  };
+
+  class 187th_B1_Droid_Crew: JLTS_Droid_B1_Crew
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Crew)";
+    uniformClass="JLTS_DroidB1_Crew";
+    weapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
+    items[]={"ACE_EarPlugs","ToolKit"};
+    respawnItems[]={"ACE_EarPlugs","ToolKit"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_Crew_pack";
+  };
+
+  class 187th_B1_Droid_EWeb_Carrier: JLTS_Droid_B1_Prototype
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (EWeb Carrier)";
+    uniformClass="JLTS_DroidB1_Prototype";
+    weapons[]={"187th_JLTS_E5","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_termDetDT_G"};
+    respawnMagazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_termDetDT_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_EWeb_Carrier_pack";
+  };
+
+  class 187th_B1_Droid_Sniper: JLTS_Droid_B1_Sniper
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Sniper)";
+    uniformClass="JLTS_DroidB1";
+    weapons[]={"187th_JLTS_E5S","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5S","187th_JLTS_RG4D","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    respawnMagazines[]={"JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_Sniper_pack";
+  };
+
+  class 187th_B1_Droid_Commander: JLTS_Droid_B1_Commander
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Commander)";
+    uniformClass="JLTS_DroidB1_Commander";
+    weapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_Commander_pack";
+  };
+
+  class 187th_B1_Droid_Marine: JLTS_Droid_B1_Marine
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Marine)";
+    uniformClass="JLTS_DroidB1_Marine";
+    weapons[]={"187th_SWOP_E5C","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_SWOP_E5C","187th_JLTS_RG4D","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_Marine_pack";
+  };
+
+  class 187th_B1_Droid_Pilot: JLTS_Droid_B1_Pilot
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Pilot)";
+    uniformClass="JLTS_DroidB1_Pilot";
+    weapons[]={"187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_RG4D","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="";
+  };
+
+  class 187th_B1_Droid_Security: JLTS_Droid_B1_Security
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Security)";
+    uniformClass="JLTS_DroidB1_Security";
+    weapons[]={"187th_JLTS_DP23","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_DP23","187th_JLTS_RG4D","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="";
+  };
+
+  class 187th_B2_Droid: SWOP_CIS_superdroid_B2
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B2 Droid";
+    uniformClass="SWOP_B2_superdroid_F_Spec";
+    weapons[]={"187th_SWOP_b2gun","Put","Throw"};
+    respawnWeapons[]={"187th_SWOP_b2gun","Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2rocket_Mag","SWOP_b2rocket_Mag"};
+    respawnMagazines[]={"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2rocket_Mag","SWOP_b2rocket_Mag"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+    backpack="";
+  };
+
+  class 187th_T_Series_Blue: SWOP_CIS_droid_tactic_blue
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="T-Series (Blue)";
+    uniformClass="SWOP_TacticDroid_blue_F_Spec";
+    weapons[]={"Put","Throw"};
+    respawnWeapons[]={"Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    backpack="";
+  };
+
+  class 187th_T_Series_Black: SWOP_CIS_droid_tactic_black
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="T Series (Black)";
+    uniformClass="SWOP_TacticDroid_black_F_Spec";
+    weapons[]={"Put","Throw"};
+    respawnWeapons[]={"Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    backpack="";
+  };
+
+  class 187th_T_Series_Green: SWOP_CIS_droid_tactic_green
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="T Series (Green)";
+    uniformClass="SWOP_TacticDroid_green_F_Spec";
+    weapons[]={"Put","Throw"};
+    respawnWeapons[]={"Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    backpack="";
+  };
+
+  class 187th_T_Series_Red: SWOP_CIS_droid_tactic_red
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="T Series (Red)";
+    uniformClass="SWOP_TacticDroid_red_F_Spec";
+    weapons[]={"Put","Throw"};
+    respawnWeapons[]={"Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
+    backpack="";
+  };
+
+  class 187th_B1_Droid_Jammer: RD501_opfor_unit_B1_jammer
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Jammer)";
+    uniformClass="JLTS_DroidB1";
+    weapons[]={"187th_JLTS_E5","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_SmokeShell"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_termDetDT_G","swop_SmokeShell"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink","ItemGPS","JLTS_NVG_droid_chip_1","JLTS_NVG_droid_chip_1"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink","ItemGPS","JLTS_NVG_droid_chip_1","JLTS_NVG_droid_chip_1"};
+    backpack="187th_B1_Droid_Jammer_pack";
+  };
+
+  class 187th_BX_Commando_E5: JLTS_Droid_B1_E5
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando (E5)";
+    uniformClass="212th_BX_DROID";
+    weapons[]={"187th_JLTS_E5","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_BX_Commando_E5_pack";
+  };
+
+  class 187th_BX_Commando_Blade: O_soldier_Melee_SW
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando (Blade)";
+    uniformClass="212th_BX_DROID";
+    weapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
+    respawnWeapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_BX_Commando_Blade_pack";
+  };
+
+  class 187th_BX_Commando_Captain: JLTS_Droid_B1_E5
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando (Captain)";
+    uniformClass="212th_BX_DROID_CAPTAIN";
+    weapons[]={"187th_JLTS_E5","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_BX_Commando_Captain_pack";
+  };
+
+  class 187th_IG_100_MagnaGuard_E5: SWOP_CIS_magnaguard
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="IG-100 MagnaGuard (E5)";
+    uniformClass="SWOP_Magnadroid_F_Spec";
+    weapons[]={"187th_JLTS_E5","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_termDet_G","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_mag_flashbang"};
+    respawnMagazines[]={"SWOP_termDet_G","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","swop_mag_flashbang"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+    backpack="";
+  };
+
+  class 187th_IG_100_MagnaGuard_Blade: O_soldier_Melee_SW
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="IG-100 MagnaGuard (Blade)";
+    uniformClass="SWOP_Magnadroid_F_Spec";
+    weapons[]={"187th_DpSword","Put","Throw"};
+    respawnWeapons[]={"187th_DpSword","Put","Throw"};
+    items[]={"FirstAidKit"};
+    respawnItems[]={"FirstAidKit"};
+    magazines[]={"SWOP_termDet_G","swop_mag_flashbang"};
+    respawnMagazines[]={"SWOP_termDet_G","swop_mag_flashbang"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+    backpack="";
+  };
+
+  class 187th_IG_88_Assassin_Droid: RD501_opfor_unit_IG_88
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="IG-88 Assassin Droid";
+    uniformClass="SWOP_ig88_unifrom";
+    weapons[]={"ElectroBinocularsB_F","187th_SWOP_DTL20BlasterRifle_Scoped","187th_SWOP_rg4dPistol","Put","Throw"};
+    respawnWeapons[]={"ElectroBinocularsB_F","187th_SWOP_DTL20BlasterRifle_Scoped","187th_SWOP_rg4dPistol","Put","Throw"};
+    items[]={"FirstAidKit","ACE_tourniquet","ACE_quikclot","ACE_CableTie","ACE_fieldDressing","ACE_tourniquet","ACE_quikclot","ACE_CableTie","ACE_fieldDressing","JLTS_credits_5000","JLTS_flan_500","JLTS_intel_bountypuck","JLTS_intel_trackingFob","ACE_CableTie","ACE_CableTie","ACE_CableTie"};
+    respawnItems[]={"FirstAidKit","ACE_tourniquet","ACE_quikclot","ACE_CableTie","ACE_fieldDressing","ACE_tourniquet","ACE_quikclot","ACE_CableTie","ACE_fieldDressing","JLTS_credits_5000","JLTS_flan_500","JLTS_intel_bountypuck","JLTS_intel_trackingFob","ACE_CableTie","ACE_CableTie","ACE_CableTie"};
+    magazines[]={"SWOP_DTL20BlasterRifle_Mag","SWOP_DTL20BlasterRifle_Mag","SWOP_DTL20BlasterRifle_Mag","SWOP_rg4dPistol_Mag","SWOP_rg4dPistol_Mag","SWOP_rg4dPistol_Mag","SWOP_termDet_G","SWOP_DTL20BlasterRifle_Mag","SWOP_DTL20BlasterRifle_Mag","SWOP_termDet_G","SWOP_rg4dPistol_Mag"};
+    respawnMagazines[]={"SWOP_DTL20BlasterRifle_Mag","SWOP_DTL20BlasterRifle_Mag","SWOP_DTL20BlasterRifle_Mag","SWOP_rg4dPistol_Mag","SWOP_rg4dPistol_Mag","SWOP_rg4dPistol_Mag","SWOP_termDet_G","SWOP_DTL20BlasterRifle_Mag","SWOP_DTL20BlasterRifle_Mag","SWOP_termDet_G","SWOP_rg4dPistol_Mag"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","ElectroBinocularsB_F","H_HelmetO_ViperSP_ghex_F","SWOP_RemBron"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS","ElectroBinocularsB_F","H_HelmetO_ViperSP_ghex_F","SWOP_RemBron"};
+    backpack="";
+  };
+  class 187th_Sith_1_Blade: O_soldier_Melee_SW
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Sith";
+    side=0;
+    displayName="Sith (1 Blade)";
+    uniformClass="SWOP_Maul_F_CombatUniform";
+    weapons[]={"187th_WBK_lightsaber_sith","Put","Throw"};
+    respawnWeapons[]={"187th_WBK_lightsaber_sith","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"lightsaber_style_1","Force_tir_Sith"};
+    respawnMagazines[]={"lightsaber_style_1","Force_tir_Sith"};
+    linkedItems[]={,"SWOP_ImpEngineerHelm","SWLB_CEE_Clone_Hood"};
+    respawnLinkedItems[]={,"SWOP_ImpEngineerHelm","SWLB_CEE_Clone_Hood"};
+    backpack="";
+  };
+  class 187th_Sith_2_Blade: O_soldier_Melee_SW
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Sith";
+    side=0;
+    displayName="Sith (2 Blades)";
+    uniformClass="SWOP_Maul_F_CombatUniform";
+    weapons[]={"WBK_lightsaber_sith_Second","187th_WBK_lightsaber_sith","Put","Throw"};
+    respawnWeapons[]={"WBK_lightsaber_sith_Second","187th_WBK_lightsaber_sith","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"Force_tir_Sith"};
+    respawnMagazines[]={"Force_tir_Sith"};
+    linkedItems[]={"WBK_lightsaber_sith_Second","SWOP_ImpEngineerHelm","SWLB_CEE_Clone_Hood"};
+    respawnLinkedItems[]={"WBK_lightsaber_sith_Second","SWOP_ImpEngineerHelm","SWLB_CEE_Clone_Hood"};
+    backpack="";
+  };
+  class 187th_B1_Droid_Marksman: JLTS_Droid_B1_Sniper
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Infantry";
+    side=0;
+    displayName="B1 Droid (Marksman)";
+    uniformClass="JLTS_DroidB1";
+    weapons[]={"187th_JLTS_DW32S","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_DW32S","187th_JLTS_RG4D","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_B1_Droid_Marksman_pack";
+  };
+    class JLTS_212th_E5_shield;
+  class 187th_BX_Commando_Citadel_Shield: O_Kalani_BX_Commando_Droid_Citadel_01
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando Citadel (Shield)";
+    uniformClass="212th_BX_DROID_CITADEL";
+    weapons[]={"JLTS_212th_E5_shield","Put","Throw"};
+    respawnWeapons[]={"JLTS_212th_E5_shield","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","tf_anprc152","ItemGPS","SWOP_NVChip2","SWOP_NVChip2"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","tf_anprc152","ItemGPS","SWOP_NVChip2","SWOP_NVChip2"};
+    backpack="";
+  };
+  class 187th_BX_Commando_Diplomat: O_Kalani_BX_Commando_Droid_Diplomat_01
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando Diplomat (E5)";
+    uniformClass="212th_BX_DROID_DIPLOMAT";
+    weapons[]={"187th_212th_E5A_SWOP_E5_HoloScope","Put","Throw"};
+    respawnWeapons[]={"187th_212th_E5A_SWOP_E5_HoloScope","Put","Throw"};
+    items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet"};
+    respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet"};
+    magazines[]={"212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","SWOP_termDet_G","SWOP_termDet_G","SmokeShellYellow","SmokeShellYellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","ACE_HandFlare_Yellow"};
+    respawnMagazines[]={"212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","SWOP_termDet_G","SWOP_termDet_G","SmokeShellYellow","SmokeShellYellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","ACE_HandFlare_Yellow"};
+    linkedItems[]={};
+    respawnLinkedItems[]={};
+    backpack="";
+  };
+  class 187th_BX_Commando_Citadel_E5: JLTS_Droid_B1_E5
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando Citadel (E5)";
+    uniformClass="212th_BX_DROID_CITADEL";
+    weapons[]={"187th_JLTS_E5","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
+    items[]={"ACE_EarPlugs"};
+    respawnItems[]={"ACE_EarPlugs"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_BX_Commando_Citadel_E5_pack";
+  };
+  class 187th_BX_Commando_Citadel_Blade: O_soldier_Melee_SW
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Special";
+    side=0;
+    displayName="BX Commando Citadel (Blade)";
+    uniformClass="212th_BX_DROID_CITADEL";
+    weapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
+    respawnWeapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
+    items[]={};
+    respawnItems[]={};
+    magazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
+    backpack="187th_BX_Commando_Citadel_Blade_pack";
+  };
+    
+    //--------------------------------------------------------------------------------------------
+    //--------------------------------- vehicles--------------------------------------------------
+    //--------------------------------------------------------------------------------------------
+
+  class 187th_AAT_Tan: 3AS_AAT_tan
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="AAT (Tan)";
+    hiddenSelectionsTextures[]={"3as\3as_aat\data\tan_aat_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_AAT: 3AS_AAT
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="AAT (Blue)";
+    hiddenSelectionsTextures[]={"3as\3as_aat\data\cis_aat_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_AAT_Tropic: 3AS_AAT_Tropic
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="AAT (Tropic)";
+    hiddenSelectionsTextures[]={"3as\3as_aat\data\tropic_aat_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_AAT_Urban: 3AS_AAT_urban
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="AAT (Urban)";
+    hiddenSelectionsTextures[]={"3as\3as_aat\data\urban_aat_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_AAT_Snow: 3AS_AAT_snow
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="AAT (Snow)";
+    hiddenSelectionsTextures[]={"3as\3as_aat\data\snow_aat_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Heavy: 3AS_GAT
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Heavy";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\hull_co.paa","3as\3as_gat\data\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Heavy_Olive: 3AS_GAT_Olive
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Heavy (Olive)";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\olive\hull_co.paa","3as\3as_gat\data\olive\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Heavy_Tan: 3AS_GAT_tan
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Heavy (Tan)";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\tan\hull_co.paa","3as\3as_gat\data\tan\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Heavy_Urban: 3AS_GAT_urban
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Heavy (Urban)";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\grey\hull_co.paa","3as\3as_gat\data\grey\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Light: 3AS_GAT_Light
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Light";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\hull_co.paa","3as\3as_gat\data\light_tank\cis\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Light_Tan: 3AS_GAT_Light_tan
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Light (Tan)";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\tan\hull_co.paa","3as\3as_gat\data\light_tank\tan\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Light_Olive: 3AS_GAT_Light_Olive
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Light (Olive)";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\olive\hull_co.paa","3as\3as_gat\data\light_tank\olive\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_GAT_Light_Urban: 3AS_GAT_Light_urban
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="GAT Light (Urban)";
+    hiddenSelectionsTextures[]={"3as\3as_gat\data\grey\hull_co.paa","3as\3as_gat\data\light_tank\gray\weapons_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Hellfire_Droid_AT: 3AS_Hailfire_AT
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="Hellfire Droid (AT)";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_MTT: 3as_MTT
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Transport";
+    side=0;
+    displayName="MTT";
+    hiddenSelectionsTextures[]={"3as\3as_mtt\data\main mmt_blue_co.paa","3as\3as_mtt\data\droid rack_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Dwarf_Spider_Droid: RD501_dwarf_spider_droid_MkII
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Dwarf Spider Droid";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_E_Web: RD501_e_web_cis
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="E Web";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid";
+    typicalCargo[]={"187th_B1_Droid"};
+  };
+  class 187th_OG_10_HSD_TALL_SPIDER: RD501_homing_spider_droid_MKII
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="OG 10 HSD";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Hellfire_Droid_SAM: 3AS_Hailfire_SAM
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="Hellfire Droid (SAM)";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Hellfire_Droid_Rocket_Arty: 3AS_Hailfire_Rocket
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Armor";
+    side=0;
+    displayName="Hellfire Droid (Rocket Artillery)";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Assault_Craft: 3as_SAC_Trade
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Transport";
+    side=0;
+    displayName="Assault Craft";
+    hiddenSelectionsTextures[]={"3as\3as_assault\data\blue_co.paa","3as\3as_assault\data\rack_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid"};
+  };
+  class 187th_CIS_Mortar: 3as_CIS_Mortar
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="CIS Mortar";
+    hiddenSelectionsTextures[]={"3as\3as_static\mortar\data\cis_base.001_co.paa","3as\3as_static\mortar\data\cis_tube.001_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Partical_Cannon: 3as_ParticleCannon
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Partical Cannon";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Proton_Cannon: 3AS_FieldCannon
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Proton Cannon";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Vulture_Droid: 3as_Vulture_dynamicLoadout
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Plane";
+    side=0;
+    displayName="Vulture Droid";
+    hiddenSelectionsTextures[]={"3as\3as_vulture\data\vulturedroid_color.paa"};
+    crew="187th_B1_Droid_Pilot";
+    typicalCargo[]={"187th_B1_Droid_Pilot"};
+  };
+  class 187th_HMP_Gunship: ls_cis_hmp
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Helicopter";
+    side=0;
+    displayName="HMP Gunship";
+    hiddenSelectionsTextures[]={"swlb_a_vehicle\hmp\data\body_co.paa","swlb_a_vehicle\hmp\data\engine_co.paa","swlb_a_vehicle\hmp\data\eyes_co.paa","swlb_a_vehicle\hmp\data\head_co.paa","swlb_a_vehicle\hmp\data\missiles_co.paa","","swlb_a_vehicle\hmp\data\wings_co.paa"};
+    crew="187th_B1_Droid_Pilot";
+    typicalCargo[]={"187th_B1_Droid_Pilot"};
+  };
+  class 187th_HMP_Transport: ls_cis_hmp_transport
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Helicopter";
+    side=0;
+    displayName="HMP Transport";
+    hiddenSelectionsTextures[]={"swlb_a_vehicle\hmp\data\body_co.paa","swlb_a_vehicle\hmp\data\engine_co.paa","swlb_a_vehicle\hmp\data\eyes_co.paa","swlb_a_vehicle\hmp\data\head_co.paa","swlb_a_vehicle\hmp\data\missiles_co.paa","swlb_a_vehicle\hmp\data\seats_co.paa","swlb_a_vehicle\hmp\data\wings_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_BAW_Heavy_Artillery_Gun: ls_ground_bawhag
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Artillery";
+    side=0;
+    displayName="BAW Heavy Artillery";
+    hiddenSelectionsTextures[]={"ls_vehicles_ground\bawhag\data\body_co.paa","ls_vehicles_ground\bawhag\data\eyes_co.paa","ls_vehicles_ground\bawhag\data\gun_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Heavy_Repeater: 3AS_HeavyRepeater_Unarmoured
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Heavy Repeater";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid";
+    typicalCargo[]={"187th_B1_Droid"};
+  };
+  class 187th_Heavy_Repeater_Shielded: 3AS_HeavyRepeater_Armoured
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Heavy Repeater (Armored)";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid";
+    typicalCargo[]={"187th_B1_Droid"};
+  };
+  class 187th_Stationary_Turret: 3AS_StationaryTurret
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Stationary Turret";
+    hiddenSelectionsTextures[]={};
+    crew="187th_B1_Droid";
+    typicalCargo[]={"187th_B1_Droid"};
+  };
+  class 187th_Speeder: SW_SpeederBikeCIV
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Car";
+    side=0;
+    displayName="Speeder";
+    hiddenSelectionsTextures[]={"sw_speederbike\speederbikeciv_co.paa"};
+    crew="187th_B1_Droid";
+    typicalCargo[]={"187th_B1_Droid"};
+  };
+  class 187th_Droideka: SWOP_Droideka
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Droideka";
+    hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikaok_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Droideka_Camo: SWOP_DroidekaCamo
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Droideka (Camo)";
+    hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikacamook_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Droideka_Support: SWOP_DroidekaSupport
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Droideka (Support)";
+    hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikasupportok_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_BEARD_AA: RD501_Praetorian_Variant_normal
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_AntiAir";
+    side=0;
+    displayName="BEARD AA";
+    hiddenSelectionsTextures[]={"awing\t_awing_03_cw.paa","awing\t_awing_03_cw.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Tarantula_AA: RD501_Tarantula_CIS
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_AntiAir";
+    side=0;
+    displayName="Tarantula AA";
+    hiddenSelectionsTextures[]={"rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_HIT: RD501_marid_MkII_CIS
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Transport";
+    side=0;
+    displayName="HIT";
+    hiddenSelectionsTextures[]={"rd501_vehicles\textures\marid\maridbody.paa","","rd501_vehicles\textures\marid\maridturret.paa","",""};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_Speedboat: RD501_speedboat_cis
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Boat";
+    side=0;
+    displayName="Speedboat";
+    hiddenSelectionsTextures[]={"a3\boat_f\boat_armed_01\data\boat_armed_01_ext_co.paa","a3\boat_f\boat_armed_01\data\boat_armed_01_int_co.paa","a3\boat_f\boat_armed_01\data\boat_armed_01_crows_blufor_co.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+  class 187th_LIT: RD501_light_infantry_transport_CIS_MkII
+  {
+    faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Transport";
+    side=0;
+    displayName="LIT";
+    hiddenSelectionsTextures[]={"rd501_vehicles\textures\tempest\cis_tempest_ext.paa","","a3\static_f_jets\aaa_system_01\data\aaa_system_01_co.paa","rd501_vehicles\textures\tempest\cis_tempest_cover.paa"};
+    crew="187th_B1_Droid_Crew";
+    typicalCargo[]={"187th_B1_Droid_Crew"};
+  };
+
+    //--------------------------------------------------------------------------------------------
+    //---------------------------------Backpacks--------------------------------------------------
+    //--------------------------------------------------------------------------------------------
+
+  class 187th_B1_Droid_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_AT_pack: JLTS_B1_backpack_at_predef
+  {
+    scope=1;
+    class TransportMagazines
+    {
+     class _xx_JLTS_RPS6_mag {count=2;magazine="JLTS_RPS6_mag";};
+    };
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_Crew_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines
+    {
+     class _xx_swop_termDetDT_G {count=1;magazine="swop_termDetDT_G";};
+    };
+    class TransportItems
+    {
+     class _xx_ToolKit {count=1;name="ToolKit";};
+    };
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_EWeb_Carrier_pack: RD501_opfor_eweb_bag_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_Sniper_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_Commander_pack: JLTS_B1_antenna
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_Marine_pack: JLTS_B1_backpack_marine_predef
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_Jammer_pack: SWOP_B_CargoBackpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_BX_Commando_E5_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_BX_Commando_Blade_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_BX_Commando_Captain_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_B1_Droid_Marksman_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_BX_Commando_Citadel_E5_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  class 187th_BX_Commando_Citadel_Blade_pack: JLTS_B1_backpack
+  {
+    scope=1;
+    class TransportMagazines{};
+    class TransportItems{};
+    class TransportWeapons{};
+  };
+  
 
 
 };// END
-

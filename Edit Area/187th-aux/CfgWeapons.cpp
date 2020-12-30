@@ -230,19 +230,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 15;
+					armor = 2;
 					hitpointName = "HitFace";
 					passThrough = 0.03;
 				};
 				class Head
 				{
-					armor = 15;
+					armor = 2;
 					hitPointName = "HitHead";
 					passThrough = 0.03;
 				};
 				class Neck
 				{
-					armor = 15;
+					armor = 2;
 					hitpointName = "HitNeck";
 					passThrough = 0.03;
 				};
@@ -399,5 +399,165 @@ class CfgWeapons
 	};
 
 
-	
-};
+	//--------------------------------------------------------------------------------------------
+    //-----------------------------------CIS Stuff------------------------------------------------
+    //--------------------------------------------------------------------------------------------
+    
+  class JLTS_E5;
+  class JLTS_RG4D;
+  class JLTS_RPS6;
+  class JLTS_E5S;
+  class SWOP_E5C;
+  class JLTS_DP23;
+  class SWOP_b2gun;
+  class WBK_Dutch_Vibro;
+  class DpSword;
+  class SWOP_DTL20BlasterRifle_Scoped;
+  class SWOP_rg4dPistol;
+  class WBK_lightsaber_sith;
+  class JLTS_DW32S;
+  class JLTS_212th_E5_shield;
+  class 212th_E5A;
+
+  class 187th_JLTS_E5: JLTS_E5
+  {
+    displayName="E-5";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_JLTS_RG4D: JLTS_RG4D
+  {
+    displayName="RG-4D";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_JLTS_RPS6: JLTS_RPS6
+  {
+    displayName="RPS-6";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_JLTS_E5S: JLTS_E5S
+  {
+    displayName="E-5S";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_SWOP_E5C: SWOP_E5C
+  {
+    displayName="E5 C Heavy Blaster";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_JLTS_DP23: JLTS_DP23
+  {
+    displayName="DP-23";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_SWOP_b2gun: SWOP_b2gun
+  {
+    displayName="B2 HandBlaster";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_WBK_Dutch_Vibro: WBK_Dutch_Vibro
+  {
+    displayName="BX Commando Vibroblade";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_DpSword: DpSword
+  {
+    displayName="Vibroblade";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_SWOP_DTL20BlasterRifle_Scoped: SWOP_DTL20BlasterRifle_Scoped
+  {
+    displayName="DTL20a Pulse rifle";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_SWOP_rg4dPistol: SWOP_rg4dPistol
+  {
+    displayName="RG-4D Blaster Pistol";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_WBK_lightsaber_sith: WBK_lightsaber_sith
+  {
+    displayName="Lightsaber (Sii-Taa) (Red)";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_JLTS_DW32S: JLTS_DW32S
+  {
+    displayName="DW-32S";
+    scope=1;
+    class LinkedItems
+    {
+    };
+  };
+
+  class 187th_JLTS_212th_E5_shield_JLTS_riot_shield_droid_attachment: JLTS_212th_E5_shield
+  {
+    displayName="[212th] E5 (Shield)";
+    scope=1;
+    class LinkedItems
+    {
+
+    };
+  };
+
+  class 187th_212th_E5A_SWOP_E5_HoloScope: 212th_E5A
+  {
+    displayName="[212th] E5A";
+    scope=1;
+    class LinkedItems
+    {
+      class LinkedItemsOptic
+      {
+        slot="CowsSlot";
+        item="SWOP_E5_HoloScope";
+      };
+    };
+  };
+      
+};// END
