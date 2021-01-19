@@ -394,6 +394,9 @@ class CfgVehicles
 --------------------------------------------------------------Vehicles--------------------------------------
 ************************************************************************************************************/
 	class 615th_LAAT_MK2;
+    class ls_laat_gun;
+    class ls_laat_gun_2;
+    class missiles_DAR;
     
     class 187th_LAAT : 615th_LAAT_MK2
 	{
@@ -409,10 +412,10 @@ class CfgVehicles
 		weapons[]=
 		{
             "Gatling_30mm_Plane_CAS_01_F",
+            "ls_laat_gun",
+            "ls_laat_gun_2",
 			"3as_ARC_Missile_AGM",
 			"3as_LAAT_Missile_AA",
-			"ParticleBeamCannon",
-            "ParticleBeamCannon_R",
 			"CMFlareLauncher"
 		};
 		magazines[]=
@@ -433,10 +436,79 @@ class CfgVehicles
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
-			"B_65x39_Case",
-            "laserAmmo",
-            "laserAmmo_F"
+			"B_65x39_Case", 
+            "200rnd_laat_he_mag",
+            "200rnd_laat_he_mag",
+            "200rnd_laat_he_mag",
+            "200rnd_laat_he_mag",
+            "200rnd_laat_ap_mag",
+            "200rnd_laat_ap_mag",
+            "200rnd_laat_ap_mag",
+            "200rnd_laat_ap_mag",
+            "12rnd_missiles",
+            "12rnd_missiles",
+            "12rnd_missiles"
 		};
+        tcw_emp_protection = 1;
+		tcw_can_use_afterburner = 1;
+		tcw_afterburner_max_boost_speed = 650;
+		tcw_afterburner_min_boost_speed = 20;
+		tcw_afterburner_min_brake_speed = 20;
+		tcw_afterburner_increment = 10;
+		tcw_afterburner_fuel_drag = 2000;
+		tcw_afterburner_fuel_multi = 4;
+		tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+        class UserActions
+		{
+			class rampOpen
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Open (187)";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==0";
+				statement = "this animateSource ['ramp',1,1];";
+				onlyforplayer = 0;
+			};
+			class rampClose
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Close (187)";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==1";
+				statement = "this animateSource ['ramp',0,1];";
+				onlyforplayer = 0;
+			};
+			class afterburners_turn_on
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Activate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+			};
+			class afterburners_turn_off
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+                priority = 9;
+				role = 0;
+				displayName = "Deactivate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+            };
+        };
 	};
 	
 	
@@ -455,6 +527,42 @@ class CfgVehicles
     faction= "187th_Republic";
     editorCategory = "187th_Rep_Assets";
     editorSubcategory = "187th_Crates";
+    };
+    
+    //--------------------------------------------------------------------------------------------
+    //-----------------------------------Medical Stuff------------------------------------------------
+    //--------------------------------------------------------------------------------------------
+    class ACE_morphineItem;
+    class ACE_elasticBandageItem;
+    
+    class 187th_StimpackItem : ACE_morphineItem
+    {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "[187th] Bacta Injection";
+        author = "PraetorPanda";
+        vehicleClass = "Items";
+        class TransportItems 
+        {
+            item_xx=(187th_Stimpack,1);
+        };
+        mass = 20
+    };
+    
+    class 187th_Bacta_InjectionItem: ACE_elasticBandageItem 
+    {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "[187th] Bacta Injection";
+        author = "PraetorPanda";
+        vehicleClass = "Items";
+        class TransportItems 
+        {
+            item_xx=(187th_Bacta_Injection,1);
+        };
+        mass = 20
     };
 
     //--------------------------------------------------------------------------------------------
@@ -1208,7 +1316,7 @@ class CfgVehicles
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
-  class 187th_Hellfire_Droid_AT: 3AS_Hailfire_AT
+  class 187th_Hellfire_Droid_AT: 3AS_Hailfire_AT // Broken, must research new asset
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";
@@ -1263,7 +1371,7 @@ class CfgVehicles
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
-  class 187th_Hellfire_Droid_SAM: 3AS_Hailfire_SAM
+  class 187th_Hellfire_Droid_SAM: 3AS_Hailfire_SAM // Broken, must research new asset
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";
@@ -1274,7 +1382,7 @@ class CfgVehicles
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
-  class 187th_Hellfire_Droid_Rocket_Arty: 3AS_Hailfire_Rocket
+  class 187th_Hellfire_Droid_Rocket_Arty: 3AS_Hailfire_Rocket // Broken, must research new asset
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";

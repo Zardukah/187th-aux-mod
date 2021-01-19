@@ -16,15 +16,15 @@ class CfgWeapons
 		author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
-		scopeCurator=2;
+		scopeCurator = 2;
 		scopeArsenal = 2;
 		displayName = "[187th] Clone Armor (Recruit)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
+			uniformModel = "-";
 			uniformClass = "187th_CloneArmor_Recruit";
-			containerClass	= "Supply150";
+			containerClass = "Supply150";
 			mass = 40;
 		};
 		
@@ -35,12 +35,12 @@ class CfgWeapons
 		author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
-		scopeCurator=2;
+		scopeCurator = 2;
 		displayName = "[187th] Clone Armor (Trooper)";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
+			uniformModel = "-";
 			uniformClass = "187th_CloneArmor_Trooper";
 			containerClass	= "Supply150";
 			mass = 40;
@@ -52,12 +52,12 @@ class CfgWeapons
 		author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
-		scopeCurator=2;
+		scopeCurator = 2;
 		displayName = "[187th] Clone Armor (Medic)";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
+			uniformModel = "-";
 			uniformClass = "187th_CloneArmor_Medic";
 			containerClass	= "Supply150";
 			mass = 40;
@@ -69,12 +69,12 @@ class CfgWeapons
 		author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
-		scopeCurator=2;
+		scopeCurator = 2;
 		displayName = "[187th] Clone Armor (Airborne)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		class ItemInfo: UniformItem
 		{
-			uniformModel="-";
+			uniformModel = "-";
 			uniformClass = "187th_CloneArmor_Airborne";
 			containerClass	= "Supply150";
 			mass = 40;
@@ -123,7 +123,7 @@ class CfgWeapons
 			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
 			containerClass = "Supply100";
 			hiddenSelections[] = {"camo1"};
-			mass=80;
+			mass = 80;
 		};
 	};
 	class JLTS_CloneVestReconOfficer;
@@ -209,7 +209,7 @@ class CfgWeapons
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName="[187th] Clone Trooper Helmet (P2)";
+		displayName = "[187th] Clone Trooper Helmet (P2)";
 		ace_hearing_protection = 5.0;
 		ace_hearing_lowerVolume = 0.25;
 		CBRN_protection = 1;
@@ -256,7 +256,7 @@ class CfgWeapons
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName="[187th] Clone Recruit Helmet (P2)";
+		displayName = "[187th] Clone Recruit Helmet (P2)";
 		hiddenSelectionsTextures[]={"MRC\JLTS\characters\CloneArmor\data\Clone_Helmet_P2_co.paa"};
 		
 	};
@@ -266,7 +266,7 @@ class CfgWeapons
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName="[187th] Clone Trooper Helmet (Airborne)";
+		displayName = "[187th] Clone Trooper Helmet (Airborne)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
 		hiddenSelections[]=
 		{
@@ -283,8 +283,8 @@ class CfgWeapons
 		};
 		class ItemInfo: HeadgearItem
 		{
-			mass=30;
-			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			mass = 30;
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
 			hiddenSelections[]=
 			{
 				"camo1"
@@ -322,7 +322,7 @@ class CfgWeapons
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName="[187th] Pilot Helmet (P2)";
+		displayName = "[187th] Pilot Helmet (P2)";
 		picture = "3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
 		model = "\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";
 		hiddenSelections[] = {"camo"};
@@ -363,7 +363,7 @@ class CfgWeapons
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName="[187th] Pilot Helmet (P1)";
+		displayName = "[187th] Pilot Helmet (P1)";
 		model = "\3AS\3AS_Characters\Clones\Headgear\3AS_P1_Pilot.p3d";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"3AS\3AS_Characters\Clones\Headgear\Textures\Phase1\Helmet_CO.paa"};
@@ -397,7 +397,37 @@ class CfgWeapons
 		};
 		allowedFacewear[] = {};
 	};
-
+    
+    //--------------------------------------------------------------------------------------------
+    //-----------------------------------Medical Stuff--------------------------------------------
+    //--------------------------------------------------------------------------------------------
+    
+    class ACE_Morphine;
+    class CBA_MiscItem_ItemInfo;
+    class 187th_Stimpack : ACE_Morphine
+    {
+        scope = 2;
+        author = "PraetorPanda";
+        displayName = "[187th] Stimpack";
+        descriptionShort = "Inject for less pain";
+		descriptionUse = "Use instead of Morphine";
+        class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 0.1;
+		};
+    };
+    
+    class ACE_elasticBandageItem;
+    class ItemInfo;
+    class 187th_Bacta_Injection : ACE_elasticBandageItem
+    {
+        scope = 2;
+        displayName = "[187th] Bacta Injection";
+        class ItemInfo: ItemInfo
+		{
+			mass = 0.2;
+        };
+    };
 
 	//--------------------------------------------------------------------------------------------
     //-----------------------------------CIS Stuff------------------------------------------------

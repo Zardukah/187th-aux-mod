@@ -1,9 +1,9 @@
 private _vehicle = vehicle player;
 private _boostStatus = _vehicle getvariable ["laat_is_boosting",false];
 
-private _3asBurnList=["187th_LAAT"];
+private _187BurnList=["187th_LAAT"];
 
-if ((driver _vehicle != player) OR !_boostStatus OR (_3asBurnList findIf {_x isEqualTo typeOf _vehicle} < 0)) exitWith{};
+if ((driver _vehicle != player) OR !_boostStatus OR (_187BurnList findIf {_x isEqualTo typeOf _vehicle} < 0)) exitWith{};
 
 private ["_vel", "_dir"];
 

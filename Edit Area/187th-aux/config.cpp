@@ -1,4 +1,5 @@
 #include "CfgWeapons.cpp"
+#include "CfgFunctions.cpp"
 #include "CfgVehicles.cpp"
 #include "CfgFactions.cpp"
 
