@@ -409,45 +409,26 @@ class CfgVehicles
 		scope=2;
 		scopeCurator = 2;
 		side=1;
+        maximumLoad = 5000;
 		weapons[]=
 		{
             "Gatling_30mm_Plane_CAS_01_F",
-            "ls_laat_gun",
-            "ls_laat_gun_2",
-			"3as_ARC_Missile_AGM",
+            "ParticleBeamCannon_F",
+            "3as_LAAT_Missile_AGM",
 			"3as_LAAT_Missile_AA",
 			"CMFlareLauncher"
 		};
 		magazines[]=
 		{
             "1000Rnd_Gatling_30mm_Plane_CAS_01_F",
-			"3as_PylonMissile_ARC_8Rnd_Missile_AA",
-			"3as_PylonMissile_ARC_8Rnd_Missile_AA",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+            "Laser_Battery_F",
+            "3as_LAAT_8Rnd_Missile_AGM",
+            "3as_LAAT_8Rnd_Missile_AGM",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
-			"240Rnd_CMFlare_Chaff_Magazine",
-			"B_65x39_Case", 
-            "200rnd_laat_he_mag",
-            "200rnd_laat_he_mag",
-            "200rnd_laat_he_mag",
-            "200rnd_laat_he_mag",
-            "200rnd_laat_ap_mag",
-            "200rnd_laat_ap_mag",
-            "200rnd_laat_ap_mag",
-            "200rnd_laat_ap_mag",
-            "12rnd_missiles",
-            "12rnd_missiles",
-            "12rnd_missiles"
+			"240Rnd_CMFlare_Chaff_Magazine"
 		};
         tcw_emp_protection = 1;
 		tcw_can_use_afterburner = 1;
@@ -464,7 +445,7 @@ class CfgVehicles
 			{
 				available = 0;
 				showWindow = 0;
-				displayName = "Ramp Open (187)";
+				displayName = "Ramp Open";
 				position = "pilotview";
 				radius = 9;
 				condition = "this animationphase 'ramp' ==0";
@@ -475,7 +456,7 @@ class CfgVehicles
 			{
 				available = 0;
 				showWindow = 0;
-				displayName = "Ramp Close (187)";
+				displayName = "Ramp Close";
 				position = "pilotview";
 				radius = 9;
 				condition = "this animationphase 'ramp' ==1";
