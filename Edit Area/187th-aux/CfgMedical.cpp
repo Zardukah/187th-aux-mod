@@ -2,6 +2,7 @@ class ACE_Medical_Treatment
 {
     class Morphine;
     class ACE_elasticBandageItem;
+    class OPTRE_Biofoam;
     
     class Medication
     {
@@ -23,7 +24,7 @@ class ACE_Medical_Treatment
             hrIncreaseNormal[] = {0,0};
             hrIncreaseHigh[] = {0,0};
             timeInSystem = 3000;
-            timeTillMaxEffect = 120;
+            timeTillMaxEffect = 60;
             maxDose = 10;
             onOverDose = "";
             incompatibleMedication[] = {};
@@ -32,7 +33,7 @@ class ACE_Medical_Treatment
     };
     class Bandaging
     {
-        class 187th_Bacta_Injection : ACE_elasticBandageItem
+        class 187th_Bacta_Injection : OPTRE_Biofoam
         {
             class Abrasion {
                 effectiveness = 4;
@@ -45,39 +46,39 @@ class ACE_Medical_Treatment
             class AbrasionLarge: Abrasion {};
 
             class Avulsions: Abrasion {};
-            class AvulsionsMinor: Avulsions {};
-            class AvulsionsMedium: Avulsions {};
-            class AvulsionsLarge: Avulsions {};
+            class AvulsionsMinor: Abrasion {};
+            class AvulsionsMedium: Abrasion {};
+            class AvulsionsLarge: Abrasion {};
 
             class Contusion: Abrasion {};
-            class ContusionMinor: Contusion {};
-            class ContusionMedium: Contusion {};
-            class ContusionLarge: Contusion {};
+            class ContusionMinor: Abrasion {};
+            class ContusionMedium: Abrasion {};
+            class ContusionLarge: Abrasion {};
 
             class Crush: Abrasion {};
-            class CrushMinor: Crush {};
-            class CrushMedium: Crush {};
-            class CrushLarge: Crush {};
+            class CrushMinor: Abrasion {};
+            class CrushMedium: Abrasion {};
+            class CrushLarge: Abrasion {};
 
             class Cut: Abrasion {};
-            class CutMinor: Cut {};
-            class CutMedium: Cut {};
-            class CutLarge: Cut {};
+            class CutMinor: Abrasion {};
+            class CutMedium: Abrasion {};
+            class CutLarge: Abrasion {};
 
             class Laceration: Abrasion {};
-            class LacerationMinor: Laceration {};
-            class LacerationMedium: Laceration {};
-            class LacerationLarge: Laceration {};
+            class LacerationMinor: Abrasion {};
+            class LacerationMedium: Abrasion {};
+            class LacerationLarge: Abrasion {};
 
             class velocityWound: Abrasion {};
-            class velocityWoundMinor: velocityWound {};
-            class velocityWoundMedium: velocityWound {};
-            class velocityWoundLarge: velocityWound {};
+            class velocityWoundMinor: Abrasion {};
+            class velocityWoundMedium: Abrasion {};
+            class velocityWoundLarge: Abrasion {};
 
             class punctureWound: Abrasion {};
-            class punctureWoundMinor: punctureWound {};
-            class punctureWoundMedium: punctureWound {};
-            class punctureWoundLarge: punctureWound {};
+            class punctureWoundMinor: Abrasion {};
+            class punctureWoundMedium: Abrasion {};
+            class punctureWoundLarge: Abrasion {};
         };
     };
 };

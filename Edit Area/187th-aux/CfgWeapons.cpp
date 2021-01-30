@@ -417,14 +417,14 @@ class CfgWeapons
 		};
     };
     
-    class ACE_elasticBandageItem;
+    class OPTRE_Medigel;
     class ItemInfo;
-    class 187th_Bacta_Injection : ACE_elasticBandageItem
+    class 187th_Bacta_Injection : OPTRE_Medigel
     {
         scope = 2;
-        displayName = "[187th] Bacta Injection";
+        displayName = "[187th] Bacta Spray";
         class ItemInfo: ItemInfo
-		{
+        {
 			mass = 0.2;
         };
     };

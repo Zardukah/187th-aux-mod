@@ -514,34 +514,34 @@ class CfgVehicles
     //-----------------------------------Medical Stuff------------------------------------------------
     //--------------------------------------------------------------------------------------------
     class ACE_morphineItem;
-    class ACE_elasticBandageItem;
+    class OPTRE_BiofoamItem;
     
     class 187th_StimpackItem : ACE_morphineItem
     {
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        displayName = "[187th] Bacta Injection";
+        displayName = "[187th] Stimpack";
         author = "PraetorPanda";
         vehicleClass = "Items";
         class TransportItems 
         {
-            item_xx=(187th_Stimpack,1);
+            item_xx=("187th_Stimpack",1);
         };
         mass = 20
     };
     
-    class 187th_Bacta_InjectionItem: ACE_elasticBandageItem 
+    class 187th_Bacta_InjectionItem: OPTRE_BiofoamItem 
     {
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        displayName = "[187th] Bacta Injection";
+        displayName = "[187th] Bacta Spray";
         author = "PraetorPanda";
         vehicleClass = "Items";
         class TransportItems 
         {
-            item_xx=(187th_Bacta_Injection,1);
+            item_xx=("187th_Bacta_Injection",1);
         };
         mass = 20
     };
@@ -636,8 +636,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_pack";
@@ -655,8 +655,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_RPS6_mag","JLTS_RPS6_mag"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_RPS6_mag","JLTS_RPS6_mag"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RPS6_mag","JLTS_RPS6_mag"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RPS6_mag","JLTS_RPS6_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_AT_pack";
@@ -674,8 +674,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs","ToolKit"};
     respawnItems[]={"ACE_EarPlugs","ToolKit"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","swop_termDetDT_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","swop_termDetDT_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_Crew_pack";
@@ -712,8 +712,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_E5S","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
-    respawnMagazines[]={"JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    magazines[]={"JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_RG4D_mag","JLTS_RG4D_mag"};
+    respawnMagazines[]={"JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_E5S_mag","JLTS_RG4D_mag","JLTS_RG4D_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_Sniper_pack";
@@ -731,8 +731,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","swop_termDetDT_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","swop_termDetDT_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_Commander_pack";
@@ -750,8 +750,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_SWOP_E5C","187th_JLTS_RG4D","Put","Throw"};
     items[]={};
     respawnItems[]={};
-    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag"};
-    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","swop_termDetDT_G","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag"};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","swop_termDetDT_G","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","swop_termDetDT_G","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag","SWOP_E5C_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_Marine_pack";
@@ -769,8 +769,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_RG4D","Put","Throw"};
     items[]={};
     respawnItems[]={};
-    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
-    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade"};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RG4D_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="";
@@ -788,8 +788,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_DP23","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag"};
-    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag"};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag","JLTS_DP23_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="";
@@ -826,8 +826,8 @@ class CfgVehicles
     respawnWeapons[]={"Put","Throw"};
     items[]={"FirstAidKit"};
     respawnItems[]={"FirstAidKit"};
-    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={};
+    respawnMagazines[]={};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     backpack="";
@@ -845,8 +845,8 @@ class CfgVehicles
     respawnWeapons[]={"Put","Throw"};
     items[]={"FirstAidKit"};
     respawnItems[]={"FirstAidKit"};
-    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={};
+    respawnMagazines[]={};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     backpack="";
@@ -864,8 +864,8 @@ class CfgVehicles
     respawnWeapons[]={"Put","Throw"};
     items[]={"FirstAidKit"};
     respawnItems[]={"FirstAidKit"};
-    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={};
+    respawnMagazines[]={};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     backpack="";
@@ -883,8 +883,8 @@ class CfgVehicles
     respawnWeapons[]={"Put","Throw"};
     items[]={"FirstAidKit"};
     respawnItems[]={"FirstAidKit"};
-    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={};
+    respawnMagazines[]={};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadio","ItemGPS"};
     backpack="";
@@ -916,13 +916,13 @@ class CfgVehicles
     editorSubcategory = "187th_Special";
     side=0;
     displayName="BX Commando (E5)";
-    uniformClass="212th_BX_DROID";
+    uniformClass="ls_cis_bxDroid_uniform";
     weapons[]={"187th_JLTS_E5","Put","Throw"};
     respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_BX_Commando_E5_pack";
@@ -935,13 +935,13 @@ class CfgVehicles
     editorSubcategory = "187th_Special";
     side=0;
     displayName="BX Commando (Blade)";
-    uniformClass="212th_BX_DROID";
+    uniformClass="ls_cis_bxDroid_uniform";
     weapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
     respawnWeapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
     items[]={};
     respawnItems[]={};
-    magazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_BX_Commando_Blade_pack";
@@ -954,13 +954,13 @@ class CfgVehicles
     editorSubcategory = "187th_Special";
     side=0;
     displayName="BX Commando (Captain)";
-    uniformClass="212th_BX_DROID_CAPTAIN";
+    uniformClass="ls_cis_bxCaptainDroid_uniform";
     weapons[]={"187th_JLTS_E5","Put","Throw"};
     respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_BX_Commando_Captain_pack";
@@ -1070,8 +1070,8 @@ class CfgVehicles
     respawnWeapons[]={"187th_JLTS_DW32S","187th_JLTS_RG4D","Put","Throw"};
     items[]={};
     respawnItems[]={};
-    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
-    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
+    magazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
+    respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_B1_Droid_Marksman_pack";
@@ -1084,13 +1084,13 @@ class CfgVehicles
     editorSubcategory = "187th_Special";
     side=0;
     displayName="BX Commando Citadel (Shield)";
-    uniformClass="212th_BX_DROID_CITADEL";
+    uniformClass="ls_cis_bxSecurityDroid_uniform";
     weapons[]={"JLTS_212th_E5_shield","Put","Throw"};
     respawnWeapons[]={"JLTS_212th_E5_shield","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow","SmokeShellYellow"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","tf_anprc152","ItemGPS","SWOP_NVChip2","SWOP_NVChip2"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","tf_anprc152","ItemGPS","SWOP_NVChip2","SWOP_NVChip2"};
     backpack="";
@@ -1120,13 +1120,13 @@ class CfgVehicles
     editorSubcategory = "187th_Special";
     side=0;
     displayName="BX Commando Citadel (E5)";
-    uniformClass="212th_BX_DROID_CITADEL";
+    uniformClass="ls_cis_bxSecurityDroid_uniform";
     weapons[]={"187th_JLTS_E5","Put","Throw"};
     respawnWeapons[]={"187th_JLTS_E5","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
-    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_BX_Commando_Citadel_E5_pack";
@@ -1138,20 +1138,20 @@ class CfgVehicles
     editorSubcategory = "187th_Special";
     side=0;
     displayName="BX Commando Citadel (Blade)";
-    uniformClass="212th_BX_DROID_CITADEL";
+    uniformClass="ls_cis_bxSecurityDroid_uniform";
     weapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
     respawnWeapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
     items[]={};
     respawnItems[]={};
-    magazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
-    respawnMagazines[]={"SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","HandGrenade","HandGrenade","SWOP_termDet_G","SWOP_termDet_G"};
+    magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
+    respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     backpack="187th_BX_Commando_Citadel_Blade_pack";
   };
     
     //--------------------------------------------------------------------------------------------
-    //--------------------------------- vehicles--------------------------------------------------
+    //--------------------------------- CIS vehicles--------------------------------------------------
     //--------------------------------------------------------------------------------------------
 
   class 187th_AAT_Tan: 3AS_AAT_tan
@@ -1304,7 +1304,6 @@ class CfgVehicles
     editorSubcategory = "187th_Armor";
     side=0;
     displayName="Hellfire Droid (AT)";
-    hiddenSelectionsTextures[]={};
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
@@ -1359,7 +1358,6 @@ class CfgVehicles
     editorSubcategory = "187th_Armor";
     side=0;
     displayName="Hellfire Droid (SAM)";
-    hiddenSelectionsTextures[]={};
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
@@ -1370,7 +1368,6 @@ class CfgVehicles
     editorSubcategory = "187th_Armor";
     side=0;
     displayName="Hellfire Droid (Rocket Artillery)";
-    hiddenSelectionsTextures[]={};
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
