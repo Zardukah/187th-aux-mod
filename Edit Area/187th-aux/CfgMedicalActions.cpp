@@ -1,7 +1,7 @@
 class Ace_Medical_Treatment_Actions
 {
     class Morphine;
-    class OPTRE_Biofoam;
+    class ACE_fieldDressing;
     class ACE_elasticBandageItem;
     
     class 187th_Stimpack : Morphine
@@ -13,13 +13,13 @@ class Ace_Medical_Treatment_Actions
         treatmentTime = 2;
     };
     
-    class 187th_Bacta_Injection : OPTRE_Biofoam
+    class 187th_Bacta_Injection : ACE_fieldDressing
     {
         displayName = "[187th] Bacta Spray";
         displayNameProgress = "Applying Bacta Spray...";
         items[] = {"187th_Bacta_Injection"};
+        callbackSuccess = "OPTRE_fnc_treatmentBandageAndPainReduction";
         category = "bandage";
         treatmentTime = 12;
-        medicRequired = 1;
     };
 };

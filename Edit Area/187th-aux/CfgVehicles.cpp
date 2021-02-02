@@ -514,7 +514,7 @@ class CfgVehicles
     //-----------------------------------Medical Stuff------------------------------------------------
     //--------------------------------------------------------------------------------------------
     class ACE_morphineItem;
-    class OPTRE_BiofoamItem;
+    class ACE_fieldDressingItem;
     
     class 187th_StimpackItem : ACE_morphineItem
     {
@@ -526,24 +526,24 @@ class CfgVehicles
         vehicleClass = "Items";
         class TransportItems 
         {
-            item_xx=("187th_Stimpack",1);
+            item_xx=(187th_Stimpack,1);
         };
-        mass = 20
+        mass = 20;
     };
     
-    class 187th_Bacta_InjectionItem: OPTRE_BiofoamItem 
+    class 187th_Bacta_InjectionItem: ACE_fieldDressingItem 
     {
-        scope = 2;
-        scopeCurator = 2;
-        scopeArsenal = 2;
+        scope = 1;
+        scopeCurator = 1;
+        scopeArsenal = 1;
         displayName = "[187th] Bacta Spray";
         author = "PraetorPanda";
         vehicleClass = "Items";
         class TransportItems 
         {
-            item_xx=("187th_Bacta_Injection",1);
+            item_xx=(187th_Bacta_Injection,1);
         };
-        mass = 20
+        mass = 20;
     };
 
     //--------------------------------------------------------------------------------------------
@@ -925,7 +925,8 @@ class CfgVehicles
     respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
-    backpack="187th_BX_Commando_E5_pack";
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
+    backpack="";
   };
 
   class 187th_BX_Commando_Blade: O_soldier_Melee_SW
@@ -944,7 +945,8 @@ class CfgVehicles
     respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
-    backpack="187th_BX_Commando_Blade_pack";
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
+    backpack="";
   };
 
   class 187th_BX_Commando_Captain: JLTS_Droid_B1_E5
@@ -963,7 +965,8 @@ class CfgVehicles
     respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
-    backpack="187th_BX_Commando_Captain_pack";
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
+    backpack="";
   };
 
   class 187th_IG_100_MagnaGuard_E5: SWOP_CIS_magnaguard
@@ -1074,7 +1077,8 @@ class CfgVehicles
     respawnMagazines[]={"JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag","JLTS_DW32S_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
-    backpack="187th_B1_Droid_Marksman_pack";
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
+    backpack="";
   };
     class JLTS_212th_E5_shield;
   class 187th_BX_Commando_Citadel_Shield: O_Kalani_BX_Commando_Droid_Citadel_01
@@ -1093,24 +1097,7 @@ class CfgVehicles
     respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","tf_anprc152","ItemGPS","SWOP_NVChip2","SWOP_NVChip2"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","tf_anprc152","ItemGPS","SWOP_NVChip2","SWOP_NVChip2"};
-    backpack="";
-  };
-  class 187th_BX_Commando_Diplomat: O_Kalani_BX_Commando_Droid_Diplomat_01
-  {
-    faction="187th_CIS";
-    editorCategory = "187th_CIS_Assets";
-    editorSubcategory = "187th_Special";
-    side=0;
-    displayName="BX Commando Diplomat (E5)";
-    uniformClass="212th_BX_DROID_DIPLOMAT";
-    weapons[]={"187th_212th_E5A_SWOP_E5_HoloScope","Put","Throw"};
-    respawnWeapons[]={"187th_212th_E5A_SWOP_E5_HoloScope","Put","Throw"};
-    items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet"};
-    respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet"};
-    magazines[]={"212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","SWOP_termDet_G","SWOP_termDet_G","SmokeShellYellow","SmokeShellYellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","ACE_HandFlare_Yellow"};
-    respawnMagazines[]={"212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","212th_E5A_mag","SWOP_termDet_G","SWOP_termDet_G","SmokeShellYellow","SmokeShellYellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","Chemlight_yellow","ACE_HandFlare_Yellow"};
-    linkedItems[]={};
-    respawnLinkedItems[]={};
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
     backpack="";
   };
   class 187th_BX_Commando_Citadel_E5: JLTS_Droid_B1_E5
@@ -1129,7 +1116,8 @@ class CfgVehicles
     respawnMagazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
-    backpack="187th_BX_Commando_Citadel_E5_pack";
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
+    backpack="";
   };
   class 187th_BX_Commando_Citadel_Blade: O_soldier_Melee_SW
   {
@@ -1147,7 +1135,8 @@ class CfgVehicles
     respawnMagazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_droid_comlink"};
-    backpack="187th_BX_Commando_Citadel_Blade_pack";
+    identityTypes[] = {"LanguageENG_F","Head_NATO"};
+    backpack="";
   };
     
     //--------------------------------------------------------------------------------------------
@@ -1511,8 +1500,6 @@ class CfgVehicles
     side=0;
     displayName="Droideka";
     hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikaok_co.paa"};
-    crew="187th_B1_Droid_Crew";
-    typicalCargo[]={"187th_B1_Droid_Crew"};
   };
   class 187th_Droideka_Camo: SWOP_DroidekaCamo
   {
@@ -1522,8 +1509,6 @@ class CfgVehicles
     side=0;
     displayName="Droideka (Camo)";
     hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikacamook_co.paa"};
-    crew="187th_B1_Droid_Crew";
-    typicalCargo[]={"187th_B1_Droid_Crew"};
   };
   class 187th_Droideka_Support: SWOP_DroidekaSupport
   {
@@ -1533,8 +1518,6 @@ class CfgVehicles
     side=0;
     displayName="Droideka (Support)";
     hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikasupportok_co.paa"};
-    crew="187th_B1_Droid_Crew";
-    typicalCargo[]={"187th_B1_Droid_Crew"};
   };
   class 187th_BEARD_AA: RD501_Praetorian_Variant_normal
   {
@@ -1593,7 +1576,7 @@ class CfgVehicles
   };
 
     //--------------------------------------------------------------------------------------------
-    //---------------------------------Backpacks--------------------------------------------------
+    //---------------------------------CIS Backpacks--------------------------------------------------
     //--------------------------------------------------------------------------------------------
 
   class 187th_B1_Droid_pack: JLTS_B1_backpack

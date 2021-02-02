@@ -2,7 +2,7 @@ class ACE_Medical_Treatment
 {
     class Morphine;
     class ACE_elasticBandageItem;
-    class OPTRE_Biofoam;
+    class ACE_fieldDressing;
     
     class Medication
     {
@@ -33,7 +33,7 @@ class ACE_Medical_Treatment
     };
     class Bandaging
     {
-        class 187th_Bacta_Injection : OPTRE_Biofoam
+        class 187th_Bacta_Injection : ACE_fieldDressing
         {
             class Abrasion {
                 effectiveness = 4;

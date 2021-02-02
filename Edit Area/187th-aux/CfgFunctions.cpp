@@ -10,4 +10,28 @@ class cfgFunctions
 			class afterburners_turn_off;
 		};
 	};
+    
+    class TAS
+	{
+		tag = "TAS";
+		class TAS_Keybinds
+		{
+			class keybinds
+			{
+				file = "187th-aux\functions\keybinds.sqf";
+				postInit = 1;
+			};
+		};
+                class TAS_utility_functions
+		{
+			class get_attribute
+			{
+				file = "187th-aux\functions\util\getAttribute.sqf";
+			};
+			class integer_boolean
+			{
+				file = "187th-aux\functions\util\integerBoolean.sqf";
+			};
+		};
+    };
 };

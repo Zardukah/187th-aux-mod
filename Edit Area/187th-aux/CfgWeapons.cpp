@@ -404,6 +404,9 @@ class CfgWeapons
     
     class ACE_Morphine;
     class CBA_MiscItem_ItemInfo;
+    class ACE_fieldDressing;
+    class ItemInfo;
+    
     class 187th_Stimpack : ACE_Morphine
     {
         scope = 2;
@@ -413,13 +416,12 @@ class CfgWeapons
 		descriptionUse = "Use instead of Morphine";
         class ItemInfo: CBA_MiscItem_ItemInfo
 		{
-			mass = 0.1;
+			mass = 1;
 		};
     };
     
-    class OPTRE_Medigel;
-    class ItemInfo;
-    class 187th_Bacta_Injection : OPTRE_Medigel
+    
+    class 187th_Bacta_Injection : ACE_fieldDressing
     {
         scope = 2;
         displayName = "[187th] Bacta Spray";
