@@ -1,25 +1,23 @@
 class Ace_Medical_Treatment_Actions
 {
     class Morphine;
-    class ACE_fieldDressing;
-    class ACE_elasticBandageItem;
+    class BasicBandage;
     
     class 187th_Stimpack : Morphine
     {
-        displayName = "[187th] Stimpack";
+        displayName = "Stimpack";
         displayNameProgress = "Injecting Stimpack...";
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"187th_Stimpack"};
         treatmentTime = 2;
     };
     
-    class 187th_Bacta_Injection : ACE_fieldDressing
+    class 187th_Bacta_Injection : BasicBandage
     {
-        displayName = "[187th] Bacta Spray";
+        displayName = "Bacta Spray";
         displayNameProgress = "Applying Bacta Spray...";
         items[] = {"187th_Bacta_Injection"};
-        callbackSuccess = "OPTRE_fnc_treatmentBandageAndPainReduction";
         category = "bandage";
-        treatmentTime = 12;
+        treatmentTime = 1;
     };
 };

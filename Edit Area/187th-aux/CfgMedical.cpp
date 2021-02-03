@@ -36,8 +36,8 @@ class ACE_Medical_Treatment
         class 187th_Bacta_Injection : ACE_fieldDressing
         {
             class Abrasion {
-                effectiveness = 4;
-                reopeningChance = 0.5;
+                effectiveness = 5;
+                reopeningChance = 0.4;
                 reopeningMinDelay = 700;
                 reopeningMaxDelay = 850;
             };
@@ -45,40 +45,75 @@ class ACE_Medical_Treatment
             class AbrasionMedium: Abrasion {};
             class AbrasionLarge: Abrasion {};
 
-            class Avulsions: Abrasion {};
-            class AvulsionsMinor: Abrasion {};
-            class AvulsionsMedium: Abrasion {};
-            class AvulsionsLarge: Abrasion {};
+            class Avulsions: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class AvulsionsMinor: Avulsions {};
+            class AvulsionsMedium: Avulsions {};
+            class AvulsionsLarge: Avulsions {};
 
-            class Contusion: Abrasion {};
-            class ContusionMinor: Abrasion {};
-            class ContusionMedium: Abrasion {};
-            class ContusionLarge: Abrasion {};
+            class Contusion: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class ContusionMinor: Contusion {};
+            class ContusionMedium: Contusion {};
+            class ContusionLarge: Contusion {};
 
-            class Crush: Abrasion {};
-            class CrushMinor: Abrasion {};
-            class CrushMedium: Abrasion {};
-            class CrushLarge: Abrasion {};
+            class Crush: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class CrushMinor: Crush {};
+            class CrushMedium: Crush {};
+            class CrushLarge: Crush {};
 
-            class Cut: Abrasion {};
-            class CutMinor: Abrasion {};
-            class CutMedium: Abrasion {};
-            class CutLarge: Abrasion {};
+            class Cut: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class CutMinor: Cut {};
+            class CutMedium: Cut {};
+            class CutLarge: Cut {};
 
-            class Laceration: Abrasion {};
-            class LacerationMinor: Abrasion {};
-            class LacerationMedium: Abrasion {};
-            class LacerationLarge: Abrasion {};
+            class Laceration: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class LacerationMinor: Laceration {};
+            class LacerationMedium: Laceration {};
+            class LacerationLarge: Laceration {};
 
-            class velocityWound: Abrasion {};
-            class velocityWoundMinor: Abrasion {};
-            class velocityWoundMedium: Abrasion {};
-            class velocityWoundLarge: Abrasion {};
+            class velocityWound: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class velocityWoundMinor: velocityWound {};
+            class velocityWoundMedium: velocityWound {};
+            class velocityWoundLarge: velocityWound {};
 
-            class punctureWound: Abrasion {};
-            class punctureWoundMinor: Abrasion {};
-            class punctureWoundMedium: Abrasion {};
-            class punctureWoundLarge: Abrasion {};
+            class punctureWound: Abrasion {
+                effectiveness = 5;
+                reopeningChance = 0.4;
+                reopeningMinDelay = 700;
+                reopeningMaxDelay = 850;
+            };
+            class punctureWoundMinor: punctureWound {};
+            class punctureWoundMedium: punctureWound {};
+            class punctureWoundLarge: punctureWound {};
         };
     };
 };

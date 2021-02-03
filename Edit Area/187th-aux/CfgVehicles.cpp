@@ -533,9 +533,9 @@ class CfgVehicles
     
     class 187th_Bacta_InjectionItem: ACE_fieldDressingItem 
     {
-        scope = 1;
-        scopeCurator = 1;
-        scopeArsenal = 1;
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
         displayName = "[187th] Bacta Spray";
         author = "PraetorPanda";
         vehicleClass = "Items";
@@ -802,7 +802,7 @@ class CfgVehicles
     editorSubcategory = "187th_Infantry";
     side=0;
     displayName="B2 Droid";
-    uniformClass="SWOP_B2_superdroid_F_Spec";
+    uniformClass="RD501_opfor_uniform_B2_SuperArmor";
     weapons[]={"187th_SWOP_b2gun","Put","Throw"};
     respawnWeapons[]={"187th_SWOP_b2gun","Put","Throw"};
     items[]={"FirstAidKit"};

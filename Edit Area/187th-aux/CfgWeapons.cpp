@@ -425,7 +425,7 @@ class CfgWeapons
     {
         scope = 2;
         displayName = "[187th] Bacta Spray";
-        class ItemInfo: ItemInfo
+        class ItemInfo: CBA_MiscItem_ItemInfo
         {
 			mass = 0.2;
         };
