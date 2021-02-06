@@ -1,6 +1,8 @@
 class CfgWeapons
 {
 // main import
+    #include "RepublicWeapons.cpp"
+    
 	class UniformItem;
 	class Uniform_Base;
 	
@@ -437,7 +439,6 @@ class CfgWeapons
     
   class JLTS_E5;
   class JLTS_RG4D;
-  class JLTS_RPS6;
   class JLTS_E5S;
   class SWOP_E5C;
   class JLTS_DP23;

@@ -1,5 +1,9 @@
+class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
+    #include "RepublicAssets.cpp"
+    #include "BanthaCfg.cpp"
+    
     class UniformItem;
 	
 /***********************************************************************************************************
@@ -393,7 +397,6 @@ class CfgVehicles
 /***********************************************************************************************************
 --------------------------------------------------------------Vehicles--------------------------------------
 ************************************************************************************************************/
-	class 615th_LAAT_MK2;
     class ls_laat_gun;
     class ls_laat_gun_2;
     class missiles_DAR;
@@ -550,7 +553,6 @@ class CfgVehicles
     //-----------------------------------CIS Stuff------------------------------------------------
     //--------------------------------------------------------------------------------------------
     
-    
   class JLTS_Droid_B1_E5;
   class JLTS_B1_backpack;
   class JLTS_Droid_B1_AT;
@@ -605,9 +607,6 @@ class CfgVehicles
   class ls_cis_hmp;
   class ls_cis_hmp_transport;
   class ls_ground_bawhag;
-  class 3AS_HeavyRepeater_Unarmoured;
-  class 3AS_HeavyRepeater_Armoured;
-  class 3AS_StationaryTurret;
   class SW_SpeederBikeCIV;
   class SWOP_Droideka;
   class SWOP_DroidekaCamo;
@@ -621,7 +620,7 @@ class CfgVehicles
   class RD501_light_infantry_transport_CIS_MkII;
     
     //--------------------------------------------------------------------------------------------
-    //---------------------------------infantry---------------------------------------------------
+    //---------------------------------CIS infantry---------------------------------------------------
     //--------------------------------------------------------------------------------------------
 
   class 187th_B1_Droid: JLTS_Droid_B1_E5
@@ -1448,7 +1447,7 @@ class CfgVehicles
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
-  class 187th_Heavy_Repeater: 3AS_HeavyRepeater_Unarmoured
+  class 187th_CIS_Heavy_Repeater: 3AS_HeavyRepeater_Unarmoured
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";
@@ -1459,7 +1458,7 @@ class CfgVehicles
     crew="187th_B1_Droid";
     typicalCargo[]={"187th_B1_Droid"};
   };
-  class 187th_Heavy_Repeater_Shielded: 3AS_HeavyRepeater_Armoured
+  class 187th_CIS_Heavy_Repeater_Shielded: 3AS_HeavyRepeater_Armoured
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";
@@ -1470,7 +1469,7 @@ class CfgVehicles
     crew="187th_B1_Droid";
     typicalCargo[]={"187th_B1_Droid"};
   };
-  class 187th_Stationary_Turret: 3AS_StationaryTurret
+  class 187th_CIS_Stationary_Turret: 3AS_StationaryTurret
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";
