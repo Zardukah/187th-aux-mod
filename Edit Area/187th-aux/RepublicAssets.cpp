@@ -495,32 +495,18 @@
     typicalCargo[]={"187th_Trooper_Crewman"};
   };
   
-  class 187th_Bantha: 212th_Bantha_MK1
+  /*class 187th_Bantha: 212th_Bantha_MK1
   {
     faction="187th_Republic";
     editorCategory="187th_Rep_Assets";
     editorSubcategory="187th_Armor";
     side=1;
-    displayName="Bantha";
+    displayName="Bantha test 1";
     hiddenSelectionsTextures[]={"212th\vehicles\212th_apc\data\textures\bantha-ext_arma material_co.paa","212th\vehicles\212th_apc\data\textures\bantha-tire_arma material_co.paa","212th\vehicles\212th_apc\data\textures\bantha-turret_arma material_co.paa","212th\vehicles\212th_apc\data\textures\bantha-int_arma material_co.paa"};
     crew="187th_Trooper";
     typicalCargo[]={"187th_Trooper"};
     
-  };
-
-  class 212th_APC_Wheeled_01_base_F;
-
-  class bantha_mk2 : 212th_APC_Wheeled_01_base_F
-  {
-    faction="187th_Republic";
-    editorCategory="187th_Rep_Assets";
-    editorSubcategory="187th_Armor";
-    side=1;
-    displayName="Bantha";
-    crew="187th_Trooper_Crewman";
-    typicalCargo[]={"187th_Trooper_Crewman"};
-    
-  };
+  };*/
 
   class 187th_Nu_A_Class_Shuttle: 3AS_Nuclass
   {

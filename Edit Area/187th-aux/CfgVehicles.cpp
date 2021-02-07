@@ -1,4 +1,28 @@
 class CBA_Extended_EventHandlers_base;
+
+class DefaultEventHandlers;
+class EventHandlers;
+class AnimationSources;
+class WeaponFireGun;
+class WeaponCloudsGun;
+class WeaponFireMGun;
+class WeaponCloudsMGun;
+class RCWSOptics;
+class Optics_Armored;
+class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_APC_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+
+
 class CfgVehicles
 {
     #include "RepublicAssets.cpp"
