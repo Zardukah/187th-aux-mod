@@ -1,4 +1,4 @@
-class cfgFunctions
+class CfgFunctions
 {
 	class OES_functions
 	{
@@ -18,7 +18,7 @@ class cfgFunctions
 		{
 			class keybinds
 			{
-				file = "187th-aux\functions\keybinds.sqf";
+				file = "187th-aux\functions\Keybinds.sqf";
 				postInit = 1;
 			};
 		};

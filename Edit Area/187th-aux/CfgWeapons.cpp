@@ -400,6 +400,48 @@ class CfgWeapons
 		allowedFacewear[] = {};
 	};
     
+    /*class 187_Test_Helm: 187_Clone_Helmet // Test Helm for learning model creation with CT Galaxy (the current model is broken)
+	{
+		author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Test Helmet (Test)";
+		
+		model = "\187th-aux\Data\Models\test7.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {""};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformModel = "\187th-aux\Data\Models\test7.p3d";
+			hiddenSelections[] = {"camo"};
+			modelSides[] = {3,1};
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 15;
+					hitpointName = "HitFace";
+					passThrough = 0.03;
+				};
+				class Head
+				{
+					armor = 15;
+					hitPointName = "HitHead";
+					passThrough = 0.03;
+				};
+				class Neck
+				{
+					armor = 15;
+					hitpointName = "HitNeck";
+					passThrough = 0.03;
+				};
+			};
+		};
+		allowedFacewear[] = {};
+	};*/
+    
     //--------------------------------------------------------------------------------------------
     //-----------------------------------Medical Stuff--------------------------------------------
     //--------------------------------------------------------------------------------------------
@@ -423,10 +465,10 @@ class CfgWeapons
     };
     
     
-    class 187th_Bacta_Injection : ACE_fieldDressing
+    class 187th_Bacta_Spray : ACE_fieldDressing
     {
         scope = 2;
-        displayName = "[187th] Bacta Spray";
+        displayName = "[187th] Bacta Spray (testing)";
         class ItemInfo: CBA_MiscItem_ItemInfo
         {
 			mass = 0.2;
@@ -454,7 +496,7 @@ class CfgWeapons
 
   class 187th_JLTS_E5: JLTS_E5
   {
-    displayName="E-5";
+    displayName="[187th] E-5";
     scope=1;
     class LinkedItems
     {
@@ -463,16 +505,16 @@ class CfgWeapons
 
   class 187th_JLTS_RG4D: JLTS_RG4D
   {
-    displayName="RG-4D";
+    displayName="[187th] RG-4D";
     scope=1;
     class LinkedItems
     {
     };
   };
 
-  class 187th_JLTS_RPS6: JLTS_RPS6
+  class 187th_CIS_JLTS_RPS6: JLTS_RPS6
   {
-    displayName="RPS-6";
+    displayName="[187th] RPS-6";
     scope=1;
     class LinkedItems
     {
@@ -481,7 +523,7 @@ class CfgWeapons
 
   class 187th_JLTS_E5S: JLTS_E5S
   {
-    displayName="E-5S";
+    displayName="[187th] E-5S";
     scope=1;
     class LinkedItems
     {
@@ -490,7 +532,7 @@ class CfgWeapons
 
   class 187th_SWOP_E5C: SWOP_E5C
   {
-    displayName="E5 C Heavy Blaster";
+    displayName="[187th] E5 C Heavy Blaster";
     scope=1;
     class LinkedItems
     {
@@ -499,7 +541,7 @@ class CfgWeapons
 
   class 187th_JLTS_DP23: JLTS_DP23
   {
-    displayName="DP-23";
+    displayName="[187th] DP-23";
     scope=1;
     class LinkedItems
     {
@@ -508,25 +550,7 @@ class CfgWeapons
 
   class 187th_SWOP_b2gun: SWOP_b2gun
   {
-    displayName="B2 HandBlaster";
-    scope=1;
-    class LinkedItems
-    {
-    };
-  };
-
-  class 187th_WBK_Dutch_Vibro: WBK_Dutch_Vibro
-  {
-    displayName="BX Commando Vibroblade";
-    scope=1;
-    class LinkedItems
-    {
-    };
-  };
-
-  class 187th_DpSword: DpSword
-  {
-    displayName="Vibroblade";
+    displayName="[187th] B2 HandBlaster";
     scope=1;
     class LinkedItems
     {
@@ -535,7 +559,7 @@ class CfgWeapons
 
   class 187th_SWOP_DTL20BlasterRifle_Scoped: SWOP_DTL20BlasterRifle_Scoped
   {
-    displayName="DTL20a Pulse rifle";
+    displayName="[187th] DTL20a Pulse rifle";
     scope=1;
     class LinkedItems
     {
@@ -544,16 +568,7 @@ class CfgWeapons
 
   class 187th_SWOP_rg4dPistol: SWOP_rg4dPistol
   {
-    displayName="RG-4D Blaster Pistol";
-    scope=1;
-    class LinkedItems
-    {
-    };
-  };
-
-  class 187th_WBK_lightsaber_sith: WBK_lightsaber_sith
-  {
-    displayName="Lightsaber (Sii-Taa) (Red)";
+    displayName="[187th] RG-4D Blaster Pistol";
     scope=1;
     class LinkedItems
     {
@@ -562,7 +577,7 @@ class CfgWeapons
 
   class 187th_JLTS_DW32S: JLTS_DW32S
   {
-    displayName="DW-32S";
+    displayName="[187th] DW-32S";
     scope=1;
     class LinkedItems
     {
@@ -571,7 +586,7 @@ class CfgWeapons
 
   class 187th_JLTS_212th_E5_shield_JLTS_riot_shield_droid_attachment: JLTS_212th_E5_shield
   {
-    displayName="[212th] E5 (Shield)";
+    displayName="[187th] E5 (Shield)";
     scope=1;
     class LinkedItems
     {
@@ -581,7 +596,7 @@ class CfgWeapons
 
   class 187th_212th_E5A_SWOP_E5_HoloScope: 212th_E5A
   {
-    displayName="[212th] E5A";
+    displayName="[187th] E5A";
     scope=1;
     class LinkedItems
     {

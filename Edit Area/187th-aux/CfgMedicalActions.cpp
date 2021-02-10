@@ -12,11 +12,11 @@ class Ace_Medical_Treatment_Actions
         treatmentTime = 2;
     };
     
-    class 187th_Bacta_Injection : BasicBandage
+    class 187th_Bacta_Spray : BasicBandage
     {
         displayName = "Bacta Spray";
         displayNameProgress = "Applying Bacta Spray...";
-        items[] = {"187th_Bacta_Injection"};
+        items[] = {"187th_Bacta_Spray"};
         category = "bandage";
         treatmentTime = 1;
     };

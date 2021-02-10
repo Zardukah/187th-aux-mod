@@ -22,6 +22,27 @@ class Optics_Gunner_APC_01: Optics_Armored
 	class Narrow;
 };
 
+class Extended_Init_EventHandlers
+{
+	class 187th_Droideka
+	{
+		class droideka_movable
+		{
+			init = "[_this select 0] spawn RD501_fnc_droidekka_move";
+		};
+	};
+};
+class Extended_Deleted_EventHandlers
+{
+	class RD501_droideka_base
+	{
+		class remove_atached_stuff
+		{
+			deleted = "[_this select 0] spawn RD501_fnc_remove_attached_objects";
+		};
+	};
+};
+
 
 class CfgVehicles
 {
@@ -421,11 +442,8 @@ class CfgVehicles
 /***********************************************************************************************************
 --------------------------------------------------------------Vehicles--------------------------------------
 ************************************************************************************************************/
-    class ls_laat_gun;
-    class ls_laat_gun_2;
-    class missiles_DAR;
     
-    class 187th_LAAT : 615th_LAAT_MK2
+    /*class 187th_LAAT : 615th_LAAT_MK2
 	{
 		displayname="Test LAAT for 187th";
 		faction="187th_Republic";
@@ -517,7 +535,7 @@ class CfgVehicles
 				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
             };
         };
-	};
+	};*/
 	
 	
 	
@@ -558,7 +576,7 @@ class CfgVehicles
         mass = 20;
     };
     
-    class 187th_Bacta_InjectionItem: ACE_fieldDressingItem 
+    class 187th_Bacta_SprayItem: ACE_fieldDressingItem 
     {
         scope = 2;
         scopeCurator = 2;
@@ -568,7 +586,7 @@ class CfgVehicles
         vehicleClass = "Items";
         class TransportItems 
         {
-            item_xx=(187th_Bacta_Injection,1);
+            item_xx=(187th_Bacta_Spray,1);
         };
         mass = 20;
     };
@@ -674,8 +692,8 @@ class CfgVehicles
     side=0;
     displayName="B1 Droid (AT)";
     uniformClass="JLTS_DroidB1";
-    weapons[]={"187th_JLTS_E5","187th_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
-    respawnWeapons[]={"187th_JLTS_E5","187th_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
+    weapons[]={"187th_JLTS_E5","187th_CIS_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
+    respawnWeapons[]={"187th_JLTS_E5","187th_CIS_JLTS_RPS6","187th_JLTS_RG4D","Put","Throw"};
     items[]={"ACE_EarPlugs"};
     respawnItems[]={"ACE_EarPlugs"};
     magazines[]={"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_RG4D_mag","JLTS_RG4D_mag","JLTS_RPS6_mag","JLTS_RPS6_mag"};

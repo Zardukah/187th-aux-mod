@@ -24,7 +24,7 @@ class ACE_Medical_Treatment
             hrIncreaseNormal[] = {0,0};
             hrIncreaseHigh[] = {0,0};
             timeInSystem = 3000;
-            timeTillMaxEffect = 60;
+            timeTillMaxEffect = 30;
             maxDose = 10;
             onOverDose = "";
             incompatibleMedication[] = {};
@@ -33,7 +33,7 @@ class ACE_Medical_Treatment
     };
     class Bandaging
     {
-        class 187th_Bacta_Injection : ACE_fieldDressing
+        class 187th_Bacta_Spray : ACE_fieldDressing
         {
             class Abrasion {
                 effectiveness = 5;
