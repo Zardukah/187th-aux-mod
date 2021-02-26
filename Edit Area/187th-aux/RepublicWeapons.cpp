@@ -1,9 +1,10 @@
+
+//Guns
 class JLTS_DC15A_plastic;
   class JLTS_DC17SA;
   class JLTS_DC15S;
   class JLTS_DC15A_ugl_plastic;
   class JLTS_Z6;
-  class JLTS_RPS6;
   class JLTS_DC15X;
 
   class 187th_JLTS_DC15A_plastic: JLTS_DC15A_plastic
@@ -87,3 +88,80 @@ class JLTS_DC15A_plastic;
     {
     };
   };
+//------------------------------------------------------
+//Helmets
+//------------------------------------------------------
+class JLTS_CloneHelmetP2MC;
+class 187_Clone_Helmet_Sparrow: JLTS_CloneHelmetP2MC
+	{
+		author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Clone Trooper Helmet (Sparrow)";
+		ace_hearing_protection = 5.0;
+		ace_hearing_lowerVolume = 0.25;
+		CBRN_protection = 1;
+		weaponPoolAvailable = 1;
+		hiddenSelections[]={"camo1"};
+		hiddenSelectionsTextures[]={"\187th-aux\Data\Helmets\187thHelmet_Sparrow.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass=30; uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2MC.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 2;
+					hitpointName = "HitFace";
+					passThrough = 0.03;
+				};
+				class Head
+				{
+					armor = 2;
+					hitPointName = "HitHead";
+					passThrough = 0.03;
+				};
+				class Neck
+				{
+					armor = 2;
+					hitpointName = "HitNeck";
+					passThrough = 0.03;
+				};
+			};
+		};
+		allowedFacewear[] = {};
+	};
+class 187_Clone_Helmet_Blu: 187_Clone_Helmet
+    {
+        author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Clone Trooper Helmet (Blu)";
+        hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Blu.paa"};
+    };
+class 187_Clone_Helmet_Darkhorse: 187_Clone_Helmet
+    {
+        author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Clone Trooper Helmet (Darkhorse)";
+        hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Darkhorse.paa"};
+    };
+class 187_Pilot_Helmet_Test: 187_Pilot_HelmetP2
+    {
+        author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Pilot Helmet (Test)";
+        hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};
+    };

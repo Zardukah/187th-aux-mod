@@ -1,7 +1,6 @@
 class CfgWeapons
 {
 // main import
-    #include "RepublicWeapons.cpp"
     
 	class UniformItem;
 	class Uniform_Base;
@@ -13,7 +12,7 @@ class CfgWeapons
 // Other Uniform stuff imports
 	class JLTS_CloneArmor;	
 	
-	class 187th_Clone_Recruit: JLTS_CloneArmor //Current issue... GOD ARMOR
+	class 187th_Clone_Recruit: JLTS_CloneArmor 
 	{
 		author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
@@ -203,8 +202,8 @@ class CfgWeapons
 /***********************************************************************************************************
 --------------------------------------------------------------Helmets------------------------------------------
 ************************************************************************************************************/
+    class HeadgearItem;
 	class JLTS_CloneHelmetP2;
-	class HeadgearItem;
 	class 187_Clone_Helmet: JLTS_CloneHelmetP2
 	{
 		author 	= "PraetorPanda";
@@ -511,7 +510,7 @@ class CfgWeapons
     {
     };
   };
-
+    class JLTS_RPS6;
   class 187th_CIS_JLTS_RPS6: JLTS_RPS6
   {
     displayName="[187th] RPS-6";
@@ -607,5 +606,10 @@ class CfgWeapons
       };
     };
   };
-      
+    
+    
+    // adding other files
+    
+    #include "RepublicWeapons.cpp"
+    #include "CISWeapons.cpp"
 };// END

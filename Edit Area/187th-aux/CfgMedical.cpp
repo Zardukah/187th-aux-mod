@@ -28,7 +28,7 @@ class ACE_Medical_Treatment
             maxDose = 10;
             onOverDose = "";
             incompatibleMedication[] = {};
-            viscosityChange = -1;
+            viscosityChange = 0;
         };
     };
     class Bandaging

@@ -1241,7 +1241,7 @@ class 212th_APC_Wheeled_01_base_F: Wheeled_APC_F
         editorSubcategory="187th_Armor";
         displayName="Bantha";
         crew="187th_Trooper_Crewman";
-        armor=700;
+        armor=900;
         
         class Turrets: Turrets
 		{

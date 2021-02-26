@@ -255,11 +255,11 @@ class CfgVehicles
 		RespawnItems[] 	= {};
 		magazines[] 	= {};
 		respawnMagazines[] = {};
-		hiddenSelections[] 		= {"camo1","camo2"};
+		hiddenSelections[] 	= {"camo1","camo2"};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\characters\CloneArmor\data\Clone_armor1_co.paa",
-			"\MRC\JLTS\characters\CloneArmor\data\Clone_armor2_co.paa"
+         "\MRC\JLTS\characters\CloneArmor\data\Clone_armor1_co.paa",
+         "\MRC\JLTS\characters\CloneArmor\data\Clone_armor2_co.paa"
 		};
 		class Wounds
 		{
@@ -415,7 +415,7 @@ class CfgVehicles
     {
         author = "PraetorPanda";
         displayName = "[187th] Clone Trooper Backpack (EOD)";
-        maximumLoad = 280;
+        maximumLoad = 450;
 		mass = 50;
 		hiddenSelections[] = {"camo1"};
     };
@@ -843,7 +843,7 @@ class CfgVehicles
     editorSubcategory = "187th_Infantry";
     side=0;
     displayName="B2 Droid";
-    uniformClass="RD501_opfor_uniform_B2_SuperArmor";
+    uniformClass="RD501_opfor_uniform_B2_Armor";
     weapons[]={"187th_SWOP_b2gun","Put","Throw"};
     respawnWeapons[]={"187th_SWOP_b2gun","Put","Throw"};
     items[]={"FirstAidKit"};
@@ -978,8 +978,8 @@ class CfgVehicles
     side=0;
     displayName="BX Commando (Blade)";
     uniformClass="ls_cis_bxDroid_uniform";
-    weapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
-    respawnWeapons[]={"187th_WBK_Dutch_Vibro","Put","Throw"};
+    weapons[]={"WBK_Dutch_Vibro","Put","Throw"};
+    respawnWeapons[]={"WBK_Dutch_Vibro","Put","Throw"};
     items[]={};
     respawnItems[]={};
     magazines[]={"SWOP_termDet_G","SWOP_termDet_G"};
@@ -1354,8 +1354,7 @@ class CfgVehicles
     editorCategory = "187th_CIS_Assets";
     editorSubcategory = "187th_Turret";
     side=0;
-    displayName="Dwarf Spider Droid";
-    hiddenSelectionsTextures[]={};
+    displayName="Dwarf Spider Droid mk2";
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
@@ -1589,7 +1588,6 @@ class CfgVehicles
     editorSubcategory = "187th_Transport";
     side=0;
     displayName="HIT";
-    hiddenSelectionsTextures[]={"rd501_vehicles\textures\marid\maridbody.paa","","rd501_vehicles\textures\marid\maridturret.paa","",""};
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
@@ -1611,7 +1609,6 @@ class CfgVehicles
     editorSubcategory = "187th_Transport";
     side=0;
     displayName="LIT";
-    hiddenSelectionsTextures[]={"rd501_vehicles\textures\tempest\cis_tempest_ext.paa","","a3\static_f_jets\aaa_system_01\data\aaa_system_01_co.paa","rd501_vehicles\textures\tempest\cis_tempest_cover.paa"};
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
@@ -1729,5 +1726,7 @@ class CfgVehicles
   };
   
 
-
+// adding other files
+    #include "CISAssets.cpp" 
+    
 };// END
