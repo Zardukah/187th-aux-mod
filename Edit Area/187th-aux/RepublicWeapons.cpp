@@ -156,12 +156,12 @@ class 187_Clone_Helmet_Darkhorse: 187_Clone_Helmet
 		displayName = "[187th] Clone Trooper Helmet (Darkhorse)";
         hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Darkhorse.paa"};
     };
-class 187_Pilot_Helmet_Test: 187_Pilot_HelmetP2
+class 187_Clone_Helmet_Panda: 187_Clone_Helmet
     {
         author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName = "[187th] Pilot Helmet (Test)";
-        hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};
+		displayName = "[187th] Clone Trooper Helmet (Panda)";
+        hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Panda.paa"};
     };

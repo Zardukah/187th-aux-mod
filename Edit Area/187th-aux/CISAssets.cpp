@@ -1,59 +1,55 @@
 // Uniforms
-/*class ls_cis_b2Droid_base;
-class 187_CIS_Base_Uniform: ls_cis_b2Droid_base
+class SWOP_B2_superdroid;
+class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 	{
         author 			= "PraetorPanda";
 		dlc				= "187th Aux Mod";
-		scope 			= 1;
-		scopeCurator	= 0;
-        uniformClass = "187_b2_Droid";
-        model = "ls_armor_redfor\uniform\cis\b2\ls_cis_b2_uniform.p3d";
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","SWLB_comlink_droid"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","SWLB_comlink_droid"};
-		items[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
-		respawnItems[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
-		armorStructural = 3;
-		hiddenSelections[] = {"arms","legs","torso"};
-		hiddenSelectionsTextures[] = {"ls_armor_redfor\uniform\cis\b2\data\arms_co.paa","ls_armor_redfor\uniform\cis\b2\data\legs_co.paa","ls_armor_redfor\uniform\cis\b2\data\torso_co.paa"};
+		scopeCurator	= 2;
+        uniformClass = "187th_b2_Droid";
+        faction = "187th_CIS";
+        editorCategory = "187th_CIS_Assets";
+		editorSubcategory = "187th_Infantry";
+		displayname = "B2 (test)";
+		scope = 2;
 		class HitPoints
 		{
 			class HitFace
 			{
-				armor = 100;
+				armor = 6;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.8;
+				passThrough = 0.013;
 				radius = 0.08;
-				explosionShielding = 0.1;
+				explosionShielding = 1;
 				minimalHit = 0.01;
 			};
 			class HitNeck: HitFace
 			{
-				armor = 100;
+				armor = 6;
 				material = -1;
 				name = "neck";
-				passThrough = 0.8;
+				passThrough = 0.013;
 				radius = 0.1;
-				explosionShielding = 0.5;
+				explosionShielding = 1;
 				minimalHit = 0.01;
 			};
 			class HitHead: HitNeck
 			{
-				armor = 100;
+				armor = 6;
 				material = -1;
 				name = "head";
-				passThrough = 0.8;
+				passThrough = 0.13;
 				radius = 0.2;
-				explosionShielding = 0.5;
+				explosionShielding = 1;
 				minimalHit = 0.01;
 				depends = "HitFace max HitNeck";
 			};
 			class HitPelvis: HitHead
 			{
-				armor = 100;
+				armor = 8;
 				material = -1;
 				name = "pelvis";
-				passThrough = 0.8;
+				passThrough = 0.44;
 				radius = 0.24;
 				explosionShielding = 1;
 				visual = "injury_body";
@@ -62,10 +58,10 @@ class 187_CIS_Base_Uniform: ls_cis_b2Droid_base
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor = 100;
+				armor = 8;
 				material = -1;
 				name = "spine1";
-				passThrough = 0.8;
+				passThrough = 0.44;
 				radius = 0.16;
 				explosionShielding = 1;
 				visual = "injury_body";
@@ -73,73 +69,117 @@ class 187_CIS_Base_Uniform: ls_cis_b2Droid_base
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor = 100;
+				armor = 8;
 				material = -1;
 				name = "spine2";
-				passThrough = 0.8;
+				passThrough = 0.44;
 				radius = 0.18;
-				explosionShielding = 6;
+				explosionShielding = 1.5;
 				visual = "injury_body";
 				minimalHit = 0.01;
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor = 100;
+				armor = 8;
 				material = -1;
 				name = "spine3";
-				passThrough = 0.8;
+				passThrough = 0.44;
 				radius = 0.18;
-				explosionShielding = 6;
+				explosionShielding = 1.5;
 				visual = "injury_body";
 				minimalHit = 0.01;
 			};
 			class HitBody: HitChest
 			{
-				armor = 500;
+				armor = 1000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
 				radius = 0;
-				explosionShielding = 6;
+				explosionShielding = 1.5;
 				visual = "injury_body";
 				minimalHit = 0.01;
 				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 			class HitArms: HitBody
 			{
-				armor = 100;
+				armor = 6;
 				material = -1;
 				name = "arms";
-				passThrough = 1;
+				passThrough = 0.13;
 				radius = 0.1;
-				explosionShielding = 1;
+				explosionShielding = 0.4;
 				visual = "injury_hands";
 				minimalHit = 0.01;
 				depends = "0";
 			};
+			class HitRightHand: HitArms
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "hand_r";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
+			class HitLeftHand: HitArms
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "hand_l";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_hands";
+			};
 			class HitHands: HitArms
 			{
-				armor = 100;
+				armor = 6;
 				material = -1;
 				name = "hands";
-				passThrough = 1;
+				passThrough = 0.13;
 				radius = 0.1;
-				explosionShielding = 1;
+				explosionShielding = 0.3;
 				visual = "injury_hands";
 				minimalHit = 0.01;
 				depends = "HitArms";
 			};
 			class HitLegs: HitHands
 			{
-				armor = 100;
+				armor = 6;
 				material = -1;
 				name = "legs";
-				passThrough = 1;
-				radius = 0.14;
-				explosionShielding = 1;
+				passThrough = 0.13;
+				radius = 0.1;
+				explosionShielding = 0.3;
 				visual = "injury_legs";
 				minimalHit = 0.01;
 				depends = "0";
+			};
+			class HitLeftLeg: HitLegs
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "leg_l";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_legs";
+			};
+			class HitRightLeg: HitLegs
+			{
+				armor = 8;
+				explosionShielding = 0.25;
+				material = -1;
+				minimalHit = 0.01;
+				name = "leg_r";
+				passThrough = 0.1;
+				radius = 0.1;
+				visual = "injury_leg";
 			};
 			class Incapacitated: HitLegs
 			{
@@ -153,36 +193,13 @@ class 187_CIS_Base_Uniform: ls_cis_b2Droid_base
 				minimalHit = 0;
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-			class HitLeftArm
-			{
-				armor = 100;
-				material = -1;
-				name = "hand_l";
-				passThrough = 1;
-				radius = 0.08;
-				explosionShielding = 1;
-				visual = "injury_hands";
-				minimalHit = 0.01;
-			};
-			class HitRightArm: HitLeftArm
-			{
-				name = "hand_r";
-			};
-			class HitLeftLeg
-			{
-				armor = 100;
-				material = -1;
-				name = "leg_l";
-				passThrough = 1;
-				radius = 0.1;
-				explosionShielding = 1;
-				visual = "injury_legs";
-				minimalHit = 0.01;
-			};
-			class HitRightLeg: HitLeftLeg
-			{
-				name = "leg_r";
-			};
 		};
-        editorSubcategory = "187_clones_white";
-	};*/
+		armor = 60;
+		armorStructural = 1;
+		explosionShielding = 0.5;
+		class EventHandlers;
+		respawnWeapons[] = {"SWOP_B2gun","Throw","Put"};
+		magazines[] = {"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag"};
+		weapons[] = {"SWOP_B2gun","Throw","Put"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
+	};
