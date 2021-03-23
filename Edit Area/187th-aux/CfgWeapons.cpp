@@ -306,7 +306,7 @@ class CfgWeapons
 		dlc		= "187th Aux Mod";
 		scope 	= 2;
 		scopeCurator = 2;
-		displayName = "[187th] Clone Recruit Helmet (P2)";
+		displayName = "[187th] Clone Helmet (Recruit)";
 		hiddenSelectionsTextures[]={"MRC\JLTS\characters\CloneArmor\data\Clone_Helmet_P2_co.paa"};
 		
 	};
