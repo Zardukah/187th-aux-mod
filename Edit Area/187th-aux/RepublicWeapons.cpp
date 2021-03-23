@@ -107,7 +107,8 @@ class 187_Clone_Helmet_Sparrow: JLTS_CloneHelmetP2MC
 		hiddenSelectionsTextures[]={"\187th-aux\Data\Helmets\187thHelmet_Sparrow.paa"};
 		class ItemInfo: HeadgearItem
 		{
-			mass=30; uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2MC.p3d";
+			mass=30; 
+            uniformModel="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2MC.p3d";
 			hiddenSelections[]=
 			{
 				"camo1"
@@ -165,3 +166,51 @@ class 187_Clone_Helmet_Panda: 187_Clone_Helmet
 		displayName = "[187th] Clone Trooper Helmet (Panda)";
         hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Panda.paa"};
     };
+class JLTS_CloneHelmetBARC;
+class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
+	{
+		author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Clone Trooper Helmet (BARC)";
+		ace_hearing_protection = 5.0;
+		ace_hearing_lowerVolume = 0.25;
+		CBRN_protection = 1;
+		weaponPoolAvailable = 1;
+		hiddenSelections[]={"camo1"};
+		hiddenSelectionsTextures[]={"\187th-aux\Data\Helmets\187th_barc.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass=30; 
+            uniformModel="\MRC\JLTS\characters\CloneArmor2\CloneHelmetBARC.p3d";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+			allowedSlots[]={801,901,701,605};
+			modelSides[]={6};
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 2;
+					hitpointName = "HitFace";
+					passThrough = 0.03;
+				};
+				class Head
+				{
+					armor = 2;
+					hitPointName = "HitHead";
+					passThrough = 0.03;
+				};
+				class Neck
+				{
+					armor = 2;
+					hitpointName = "HitNeck";
+					passThrough = 0.03;
+				};
+			};
+		};
+		allowedFacewear[] = {};
+	};

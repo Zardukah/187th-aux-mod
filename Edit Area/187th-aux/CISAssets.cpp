@@ -46,7 +46,7 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitPelvis: HitHead
 			{
-				armor = 8;
+				armor = 10;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.44;
@@ -58,7 +58,7 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor = 8;
+				armor = 10;
 				material = -1;
 				name = "spine1";
 				passThrough = 0.44;
@@ -69,7 +69,7 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor = 8;
+				armor = 10;
 				material = -1;
 				name = "spine2";
 				passThrough = 0.44;
@@ -80,7 +80,7 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor = 8;
+				armor = 10;
 				material = -1;
 				name = "spine3";
 				passThrough = 0.44;
@@ -103,7 +103,7 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitArms: HitBody
 			{
-				armor = 6;
+				armor = 10;
 				material = -1;
 				name = "arms";
 				passThrough = 0.13;
@@ -115,8 +115,8 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitRightHand: HitArms
 			{
-				armor = 8;
-				explosionShielding = 0.25;
+				armor = 10;
+				explosionShielding = 0.30;
 				material = -1;
 				minimalHit = 0.01;
 				name = "hand_r";
@@ -126,8 +126,8 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitLeftHand: HitArms
 			{
-				armor = 8;
-				explosionShielding = 0.25;
+				armor = 10;
+				explosionShielding = 0.30;
 				material = -1;
 				minimalHit = 0.01;
 				name = "hand_l";
@@ -137,32 +137,32 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitHands: HitArms
 			{
-				armor = 6;
+				armor = 10;
 				material = -1;
 				name = "hands";
 				passThrough = 0.13;
 				radius = 0.1;
-				explosionShielding = 0.3;
+				explosionShielding = 0.30;
 				visual = "injury_hands";
 				minimalHit = 0.01;
 				depends = "HitArms";
 			};
 			class HitLegs: HitHands
 			{
-				armor = 6;
+				armor = 10;
 				material = -1;
 				name = "legs";
 				passThrough = 0.13;
 				radius = 0.1;
-				explosionShielding = 0.3;
+				explosionShielding = 0.30;
 				visual = "injury_legs";
 				minimalHit = 0.01;
 				depends = "0";
 			};
 			class HitLeftLeg: HitLegs
 			{
-				armor = 8;
-				explosionShielding = 0.25;
+				armor = 10;
+				explosionShielding = 0.30;
 				material = -1;
 				minimalHit = 0.01;
 				name = "leg_l";
@@ -172,8 +172,8 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 			};
 			class HitRightLeg: HitLegs
 			{
-				armor = 8;
-				explosionShielding = 0.25;
+				armor = 10;
+				explosionShielding = 0.30;
 				material = -1;
 				minimalHit = 0.01;
 				name = "leg_r";
@@ -194,12 +194,22 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 60;
+		armor = 200;
 		armorStructural = 1;
-		explosionShielding = 0.5;
+		explosionShielding = 0.7;
 		class EventHandlers;
+        weapons[] = {"SWOP_B2gun","Throw","Put"};
 		respawnWeapons[] = {"SWOP_B2gun","Throw","Put"};
 		magazines[] = {"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag"};
-		weapons[] = {"SWOP_B2gun","Throw","Put"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
+
+//BX Droid E5 - 212th_BX_DROID
+
+//BX Droid Captain - 212th_BX_DROID_CAPTAIN
+
+//BX Droid Citidel - 212th_BX_DROID_CITADEL
+
+//BX Droid Diplomat - 212th_BX_DROID_DIPLOMAT
+
+//BX Droid Training - 212th_BX_DROID_TRAINING (to come)
