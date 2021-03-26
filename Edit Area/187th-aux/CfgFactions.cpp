@@ -19,12 +19,16 @@ class CfgEditorCategories
 {
 	class 187th_Rep_Assets
 	{
-		displayName="187th Republic Test Assets";
+		displayName="187th Republic Assets";
 	};
 	class 187th_CIS_Assets
 	{
-		displayName="187th CIS Test Assets";
+		displayName="187th CIS Assets";
 	};
+    class 187th_Test_Assets
+    {
+        displayName="187th Test Assets";
+    };
 	
 };
 class CfgEditorSubcategories

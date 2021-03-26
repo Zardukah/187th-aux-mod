@@ -310,16 +310,6 @@ class CfgWeapons
 		hiddenSelectionsTextures[]={"MRC\JLTS\characters\CloneArmor\data\Clone_Helmet_P2_co.paa"};
 		
 	};
-    class 187_Clone_Helmet_Test: 187_Clone_Helmet
-	{
-		author 	= "Coots";
-		dlc		= "187th Aux Mod";
-		scope 	= 2;
-		scopeCurator = 2;
-		displayName = "[187th] Helmet TEST (Coots)";
-		hiddenSelectionsTextures[]={"MRC\JLTS\characters\CloneArmor\data\Clone_Helmet_P2_co.paa"};
-		
-	};
 	class 187_Clone_Helmet_Airborne: 187_Clone_Helmet
 	{
 		author 	= "PraetorPanda";
