@@ -416,6 +416,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
+        subItems[] = {"187th_Integrated_NVG_TI_1_F"};
 	};
 	class 187_Pilot_HelmetP1: 187_Pilot_HelmetP2
 	{
@@ -456,7 +457,14 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
+        subItems[] = {"187th_Integrated_NVG_TI_1_F"};
+        
 	};
+    class 187th_Integrated_NVG_TI_1_F
+    {
+        visionMode[] = {"Normal","NVG","TI"};
+		thermalMode[] = {0,1};
+    }
     
     /*class 187_Test_Helm: 187_Clone_Helmet // Test Helm for learning model creation with CT Galaxy (the current model is broken)
 	{
