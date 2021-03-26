@@ -13,7 +13,7 @@ class 187th_b2_Droid: SWOP_B2_superdroid_F_Spec
     class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "187th_CIS_Base_Uniform";
+			uniformClass = "187th_CIS_B2_F";
 			containerClass = "Supply150";
 			mass = 80;
 		};

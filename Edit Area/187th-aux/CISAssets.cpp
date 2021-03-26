@@ -1,15 +1,15 @@
 // Uniforms
 class SWOP_B2_superdroid;
-class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
+class 187th_CIS_B2_F: SWOP_B2_superdroid
 	{
         author 			= "PraetorPanda";
 		dlc				= "187th Aux Mod";
 		scopeCurator	= 2;
         uniformClass = "187th_b2_Droid";
         faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
+        editorCategory = "187th_Test_Assets";
 		editorSubcategory = "187th_Infantry";
-		displayname = "B2 (test)";
+		displayname = "B2 (can run)";
 		scope = 2;
 		class HitPoints
 		{
@@ -194,10 +194,10 @@ class 187th_CIS_Base_Uniform: SWOP_B2_superdroid
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 200;
+        class EventHandlers: DefaultEventhandlers{};
+		armor = 250;
 		armorStructural = 1;
 		explosionShielding = 0.7;
-		class EventHandlers;
         weapons[] = {"SWOP_B2gun","Throw","Put"};
 		respawnWeapons[] = {"SWOP_B2gun","Throw","Put"};
 		magazines[] = {"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag"};
@@ -213,8 +213,8 @@ class 187th_BX_Droid_E5_F: 212th_BX_DROID_F
 		scopeCurator	= 2;
         uniformClass = "187th_BX_Droid_E5";
         faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
-		editorSubcategory = "187th_Infantry";
+        editorCategory = "187th_Test_Assets";
+		editorSubcategory = "187th_Special";
 		displayname = "BX Droid E5 (test)";
 		scope = 2;
 		class HitPoints
@@ -400,7 +400,7 @@ class 187th_BX_Droid_E5_F: 212th_BX_DROID_F
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 150;
+		armor = 100;
 		armorStructural = 1;
 		explosionShielding = 0.5;
 		class EventHandlers;
@@ -419,8 +419,8 @@ class 187th_BX_Droid_Captain_E5_F: 212th_BX_DROID_CAPTAIN_F
 		scopeCurator	= 2;
         uniformClass = "187th_BX_Droid_Captian_E5";
         faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
-		editorSubcategory = "187th_Infantry";
+        editorCategory = "187th_Test_Assets";
+		editorSubcategory = "187th_Special";
 		displayname = "BX Droid Captain E5 (test)";
 		scope = 2;
 		class HitPoints
@@ -606,7 +606,7 @@ class 187th_BX_Droid_Captain_E5_F: 212th_BX_DROID_CAPTAIN_F
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 150;
+		armor = 100;
 		armorStructural = 1;
 		explosionShielding = 0.5;
 		class EventHandlers;
@@ -624,8 +624,8 @@ class 187th_BX_Droid_Citadel_E5_F: 212th_BX_DROID_CITADEL_F
 		scopeCurator	= 2;
         uniformClass = "187th_BX_Droid_Citadel_E5";
         faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
-		editorSubcategory = "187th_Infantry";
+        editorCategory = "187th_Test_Assets";
+		editorSubcategory = "187th_Special";
 		displayname = "BX Droid Citadel E5 (test)";
 		scope = 2;
 		class HitPoints
@@ -811,7 +811,7 @@ class 187th_BX_Droid_Citadel_E5_F: 212th_BX_DROID_CITADEL_F
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 150;
+		armor = 100;
 		armorStructural = 1;
 		explosionShielding = 0.5;
 		class EventHandlers;
@@ -829,8 +829,8 @@ class 187th_BX_Droid_Diplomat_E5_F: 212th_BX_DROID_DIPLOMAT_F
 		scopeCurator	= 2;
         uniformClass = "187th_BX_Droid_Diplomat_E5";
         faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
-		editorSubcategory = "187th_Infantry";
+        editorCategory = "187th_Test_Assets";
+		editorSubcategory = "187th_Special";
 		displayname = "BX Droid Diplomat E5 (test)";
 		scope = 2;
 		class HitPoints
@@ -1016,7 +1016,7 @@ class 187th_BX_Droid_Diplomat_E5_F: 212th_BX_DROID_DIPLOMAT_F
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 150;
+		armor = 100;
 		armorStructural = 1;
 		explosionShielding = 0.5;
 		class EventHandlers;
@@ -1034,8 +1034,8 @@ class 187th_BX_Droid_Training_E5_F: 212th_BX_DROID_TRAINING_F
 		scopeCurator	= 2;
         uniformClass = "187th_BX_Droid_Diplomat_E5";
         faction = "187th_CIS";
-        editorCategory = "187th_CIS_Assets";
-		editorSubcategory = "187th_Infantry";
+        editorCategory = "187th_Test_Assets";
+		editorSubcategory = "187th_Special";
 		displayname = "BX Droid Training E5 (test)";
 		scope = 2;
 		class HitPoints
@@ -1221,7 +1221,7 @@ class 187th_BX_Droid_Training_E5_F: 212th_BX_DROID_TRAINING_F
 				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor = 150;
+		armor = 100;
 		armorStructural = 1;
 		explosionShielding = 0.5;
 		class EventHandlers;

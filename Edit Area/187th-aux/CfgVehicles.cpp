@@ -22,16 +22,6 @@ class Optics_Gunner_APC_01: Optics_Armored
 	class Narrow;
 };
 
-class Extended_Init_EventHandlers
-{
-	class 187th_Droideka
-	{
-		class droideka_movable
-		{
-			init = "[_this select 0] spawn RD501_fnc_droidekka_move";
-		};
-	};
-};
 class Extended_Deleted_EventHandlers
 {
 	class RD501_droideka_base
@@ -39,6 +29,14 @@ class Extended_Deleted_EventHandlers
 		class remove_atached_stuff
 		{
 			deleted = "[_this select 0] spawn RD501_fnc_remove_attached_objects";
+		};
+        
+	};
+    class 187th_CIS_B2_F
+	{
+		class ForceWalk
+		{
+			init = "[_this select 0] call OES_fnc_force_b2_walk";
 		};
 	};
 };
