@@ -227,3 +227,13 @@ class 187th_NVG_Chip:JLTS_NVG_droid_chip_1
     
     
 };
+
+class 187th_NVG_Chip_1:JLTS_NVG_droid_chip_1
+{
+    author = "Cootsies";
+    displayName = "TEST NVG 2";
+    visionMode[] = {"Normal","NVG","TI"};
+    thermalMode[] = {5,6};
+    
+    
+};
