@@ -365,7 +365,9 @@ class CfgWeapons
 		};
 		allowedFacewear[] = {};
 	};
-
+    //Pulling class for Integrated NV for Pilot helmets
+    class NVGoggles;
+    class Integrated_NVG_TI_0_F;
 	class 187_Pilot_HelmetP2: 187_Clone_Helmet
 	{
 		author 	= "PraetorPanda";
@@ -406,6 +408,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
+        subItems[] = {"Integrated_NVG_TI_0_F"};
 	};
 	class 187_Pilot_HelmetP1: 187_Pilot_HelmetP2
 	{
@@ -446,7 +449,10 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
+        subItems[] = {"Integrated_NVG_TI_0_F"};
+        
 	};
+    
     
     /*class 187_Test_Helm: 187_Clone_Helmet // Test Helm for learning model creation with CT Galaxy (the current model is broken)
 	{

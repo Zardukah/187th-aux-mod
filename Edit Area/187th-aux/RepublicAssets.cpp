@@ -252,8 +252,8 @@
     respawnItems[]={"ACE_EarPlugs","FirstAidKit","ACE_EarPlugs"};
     magazines[]={"JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","SmokeShell","SmokeShellGreen"};
     respawnMagazines[]={"JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","JLTS_DC15S_mag","SmokeShell","SmokeShellGreen"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_clone_comlink","JLTS_NVG_droid_chip_1","JLTS_CloneBinocular","187_Pilot_HelmetP2","187_Clone_Holster","JLTS_Clone_helmetInterior_P2","187th_Clone_Trooper","JLTS_NVG_droid_chip_1"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_clone_comlink","JLTS_NVG_droid_chip_1","JLTS_CloneBinocular","187_Pilot_HelmetP2","187_Clone_Holster","JLTS_Clone_helmetInterior_P2","187th_Clone_Trooper","JLTS_NVG_droid_chip_1"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_clone_comlink","JLTS_NVG_droid_chip_1","JLTS_CloneBinocular","187_Pilot_HelmetP2","187_Clone_Holster","JLTS_Clone_helmetInterior_P2","187th_Clone_Trooper"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","JLTS_clone_comlink","JLTS_NVG_droid_chip_1","JLTS_CloneBinocular","187_Pilot_HelmetP2","187_Clone_Holster","JLTS_Clone_helmetInterior_P2","187th_Clone_Trooper"};
     backpack="187_Clone_Beltbag";
   };
 
