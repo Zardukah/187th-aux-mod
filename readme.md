@@ -6,9 +6,9 @@ This mod is made for the sole purpose to provide small patches and changes to be
 
 1. Fork and then download the repository.
 
-2. Install WINSE's PBO Manager, [http://www.armaholic.com/page.php?id=16369](http://www.armaholic.com/page.php?id=16369)
+2. Install WINSE's PBO Manager, [http://www.armaholic.com/page.php?id=16369](http://www.armaholic.com/page.php?id=16369){:target="_blank"}
 
-3. Install GitKraken, [https://www.gitkraken.com/](https://www.gitkraken.com/)
+3. Install GitKraken, [https://www.gitkraken.com/](https://www.gitkraken.com/){:target="_blank"}
 
 4. Make the changes that you want, look at the rest of the mod to get a sense of the style guide, i.e splitting the categories up.
 
@@ -28,4 +28,4 @@ This mod is made for the sole purpose to provide small patches and changes to be
 
 Optional Tools for ease of life:
 
-Mikero's Tools, [https://mikero.bytex.digital/Downloads](https://mikero.bytex.digital/Downloads)
+Mikero's Tools, [https://mikero.bytex.digital/Downloads](https://mikero.bytex.digital/Downloads){:target="_blank"}
