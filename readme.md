@@ -6,9 +6,9 @@ This mod is made for the sole purpose to provide small patches and changes to be
 
 1. Fork and then download the repository.
 
-2. Install WINSE's PBO Manager, [http://www.armaholic.com/page.php?id=16369](http://www.armaholic.com/page.php?id=16369){:target="_blank"}
+2. Install WINSE's PBO Manager, <a href="http://www.armaholic.com/page.php?id=16369/" target="_blank">http://www.armaholic.com/page.php?id=16369</a>
 
-3. Install GitKraken, [https://www.gitkraken.com/](https://www.gitkraken.com/){:target="_blank"}
+3. Install GitKraken, <a href="https://www.gitkraken.com/" target="_blank">https://www.gitkraken.com</a>
 
 4. Make the changes that you want, look at the rest of the mod to get a sense of the style guide, i.e splitting the categories up.
 
