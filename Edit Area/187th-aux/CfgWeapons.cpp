@@ -408,7 +408,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
-        subItems[] = {"Integrated_NVG_TI_0_F"};
+        subItems[] = {"187th_NVG_Chip"}; //Integrated_NVG_TI_0_F
 	};
 	class 187_Pilot_HelmetP1: 187_Pilot_HelmetP2
 	{
@@ -449,7 +449,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
-        subItems[] = {"Integrated_NVG_TI_0_F"};
+        subItems[] = {"187th_NVG_Chip"};
         
 	};
     

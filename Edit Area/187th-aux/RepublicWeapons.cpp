@@ -214,3 +214,16 @@ class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 		};
 		allowedFacewear[] = {};
 	};
+
+//-------------------------------------------------------------------
+// Equipment
+// ------------------------------------------------------------------
+
+class JLTS_NVG_droid_chip_1;
+
+class 187th_NVG_Chip: JLTS_NVG_droid_chip_1
+{
+    author = "PraetorPanda";
+    visionMode[] = {"Normal","NVG","TI"};
+    thermalMode[] = {0,1};
+};
