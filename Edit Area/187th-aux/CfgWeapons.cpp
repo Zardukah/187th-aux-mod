@@ -457,7 +457,8 @@ class CfgWeapons
 		};
 		allowedFacewear[] = {};
 	};
-    
+
+
     /*class 187_Test_Helm: 187_Clone_Helmet // Test Helm for learning model creation with CT Galaxy (the current model is broken)
 	{
 		author 	= "PraetorPanda";

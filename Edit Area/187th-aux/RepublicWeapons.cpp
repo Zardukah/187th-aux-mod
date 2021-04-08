@@ -59,11 +59,11 @@ class JLTS_DC15A_plastic;
 
   class 187th_JLTS_RPS6: JLTS_RPS6
   {
-    displayName="RPS-6";
-    scope=1;
-    class LinkedItems
-    {
-    };
+    displayName = "RPS-6 (TEST)";
+    scope = 1;
+    scopeArsenal = 2;
+    magazines[] = {"187th_RPG32_F"};
+    
   };
 
   class 187th_JLTS_DC15X_JLTS_DC15X_scope: JLTS_DC15X
@@ -224,8 +224,7 @@ class 187th_NVG_Chip:JLTS_NVG_droid_chip_1
     displayName = "TEST NVG";
     visionMode[] = {"Normal","NVG","TI"};
     thermalMode[] = {0,1};
-    
-    
+
 };
 
 class 187th_NVG_Chip_1:JLTS_NVG_droid_chip_1
@@ -234,6 +233,5 @@ class 187th_NVG_Chip_1:JLTS_NVG_droid_chip_1
     displayName = "TEST NVG 2";
     visionMode[] = {"Normal","NVG","TI"};
     thermalMode[] = {5,6};
-    
-    
+
 };
