@@ -26,6 +26,6 @@ This mod is made for the sole purpose to provide small patches and changes to be
 
 10. Thanks for your contribution!
 
-Optional Tools for ease of Life:
+Optional Tools for ease of life:
 
 Mikero's Tools, [https://mikero.bytex.digital/Downloads](https://mikero.bytex.digital/Downloads)
