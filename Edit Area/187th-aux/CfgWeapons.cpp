@@ -365,9 +365,6 @@ class CfgWeapons
 		};
 		allowedFacewear[] = {};
 	};
-    //Pulling class for Integrated NV for Pilot helmets
-    class NVGoggles;
-    class Integrated_NVG_TI_0_F;
 	class 187_Pilot_HelmetP2: 187_Clone_Helmet
 	{
 		author 	= "PraetorPanda";
@@ -408,7 +405,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
-        subItems[] = {"187th_NVG_Chip"}; //Integrated_NVG_TI_0_F
+        subItems[] = {"187th_NVG_Chip"};
 	};
 	class 187_Pilot_HelmetP1: 187_Pilot_HelmetP2
 	{
