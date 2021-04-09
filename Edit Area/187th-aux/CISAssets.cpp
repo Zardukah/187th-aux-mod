@@ -1,5 +1,6 @@
 // Uniforms
 class SWOP_B2_superdroid;
+class O_DBA_CIS_Dwarf_Spider_Droid_1_F;
 class 187th_CIS_B2_F: SWOP_B2_superdroid
 	{
         author 			= "PraetorPanda";
@@ -1229,4 +1230,16 @@ class 187th_BX_Droid_Training_E5_F: 212th_BX_DROID_TRAINING_F
 		respawnWeapons[] = {"JLTS_E5","Throw","Put"};
 		magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
+	};
+class 187th_CIS_Dwarf_Spider_Droid_1_F:O_DBA_CIS_Dwarf_Spider_Droid_1_F
+{
+        author 			= "WiltonS048";
+		dlc				= "187th Aux Mod";
+		faction="187th_CIS";
+    editorCategory = "187th_CIS_Assets";
+    editorSubcategory = "187th_Turret";
+    side=0;
+    displayName="Dwarf Spider Droid mk1";
+    crew="O_UAV_AI_F";
+    typicalCargo[]={"O_UAV_AI_F"};
 	};
