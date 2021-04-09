@@ -378,7 +378,7 @@ class CfgWeapons
 		picture = "3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
 		model = "\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};
+		/*hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};*/
 		class ItemInfo: HeadgearItem
 		{
 			mass = 30;
