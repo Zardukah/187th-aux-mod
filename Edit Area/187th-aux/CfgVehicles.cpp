@@ -676,7 +676,7 @@ class CfgVehicles
   class ls_cis_hmp_transport;
   class ls_ground_bawhag;
   class SW_SpeederBikeCIV;
-  class SWOP_Droideka;
+  class k_CIS_Droideka;
   class SWOP_DroidekaCamo;
   class SWOP_DroidekaSupport;
   class RD501_Praetorian_Variant_normal;
@@ -1559,14 +1559,14 @@ class CfgVehicles
     crew="187th_B1_Droid";
     typicalCargo[]={"187th_B1_Droid"};
   };
-  class 187th_Droideka: SWOP_Droideka
+  class 187th_Droideka: k_CIS_Droideka
   {
     faction="187th_CIS";
     editorCategory = "187th_CIS_Assets";
     editorSubcategory = "187th_Turret";
     side=0;
     displayName="Droideka";
-    hiddenSelectionsTextures[]={"sw_clonewarsweapons\droideka\droidikaok_co.paa"};
+    hiddenSelectionsTextures[]={"kobra\442_turrets\droideka\data\Droideka_CO.paa"};
   };
   class 187th_Droideka_Camo: SWOP_DroidekaCamo
   {
