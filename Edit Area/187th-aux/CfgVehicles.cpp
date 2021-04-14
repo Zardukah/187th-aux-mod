@@ -1597,17 +1597,6 @@ class CfgVehicles
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
-  class 187th_Tarantula_AA: RD501_Tarantula_CIS
-  {
-    faction="187th_CIS";
-    editorCategory = "187th_CIS_Assets";
-    editorSubcategory = "187th_AntiAir";
-    side=0;
-    displayName="Tarantula AA";
-    hiddenSelectionsTextures[]={"rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa","rd501_vehicles\textures\tempest\cis_tempest_ext.paa"};
-    crew="187th_B1_Droid_Crew";
-    typicalCargo[]={"187th_B1_Droid_Crew"};
-  };
   class 187th_HIT: RD501_marid_MkII_CIS
   {
     faction="187th_CIS";
