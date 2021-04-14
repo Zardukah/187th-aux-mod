@@ -166,6 +166,15 @@ class 187_Clone_Helmet_Panda: 187_Clone_Helmet
 		displayName = "[187th] Clone Trooper Helmet (Panda)";
         hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Panda.paa"};
     };
+class 187_Clone_Helmet_Warren: 187_Clone_Helmet
+    {
+        author 	= "PraetorPanda";
+		dlc		= "187th Aux Mod";
+		scope 	= 2;
+		scopeCurator = 2;
+		displayName = "[187th] Clone Trooper Helmet (Warren)";
+        hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Warren.paa"};
+    };
 class JLTS_CloneHelmetBARC;
 class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 	{
@@ -214,3 +223,16 @@ class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 		};
 		allowedFacewear[] = {};
 	};
+
+//-------------------------------------------------------------------
+// Equipment
+// ------------------------------------------------------------------
+
+class JLTS_NVG_droid_chip_1;
+
+class 187th_NVG_Chip: JLTS_NVG_droid_chip_1
+{
+    author = "PraetorPanda";
+    visionMode[] = {"Normal","NVG","TI"};
+    thermalMode[] = {0,1};
+};

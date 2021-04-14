@@ -1,4 +1,5 @@
-class Car;
+    // this code was a mass copy/paste and does not belong to 187th Legion. Most work done in this config has been done by the 212th Aux Mod Team
+    class Car; 
 	class Car_F: Car
 	{
 		class NewTurret;
@@ -34,7 +35,7 @@ class Car;
 		};
 	};
 
-class 212th_APC_Wheeled_01_base_F: Wheeled_APC_F
+    class 212th_APC_Wheeled_01_base_F: Wheeled_APC_F 
 	{
 		features = "Randomization: No      <br />Camo selections: 3 - top of hull, bottom of hull, turret      <br />Script door sources: None      <br />Script animations: HideTurret      <br />Executed scripts: None       <br />Firing from vehicles: No      <br />Slingload: No      <br />Cargo proxy indexes: 1 to 8";
 		author = "Six, Dutch, Lark, Cut";
@@ -1233,7 +1234,7 @@ class 212th_APC_Wheeled_01_base_F: Wheeled_APC_F
 		};
 	};
 
-    class 187th_bantha_mk1 : 212th_B_APC_Wheeled_01_cannon_F
+    class 187th_bantha_mk1 : 212th_B_APC_Wheeled_01_cannon_F // This class is the only change made by the 187th Aux Mod team. Adding what we want
     {
         author="PraetorPanda";
         faction="187th_Republic";

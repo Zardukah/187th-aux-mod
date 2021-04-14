@@ -365,10 +365,8 @@ class CfgWeapons
 		};
 		allowedFacewear[] = {};
 	};
-    //Pulling class for Integrated NV for Pilot helmets
-    class NVGoggles;
-    class Integrated_NVG_TI_0_F;
-	class 187_Pilot_HelmetP2: 187_Clone_Helmet
+    class 3as_P2_Pilot_helmet;
+	class 187_Pilot_HelmetP2: 3as_P2_Pilot_helmet
 	{
 		author 	= "PraetorPanda";
 		dlc		= "187th Aux Mod";
@@ -376,9 +374,9 @@ class CfgWeapons
 		scopeCurator = 2;
 		displayName = "[187th] Pilot Helmet (P2)";
 		picture = "3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
-		model = "\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";
+		/*model = "\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";*/
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};
+		/*hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};*/
 		class ItemInfo: HeadgearItem
 		{
 			mass = 30;
@@ -408,7 +406,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
-        subItems[] = {"Integrated_NVG_TI_0_F"};
+        subItems[] = {"187th_NVG_Chip"};
 	};
 	class 187_Pilot_HelmetP1: 187_Pilot_HelmetP2
 	{
@@ -449,7 +447,7 @@ class CfgWeapons
 			};
 		};
 		allowedFacewear[] = {};
-        subItems[] = {"Integrated_NVG_TI_0_F"};
+        subItems[] = {"187th_NVG_Chip"};
         
 	};
     
