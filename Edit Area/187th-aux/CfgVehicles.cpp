@@ -1597,16 +1597,6 @@ class CfgVehicles
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
-  class 187th_HIT: RD501_marid_MkII_CIS
-  {
-    faction="187th_CIS";
-    editorCategory = "187th_CIS_Assets";
-    editorSubcategory = "187th_Transport";
-    side=0;
-    displayName="HIT";
-    crew="187th_B1_Droid_Crew";
-    typicalCargo[]={"187th_B1_Droid_Crew"};
-  };
   class 187th_Speedboat: RD501_speedboat_cis
   {
     faction="187th_CIS";
@@ -1615,16 +1605,6 @@ class CfgVehicles
     side=0;
     displayName="Speedboat";
     hiddenSelectionsTextures[]={"a3\boat_f\boat_armed_01\data\boat_armed_01_ext_co.paa","a3\boat_f\boat_armed_01\data\boat_armed_01_int_co.paa","a3\boat_f\boat_armed_01\data\boat_armed_01_crows_blufor_co.paa"};
-    crew="187th_B1_Droid_Crew";
-    typicalCargo[]={"187th_B1_Droid_Crew"};
-  };
-  class 187th_LIT: RD501_light_infantry_transport_CIS_MkII
-  {
-    faction="187th_CIS";
-    editorCategory = "187th_CIS_Assets";
-    editorSubcategory = "187th_Transport";
-    side=0;
-    displayName="LIT";
     crew="187th_B1_Droid_Crew";
     typicalCargo[]={"187th_B1_Droid_Crew"};
   };
