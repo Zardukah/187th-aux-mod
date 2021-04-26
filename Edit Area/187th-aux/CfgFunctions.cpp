@@ -10,8 +10,8 @@ class CfgFunctions
 			class afterburners_turn_off;
 		};
 	};
-    
-    class TAS
+
+	class TAS
 	{
 		tag = "TAS";
 		class TAS_Keybinds
@@ -22,8 +22,8 @@ class CfgFunctions
 				postInit = 1;
 			};
 		};
-        
-        class TAS_utility_functions
+
+		class TAS_utility_functions
 		{
 			class get_attribute
 			{
@@ -34,7 +34,7 @@ class CfgFunctions
 				file = "187th-aux\functions\util\integerBoolean.sqf";
 			};
 		};
-    };
+	};
 };
 
 class Extended_Init_EventHandlers
@@ -46,11 +46,11 @@ class Extended_Init_EventHandlers
 			init = "[_this select 0] spawn RD501_fnc_droidekka_move";
 		};
 	};
-    class 187th_b2_Droid
+	class 187th_b2_Droid
 	{
 		class set_walk
 		{
-            file="187th-aux\Functions\force_b2_walk.sqf";
+			file="187th-aux\Functions\force_b2_walk.sqf";
 			init = "[_this select 0] spawn OES_fnc_force_b2_walk";
 		};
 	};
