@@ -381,6 +381,7 @@
     hiddenSelectionsTextures[]={};
     crew="187th_Trooper_Crewman";
     typicalCargo[]={"187th_Trooper_Crewman"};
+    ace_cargo_space = 200;  // Cargo space your vehicle has
   };
 
   class 187th_RTT: 3as_RTT
@@ -534,16 +535,15 @@
 		faction="187th_Republic";
 		editorCategory = "187th_Rep_Assets";
 		editorSubcategory = "187th_Helicopter";
-		armor=600;
-		fuelCapacity=3000;
+		armor=700;
+		fuelCapacity=4000;
 		scope=2;
 		scopeCurator = 2;
 		side=1;
-        maximumLoad = 5000;
+        maximumLoad = 10000;
         crew="187th_Pilot";
 		weapons[]=
 		{
-            "Gatling_30mm_Plane_CAS_01_F",
             "ParticleBeamCannon_F",
             "3as_LAAT_Missile_AGM",
 			"3as_LAAT_Missile_AA",
@@ -551,7 +551,6 @@
 		};
 		magazines[]=
 		{
-            "1000Rnd_Gatling_30mm_Plane_CAS_01_F",
             "Laser_Battery_F",
             "3as_LAAT_8Rnd_Missile_AGM",
             "3as_LAAT_8Rnd_Missile_AGM",
@@ -629,16 +628,15 @@
 		faction="187th_Republic";
 		editorCategory = "187th_Rep_Assets";
 		editorSubcategory = "187th_Helicopter";
-		armor=600;
-		fuelCapacity=3000;
+		armor=700;
+		fuelCapacity=4000;
 		scope=2;
 		scopeCurator = 2;
 		side=1;
-        maximumLoad = 5000;
+        maximumLoad = 10000;
         crew="187th_Pilot";
 		weapons[]=
 		{
-            "Gatling_30mm_Plane_CAS_01_F",
             "ParticleBeamCannon_F",
             "3as_LAAT_Missile_AGM",
 			"3as_LAAT_Missile_AA",
@@ -646,7 +644,6 @@
 		};
 		magazines[]=
 		{
-            "1000Rnd_Gatling_30mm_Plane_CAS_01_F",
             "Laser_Battery_F",
             "3as_LAAT_8Rnd_Missile_AGM",
             "3as_LAAT_8Rnd_Missile_AGM",
@@ -724,24 +721,22 @@
 		faction="187th_Republic";
 		editorCategory = "187th_Rep_Assets";
 		editorSubcategory = "187th_Helicopter";
-		armor=600;
-		fuelCapacity=3000;
+		armor=700;
+		fuelCapacity=4000;
 		scope=2;
 		scopeCurator = 2;
 		side=1;
-        maximumLoad = 5000;
+        maximumLoad = 10000;
         crew="187th_Pilot";
 		weapons[]=
 		{
-            "Gatling_30mm_Plane_CAS_01_F",
             "ParticleBeamCannon_F",
             "3as_LAAT_Missile_AGM",
 			"3as_LAAT_Missile_AA",
 			"CMFlareLauncher"
 		};
 		magazines[]=
-		{
-            "1000Rnd_Gatling_30mm_Plane_CAS_01_F",
+        {
             "Laser_Battery_F",
             "3as_LAAT_8Rnd_Missile_AGM",
             "3as_LAAT_8Rnd_Missile_AGM",
