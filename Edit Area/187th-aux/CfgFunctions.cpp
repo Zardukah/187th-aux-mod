@@ -9,8 +9,20 @@ class CfgFunctions
 			class afterburners_turn_on;
 			class afterburners_turn_off;
 		};
+		class ShuttleMagLiftSystem
+		{
+			file = "187th-aux\Functions\ShuttleMagLiftSystem";
+			class ShuttleLoadinsideValidate{};
+            class ShuttleLoadOutsideValidate{};
+			class ShuttleUnLoadinsideValidate{};
+            class ShuttleUnLoadOutsideValidate{};
+			class ShuttleLoadSupplyPodsMenuLoad{};
+			class ShuttleLoadSupplyPodsMenuOpened{};
+			class ShuttleLoadSupplyPodMenuDetachMenu{};
+			class ShuttleLoadSupplyPodsMenuUnload{};
+			class ShuttleLoad_UnloadAllSupplyPods{};
+		};
 	};
-
 	class TAS
 	{
 		tag = "TAS";
@@ -33,25 +45,6 @@ class CfgFunctions
 			{
 				file = "187th-aux\functions\util\integerBoolean.sqf";
 			};
-		};
-	};
-};
-
-class Extended_Init_EventHandlers
-{
-	class 187th_Droideka
-	{
-		class droideka_movable
-		{
-			init = "[_this select 0] spawn RD501_fnc_droidekka_move";
-		};
-	};
-	class 187th_b2_Droid
-	{
-		class set_walk
-		{
-			file="187th-aux\Functions\force_b2_walk.sqf";
-			init = "[_this select 0] spawn OES_fnc_force_b2_walk";
 		};
 	};
 };

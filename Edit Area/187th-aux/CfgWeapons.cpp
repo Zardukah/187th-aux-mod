@@ -660,6 +660,140 @@ class CfgWeapons
             	};
             };
 
+            // adding AAT Side guns to make it work
+            class CannonCore;
+            class MGun;
+            class LMG_RCWS;
+
+            class 187th_3AS_AATRepeater: LMG_RCWS
+            {
+               displayName = "CIS Repeater";
+               magazineReloadTime = 10;
+               ballisticsComputer = 2;
+               aiDispersionCoefY = 0.5;
+               aiDispersionCoefX = 0.5;
+               class GunParticles
+               {
+                  class effect1
+                  {
+                     positionName = "z_gunl_chamber";
+                     directionName = "z_gunl_muzzle";
+                     effectName = "MachineGunCloud";
+                  };
+                  class effect2
+                  {
+                     positionName = "z_gunr_chamber";
+                     directionName = "z_gunr_muzzle";
+                     effectName = "MachineGunCloud";
+                  };
+               };
+               class manual: MGun
+               {
+                  displayName = "Heavy Repeater";
+                  sounds[] = {"StandardSound"};
+                  class BaseSoundModeType
+                  {
+                     closure1[] = {"A3\sounds_f\weapons\gatling\gatling_rotation_short_2",0.316228,1,20};
+                     closure2[] = {"A3\sounds_f\weapons\gatling\gatling_rotation_short_3",0.316228,1,20};
+                     soundClosure[] = {"closure1",0.5,"closure2",0.5};
+                  };
+                  class StandardSound: BaseSoundModeType
+                  {
+                     begin1[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin2[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin3[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin4[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin5[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin6[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin7[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin8[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin9[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     begin10[] = {"3AS\3AS_Static\data\Sounds\HeavyRepeater\Blaster_Cannon_1",0.95,1,2000};
+                     soundBegin[] = {"begin1",0.1,"begin2",0.1,"begin3",0.1,"begin4",0.1,"begin5",0.1,"begin6",0.1,"begin7",0.1,"begin8",0.1,"begin9",0.1,"begin10",0.1};
+                  };
+                  soundContinuous = 0;
+                  soundBurst = 0;
+                  multiplier = 1;
+                  reloadTime = 0.25;
+                  dispersion = 0.0115;
+                  aiRateOfFire = 1;
+                  aiRateOfFireDistance = 10;
+                  minRange = 0;
+                  minRangeProbab = 0.01;
+                  midRange = 1;
+                  midRangeProbab = 0.01;
+                  maxRange = 2;
+                  maxRangeProbab = 0.01;
+               };
+               class close: manual
+               {
+                  soundBurst = 0;
+                  aiBurstTerminable = 1;
+                  showToPlayer = 0;
+                  burst = 12;
+                  burstRangeMax = 42;
+                  aiRateOfFire = 0.5;
+                  aiRateOfFireDispersion = 1;
+                  aiRateOfFireDistance = 50;
+                  minRange = 0;
+                  minRangeProbab = 0.7;
+                  midRange = 100;
+                  midRangeProbab = 0.75;
+                  maxRange = 300;
+                  maxRangeProbab = 0.2;
+               };
+               class short: close
+               {
+                  aiBurstTerminable = 1;
+                  showToPlayer = 0;
+                  burst = 8;
+                  burstRangeMax = 36;
+                  aiRateOfFire = 1;
+                  aiRateOfFireDispersion = 2;
+                  aiRateOfFireDistance = 150;
+                  minRange = 100;
+                  minRangeProbab = 0.75;
+                  midRange = 300;
+                  midRangeProbab = 0.75;
+                  maxRange = 600;
+                  maxRangeProbab = 0.2;
+               };
+               class medium: close
+               {
+                  aiBurstTerminable = 1;
+                  showToPlayer = 0;
+                  burst = 8;
+                  burstRangeMax = 30;
+                  aiRateOfFire = 2;
+                  aiRateOfFireDispersion = 2;
+                  aiRateOfFireDistance = 300;
+                  minRange = 300;
+                  minRangeProbab = 0.75;
+                  midRange = 600;
+                  midRangeProbab = 0.65;
+                  maxRange = 800;
+                  maxRangeProbab = 0.1;
+               };
+               class far: close
+               {
+                  aiBurstTerminable = 1;
+                  showToPlayer = 0;
+                  burst = 8;
+                  burstRangeMax = 12;
+                  aiRateOfFire = 4;
+                  aiRateOfFireDispersion = 4;
+                  aiRateOfFireDistance = 800;
+                  minRange = 800;
+                  minRangeProbab = 0.65;
+                  midRange = 1000;
+                  midRangeProbab = 0.3;
+                  maxRange = 1500;
+                  maxRangeProbab = 0.05;
+               };
+               drySound[] = {"A3\Sounds_F\arsenal\weapons_vehicles\LMG_Minigun_65mm\LMGMinigun65mm_dry.wss",1,1,10};
+               magazines[] = {"3AS_500Rnd_ATT_RedPlasma"};
+            };
+
 
 // adding other files
 
