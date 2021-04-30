@@ -379,16 +379,17 @@ class 187th_Captain : JLTS_Clone_P2_lieutenant_187
 // Vehicles
 //---------------------------------------------------------------------
 
-class 187th_Juggernaut : 3as_Jug
+class 187th_Juggernaut: 3as_Jug
 {
-	faction="187th_Republic";
-	editorCategory="187th_Rep_Assets";
-	editorSubcategory="187th_Armor";
-	side=1;
-	displayName="Juggernaut";
-	hiddenSelectionsTextures[]={};
-	crew="187th_Trooper_Crewman";
-	typicalCargo[]={"187th_Trooper_Crewman"};
+   faction="187th_Republic";
+   editorCategory="187th_Rep_Assets";
+   editorSubcategory="187th_Armor";
+   side=1;
+   displayName="Juggernaut";
+   hiddenSelectionsTextures[]={};
+   crew="187th_Trooper_Crewman";
+   typicalCargo[]={"187th_Trooper_Crewman"};
+   ace_cargo_space = 200;  // Cargo space your vehicle has
 };
 
 class 187th_RTT : 3as_RTT
@@ -778,449 +779,284 @@ class 187th_UT_AT : 3as_UTAT
    };
  };
 
- class 187th_LAAT_mk_2 : 615th_LAAT_MK2
- {
-   displayname="LAAT MK 2";
-   faction="187th_Republic";
-   editorCategory = "187th_Rep_Assets";
-   editorSubcategory = "187th_Helicopter";
-   armor=600;
-   fuelCapacity=3000;
-   scope=2;
-   scopeCurator = 2;
-   side=1;
-   maximumLoad = 5000;
-   crew="187th_Pilot";
-   weapons[]=
-   {
-    "Gatling_30mm_Plane_CAS_01_F",
-    "ParticleBeamCannon_F",
-    "3as_LAAT_Missile_AGM",
-    "3as_LAAT_Missile_AA",
-    "CMFlareLauncher"
-  };
-  magazines[]=
+ class 187th_LAAT_mk_2: 615th_LAAT_MK2
   {
-    "1000Rnd_Gatling_30mm_Plane_CAS_01_F",
-    "Laser_Battery_F",
-    "3as_LAAT_8Rnd_Missile_AGM",
-    "3as_LAAT_8Rnd_Missile_AGM",
-    "3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-    "3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-    "240Rnd_CMFlare_Chaff_Magazine",
-    "240Rnd_CMFlare_Chaff_Magazine",
-    "240Rnd_CMFlare_Chaff_Magazine"
+        displayname="LAAT MK 2";
+		faction="187th_Republic";
+		editorCategory = "187th_Rep_Assets";
+		editorSubcategory = "187th_Helicopter";
+		armor=700;
+		fuelCapacity=4000;
+		scope=2;
+		scopeCurator = 2;
+		side=1;
+        maximumLoad = 10000;
+        crew="187th_Pilot";
+		weapons[]=
+		{
+            "ParticleBeamCannon_F",
+            "3as_LAAT_Missile_AGM",
+			"3as_LAAT_Missile_AA",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+            "Laser_Battery_F",
+            "3as_LAAT_8Rnd_Missile_AGM",
+            "3as_LAAT_8Rnd_Missile_AGM",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+        tcw_emp_protection = 1;
+		tcw_can_use_afterburner = 1;
+		tcw_afterburner_max_boost_speed = 650;
+		tcw_afterburner_min_boost_speed = 20;
+		tcw_afterburner_min_brake_speed = 20;
+		tcw_afterburner_increment = 10;
+		tcw_afterburner_fuel_drag = 2000;
+		tcw_afterburner_fuel_multi = 4;
+		tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+        class UserActions
+		{
+			class rampOpen
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Open";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==0";
+				statement = "this animateSource ['ramp',1,1];";
+				onlyforplayer = 0;
+			};
+			class rampClose
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Close";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==1";
+				statement = "this animateSource ['ramp',0,1];";
+				onlyforplayer = 0;
+			};
+			class afterburners_turn_on
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Activate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+			};
+			class afterburners_turn_off
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+                priority = 9;
+				role = 0;
+				displayName = "Deactivate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+            };
+        };
   };
-  tcw_emp_protection = 1;
-  tcw_can_use_afterburner = 1;
-  tcw_afterburner_max_boost_speed = 650;
-  tcw_afterburner_min_boost_speed = 20;
-  tcw_afterburner_min_brake_speed = 20;
-  tcw_afterburner_increment = 10;
-  tcw_afterburner_fuel_drag = 2000;
-  tcw_afterburner_fuel_multi = 4;
-  tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
-  class UserActions
+
+  class 187th_LAAT_mk_1: 615th_LAAT
   {
-   class rampOpen
-   {
-     available = 0;
-     showWindow = 0;
-     displayName = "Ramp Open";
-     position = "pilotview";
-     radius = 9;
-     condition = "this animationphase 'ramp' ==0";
-     statement = "this animateSource ['ramp',1,1];";
-     onlyforplayer = 0;
-   };
-   class rampClose
-   {
-     available = 0;
-     showWindow = 0;
-     displayName = "Ramp Close";
-     position = "pilotview";
-     radius = 9;
-     condition = "this animationphase 'ramp' ==1";
-     statement = "this animateSource ['ramp',0,1];";
-     onlyforplayer = 0;
-   };
-   class afterburners_turn_on
-   {
-     showWindow = 0;
-     hideOnUse = 0;
-     priority = 9;
-     role = 0;
-     displayName = "Activate Impulse";
-     position = "pilotview";
-     radius = 6;
-     onlyforplayer = 1;
-     condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
-     statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
-   };
-   class afterburners_turn_off
-   {
-     showWindow = 0;
-     hideOnUse = 0;
-     priority = 9;
-     role = 0;
-     displayName = "Deactivate Impulse";
-     position = "pilotview";
-     radius = 6;
-     onlyforplayer = 1;
-     condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
-     statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
-   };
- };
- class pilotCamera
- {
-   class OpticsIn
-   {
-     class Wide
-     {
-       opticsDisplayName = "WFOV";
-       initAngleX = 0;
-       minAngleX = 0;
-       maxAngleX = 0;
-       initAngleY = 0;
-       minAngleY = 0;
-       maxAngleY = 0;
-       initFov = "(30 / 120)";
-       minFov = "(30 / 120)";
-       maxFov = "(30 / 120)";
-       directionStabilized = 1;
-       visionMode[] = {"Normal","Ti"};
-       thermalMode[] = {0,1};
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-       opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
-     };
-     class Medium : Wide
-     {
-       opticsDisplayName = "MFOV";
-       initFov = "(15 / 120)";
-       minFov = "(15 / 120)";
-       maxFov = "(15 / 120)";
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
-     };
-     class Narrow : Wide
-     {
-       opticsDisplayName = "NFOV";
-       initFov = "(3.75 / 120)";
-       minFov = "(3.75 / 120)";
-       maxFov = "(3.75 / 120)";
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-     };
-     showMiniMapInOptics = 1;
-     showUAVViewInOptics = 0;
-     showSlingLoadManagerInOptics = 0;
-   };
-   minTurn = -120;
-   maxTurn = 120;
-   initTurn = 0;
-   minElev = -10;
-   maxElev = 90;
-   initElev = 0;
-   maxXRotSpeed = 0.3;
-   maxYRotSpeed = 0.3;
-   pilotOpticsShowCursor = 1;
-   controllable = 1;
- };
-};
+        displayname="LAAT MK 1";
+		faction="187th_Republic";
+		editorCategory = "187th_Rep_Assets";
+		editorSubcategory = "187th_Helicopter";
+		armor=700;
+		fuelCapacity=4000;
+		scope=2;
+		scopeCurator = 2;
+		side=1;
+        maximumLoad = 10000;
+        crew="187th_Pilot";
+		weapons[]=
+		{
+            "ParticleBeamCannon_F",
+            "3as_LAAT_Missile_AGM",
+			"3as_LAAT_Missile_AA",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+            "Laser_Battery_F",
+            "3as_LAAT_8Rnd_Missile_AGM",
+            "3as_LAAT_8Rnd_Missile_AGM",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+        tcw_emp_protection = 1;
+		tcw_can_use_afterburner = 1;
+		tcw_afterburner_max_boost_speed = 650;
+		tcw_afterburner_min_boost_speed = 20;
+		tcw_afterburner_min_brake_speed = 20;
+		tcw_afterburner_increment = 10;
+		tcw_afterburner_fuel_drag = 2000;
+		tcw_afterburner_fuel_multi = 4;
+		tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+        class UserActions
+		{
+			class rampOpen
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Open";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==0";
+				statement = "this animateSource ['ramp',1,1];";
+				onlyforplayer = 0;
+			};
+			class rampClose
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Close";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==1";
+				statement = "this animateSource ['ramp',0,1];";
+				onlyforplayer = 0;
+			};
+			class afterburners_turn_on
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Activate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+			};
+			class afterburners_turn_off
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+                priority = 9;
+				role = 0;
+				displayName = "Deactivate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+            };
+        };
+  };
 
-class 187th_LAAT_mk_1 : 615th_LAAT
-{
-	displayname="LAAT MK 1";
-	faction="187th_Republic";
-	editorCategory = "187th_Rep_Assets";
-	editorSubcategory = "187th_Helicopter";
-	armor=600;
-	fuelCapacity=3000;
-	scope=2;
-	scopeCurator = 2;
-	side=1;
-	maximumLoad = 5000;
-	crew="187th_Pilot";
-	weapons[]=
-	{
-		"Gatling_30mm_Plane_CAS_01_F",
-		"ParticleBeamCannon_F",
-		"3as_LAAT_Missile_AGM",
-		"3as_LAAT_Missile_AA",
-		"CMFlareLauncher"
-	};
-	magazines[]=
-	{
-		"1000Rnd_Gatling_30mm_Plane_CAS_01_F",
-		"Laser_Battery_F",
-		"3as_LAAT_8Rnd_Missile_AGM",
-		"3as_LAAT_8Rnd_Missile_AGM",
-		"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-		"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-		"240Rnd_CMFlare_Chaff_Magazine",
-		"240Rnd_CMFlare_Chaff_Magazine",
-		"240Rnd_CMFlare_Chaff_Magazine"
-	};
-	tcw_emp_protection = 1;
-	tcw_can_use_afterburner = 1;
-	tcw_afterburner_max_boost_speed = 650;
-	tcw_afterburner_min_boost_speed = 20;
-	tcw_afterburner_min_brake_speed = 20;
-	tcw_afterburner_increment = 10;
-	tcw_afterburner_fuel_drag = 2000;
-	tcw_afterburner_fuel_multi = 4;
-	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
-	class UserActions
-	{
-   class rampOpen
-   {
-     available = 0;
-     showWindow = 0;
-     displayName = "Ramp Open";
-     position = "pilotview";
-     radius = 9;
-     condition = "this animationphase 'ramp' ==0";
-     statement = "this animateSource ['ramp',1,1];";
-     onlyforplayer = 0;
-   };
-   class rampClose
-   {
-     available = 0;
-     showWindow = 0;
-     displayName = "Ramp Close";
-     position = "pilotview";
-     radius = 9;
-     condition = "this animationphase 'ramp' ==1";
-     statement = "this animateSource ['ramp',0,1];";
-     onlyforplayer = 0;
-   };
-   class afterburners_turn_on
-   {
-     showWindow = 0;
-     hideOnUse = 0;
-     priority = 9;
-     role = 0;
-     displayName = "Activate Impulse";
-     position = "pilotview";
-     radius = 6;
-     onlyforplayer = 1;
-     condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
-     statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
-   };
-   class afterburners_turn_off
-   {
-     showWindow = 0;
-     hideOnUse = 0;
-     priority = 9;
-     role = 0;
-     displayName = "Deactivate Impulse";
-     position = "pilotview";
-     radius = 6;
-     onlyforplayer = 1;
-     condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
-     statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
-   };
- };
- class pilotCamera
- {
-   class OpticsIn
-   {
-     class Wide
-     {
-       opticsDisplayName = "WFOV";
-       initAngleX = 0;
-       minAngleX = 0;
-       maxAngleX = 0;
-       initAngleY = 0;
-       minAngleY = 0;
-       maxAngleY = 0;
-       initFov = "(30 / 120)";
-       minFov = "(30 / 120)";
-       maxFov = "(30 / 120)";
-       directionStabilized = 1;
-       visionMode[] = {"Normal","Ti"};
-       thermalMode[] = {0,1};
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-       opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
-     };
-     class Medium : Wide
-     {
-       opticsDisplayName = "MFOV";
-       initFov = "(15 / 120)";
-       minFov = "(15 / 120)";
-       maxFov = "(15 / 120)";
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
-     };
-     class Narrow : Wide
-     {
-       opticsDisplayName = "NFOV";
-       initFov = "(3.75 / 120)";
-       minFov = "(3.75 / 120)";
-       maxFov = "(3.75 / 120)";
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-     };
-     showMiniMapInOptics = 1;
-     showUAVViewInOptics = 0;
-     showSlingLoadManagerInOptics = 0;
-   };
-   minTurn = -120;
-   maxTurn = 120;
-   initTurn = 0;
-   minElev = -10;
-   maxElev = 90;
-   initElev = 0;
-   maxXRotSpeed = 0.3;
-   maxYRotSpeed = 0.3;
-   pilotOpticsShowCursor = 1;
-   controllable = 1;
- };
-};
-
-class 187th_LAAT_Floodlights : 615th_LAAT_MK2Light
-{
-	displayname="LAAT (Floodlights)";
-	faction="187th_Republic";
-	editorCategory = "187th_Rep_Assets";
-	editorSubcategory = "187th_Helicopter";
-	armor=600;
-	fuelCapacity=3000;
-	scope=2;
-	scopeCurator = 2;
-	side=1;
-	maximumLoad = 5000;
-	crew="187th_Pilot";
-	weapons[]=
-	{
-		"Gatling_30mm_Plane_CAS_01_F",
-		"ParticleBeamCannon_F",
-		"3as_LAAT_Missile_AGM",
-		"3as_LAAT_Missile_AA",
-		"CMFlareLauncher"
-	};
-	magazines[]=
-	{
-		"1000Rnd_Gatling_30mm_Plane_CAS_01_F",
-		"Laser_Battery_F",
-		"3as_LAAT_8Rnd_Missile_AGM",
-		"3as_LAAT_8Rnd_Missile_AGM",
-		"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-		"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-		"240Rnd_CMFlare_Chaff_Magazine",
-		"240Rnd_CMFlare_Chaff_Magazine",
-		"240Rnd_CMFlare_Chaff_Magazine"
-	};
-	tcw_emp_protection = 1;
-	tcw_can_use_afterburner = 1;
-	tcw_afterburner_max_boost_speed = 650;
-	tcw_afterburner_min_boost_speed = 20;
-	tcw_afterburner_min_brake_speed = 20;
-	tcw_afterburner_increment = 10;
-	tcw_afterburner_fuel_drag = 2000;
-	tcw_afterburner_fuel_multi = 4;
-	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
-	class UserActions
-	{
-   class rampOpen
-   {
-     available = 0;
-     showWindow = 0;
-     displayName = "Ramp Open";
-     position = "pilotview";
-     radius = 9;
-     condition = "this animationphase 'ramp' ==0";
-     statement = "this animateSource ['ramp',1,1];";
-     onlyforplayer = 0;
-   };
-   class rampClose
-   {
-     available = 0;
-     showWindow = 0;
-     displayName = "Ramp Close";
-     position = "pilotview";
-     radius = 9;
-     condition = "this animationphase 'ramp' ==1";
-     statement = "this animateSource ['ramp',0,1];";
-     onlyforplayer = 0;
-   };
-   class afterburners_turn_on
-   {
-     showWindow = 0;
-     hideOnUse = 0;
-     priority = 9;
-     role = 0;
-     displayName = "Activate Impulse";
-     position = "pilotview";
-     radius = 6;
-     onlyforplayer = 1;
-     condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
-     statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
-   };
-   class afterburners_turn_off
-   {
-     showWindow = 0;
-     hideOnUse = 0;
-     priority = 9;
-     role = 0;
-     displayName = "Deactivate Impulse";
-     position = "pilotview";
-     radius = 6;
-     onlyforplayer = 1;
-     condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
-     statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
-   };
- };
- class pilotCamera
- {
-   class OpticsIn
-   {
-     class Wide
-     {
-       opticsDisplayName = "WFOV";
-       initAngleX = 0;
-       minAngleX = 0;
-       maxAngleX = 0;
-       initAngleY = 0;
-       minAngleY = 0;
-       maxAngleY = 0;
-       initFov = "(30 / 120)";
-       minFov = "(30 / 120)";
-       maxFov = "(30 / 120)";
-       directionStabilized = 1;
-       visionMode[] = {"Normal","Ti"};
-       thermalMode[] = {0,1};
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-       opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
-     };
-     class Medium : Wide
-     {
-       opticsDisplayName = "MFOV";
-       initFov = "(15 / 120)";
-       minFov = "(15 / 120)";
-       maxFov = "(15 / 120)";
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
-     };
-     class Narrow : Wide
-     {
-       opticsDisplayName = "NFOV";
-       initFov = "(3.75 / 120)";
-       minFov = "(3.75 / 120)";
-       maxFov = "(3.75 / 120)";
-       gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-     };
-     showMiniMapInOptics = 1;
-     showUAVViewInOptics = 0;
-     showSlingLoadManagerInOptics = 0;
-   };
-   minTurn = -120;
-   maxTurn = 120;
-   initTurn = 0;
-   minElev = -10;
-   maxElev = 90;
-   initElev = 0;
-   maxXRotSpeed = 0.3;
-   maxYRotSpeed = 0.3;
-   pilotOpticsShowCursor = 1;
-   controllable = 1;
- };
-};
+  class 187th_LAAT_Floodlights: 615th_LAAT_MK2Light
+  {
+        displayname="LAAT (Floodlights)";
+		faction="187th_Republic";
+		editorCategory = "187th_Rep_Assets";
+		editorSubcategory = "187th_Helicopter";
+		armor=700;
+		fuelCapacity=4000;
+		scope=2;
+		scopeCurator = 2;
+		side=1;
+        maximumLoad = 10000;
+        crew="187th_Pilot";
+		weapons[]=
+		{
+            "ParticleBeamCannon_F",
+            "3as_LAAT_Missile_AGM",
+			"3as_LAAT_Missile_AA",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+        {
+            "Laser_Battery_F",
+            "3as_LAAT_8Rnd_Missile_AGM",
+            "3as_LAAT_8Rnd_Missile_AGM",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+        tcw_emp_protection = 1;
+		tcw_can_use_afterburner = 1;
+		tcw_afterburner_max_boost_speed = 650;
+		tcw_afterburner_min_boost_speed = 20;
+		tcw_afterburner_min_brake_speed = 20;
+		tcw_afterburner_increment = 10;
+		tcw_afterburner_fuel_drag = 2000;
+		tcw_afterburner_fuel_multi = 4;
+		tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+        class UserActions
+		{
+			class rampOpen
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Open";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==0";
+				statement = "this animateSource ['ramp',1,1];";
+				onlyforplayer = 0;
+			};
+			class rampClose
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Close";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==1";
+				statement = "this animateSource ['ramp',0,1];";
+				onlyforplayer = 0;
+			};
+			class afterburners_turn_on
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Activate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+			};
+			class afterburners_turn_off
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+                priority = 9;
+				role = 0;
+				displayName = "Deactivate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 1;
+				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+            };
+        };
+  };
 
 class 187th_Heavy_Repeater : 3AS_HeavyRepeater_Unarmoured
 {
