@@ -637,7 +637,7 @@ class 187th_UT_AT : 3as_UTAT
    {
      faction="187th_Republic";     editorCategory="187th_Rep_Assets";     editorSubcategory="187th_Helicopter";
      side=1;
-     displayName="Nu-class Attack Shuttle";
+     displayName="Nu-class Attack Shuttle (Broken)";
      hiddenSelectionsTextures[]={"3as\3as_nu\data\charger\exterior_co.paa","3as\3as_nu\data\charger\wings_co.paa","3as\3as_nu\data\charger\interior_co.paa","3as\3as_nu\data\charger\cockpit_doors_co.paa"};
      crew="187th_Pilot";
      typicalCargo[]={"187th_Pilot"};
