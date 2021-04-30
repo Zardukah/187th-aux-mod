@@ -3,7 +3,7 @@ class ACE_Medical_Treatment
     class Morphine;
     class ACE_elasticBandageItem;
     class ACE_fieldDressing;
-    
+
     class Medication
     {
         /* copy past for items

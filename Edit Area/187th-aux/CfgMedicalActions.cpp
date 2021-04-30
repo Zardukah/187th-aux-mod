@@ -2,7 +2,7 @@ class Ace_Medical_Treatment_Actions
 {
     class Morphine;
     class BasicBandage;
-    
+
     class 187th_Stimpack : Morphine
     {
         displayName = "Stimpack";
@@ -11,7 +11,7 @@ class Ace_Medical_Treatment_Actions
         items[] = {"187th_Stimpack"};
         treatmentTime = 2;
     };
-    
+
     class 187th_Bacta_Spray : BasicBandage
     {
         displayName = "Bacta Spray";
