@@ -98,7 +98,7 @@ class 187_Clone_Helmet_Sparrow: JLTS_CloneHelmetP2MC
 	dlc		= "187th Aux Mod";
 	scope 	= 2;
 	scopeCurator = 2;
-	displayName = "[187th] Clone Trooper Helmet (Sparrow)";
+	displayName = "[187th] Clone Custom Helmet (Sparrow)";
 	ace_hearing_protection = 5.0;
 	ace_hearing_lowerVolume = 0.25;
 	CBRN_protection = 1;
@@ -145,7 +145,7 @@ class 187_Clone_Helmet_Blu: 187_Clone_Helmet
 	dlc		= "187th Aux Mod";
 	scope 	= 2;
 	scopeCurator = 2;
-	displayName = "[187th] Clone Trooper Helmet (Blu)";
+	displayName = "[187th] Clone Custom Helmet (Blu)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Blu.paa"};
 };
 class 187_Clone_Helmet_Darkhorse: 187_Clone_Helmet
@@ -154,7 +154,7 @@ class 187_Clone_Helmet_Darkhorse: 187_Clone_Helmet
 	dlc		= "187th Aux Mod";
 	scope 	= 2;
 	scopeCurator = 2;
-	displayName = "[187th] Clone Trooper Helmet (Darkhorse)";
+	displayName = "[187th] Clone Custom Helmet (Darkhorse)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Darkhorse.paa"};
 };
 class 187_Clone_Helmet_Panda: 187_Clone_Helmet
@@ -163,7 +163,7 @@ class 187_Clone_Helmet_Panda: 187_Clone_Helmet
 	dlc		= "187th Aux Mod";
 	scope 	= 2;
 	scopeCurator = 2;
-	displayName = "[187th] Clone Trooper Helmet (Panda)";
+	displayName = "[187th] Clone Custom Helmet (Panda)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Panda.paa"};
 };
 class 187_Clone_Helmet_Warren: 187_Clone_Helmet
@@ -172,9 +172,28 @@ class 187_Clone_Helmet_Warren: 187_Clone_Helmet
 	dlc		= "187th Aux Mod";
 	scope 	= 2;
 	scopeCurator = 2;
-	displayName = "[187th] Clone Trooper Helmet (Warren)";
+	displayName = "[187th] Clone Custom Helmet (Warren)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Warren.paa"};
 };
+class 187_Clone_Helmet_Badger: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Badger)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Badger.paa"};
+};
+class 187_Clone_Helmet_Mountain: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Mountain)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Mountain.paa"};
+};
+
 class JLTS_CloneHelmetBARC;
 class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 {
@@ -222,6 +241,15 @@ class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 		};
 	};
 	allowedFacewear[] = {};
+};
+class 187_Clone_Helmet_Rogue: 187_Clone_Helmet_BARC
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Rogue)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Rogue.paa"};
 };
 
 //-------------------------------------------------------------------
