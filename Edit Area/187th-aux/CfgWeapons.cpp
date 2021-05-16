@@ -374,9 +374,8 @@ class CfgWeapons
    	scopeCurator = 2;
    	displayName = "[187th] Pilot Helmet (P2)";
    	picture = "3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
-	/*model = "\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";*/
    	hiddenSelections[] = {"camo"};
-	/*hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\Phase2Pilot187th.paa"};*/
+	   hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Pilot.paa"};
    	class ItemInfo : HeadgearItem
    	{
    		mass = 30;

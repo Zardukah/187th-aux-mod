@@ -8,7 +8,7 @@ class 187th_CIS_B2_F: O_DBA_CIS_B2_Droid_F
 	scopeCurator	= 2;
 	uniformClass = "187th_b2_Droid";
 	faction = "187th_CIS";
-	editorCategory = "187th_Test_Assets";
+	editorCategory = "187th_CIS_Assets";
 	editorSubcategory = "187th_Infantry";
 	displayname = "B2";
 	scope = 2;
@@ -203,14 +203,13 @@ class 187th_CIS_B2_F: O_DBA_CIS_B2_Droid_F
 	armor = 250;
 	armorStructural = 1;
 	explosionShielding = 0.7;
-	weapons[] = {"SWOP_B2gun","Throw","Put"};
-	respawnWeapons[] = {"SWOP_B2gun","Throw","Put"};
-	magazines[] = {"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2rocket_Mag"};
+	weapons[] = {"DBA_B2_Weapon","Throw","Put"};
+	respawnWeapons[] = {"DBA_B2_Weapon","Throw","Put"};
+	magazines[] = {"101st_B2_Mag","101st_B2_Mag","101st_B2_Mag","101st_B2_Mag","101st_B2_Rocket"};
 	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 };
 
 //BX Droid E5 - 212th_BX_DROID_F
-class lsd_cis_bxDroid_base;
 class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 {
 	author 			= "PraetorPanda";
@@ -218,9 +217,9 @@ class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 	scopeCurator	= 2;
 	uniformClass = "187th_BX_Droid_E5";
 	faction = "187th_CIS";
-	editorCategory = "187th_Test_Assets";
+	editorCategory = "187th_CIS_Assets";
 	editorSubcategory = "187th_Special";
-	displayname = "BX Droid E5";
+	displayname = "BX Droid (E5)";
 	scope = 2;
 	class HitPoints
 	{
@@ -410,19 +409,35 @@ class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 	explosionShielding = 0.5;
 	weapons[] = {"JLTS_E5","Throw","Put"};
 	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
-	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
+	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
+};
+
+class 187th_BX_Droid_E5Shield_F: 187th_BX_Droid_E5_F
+{
+	author 			= "PraetorPanda";
+	dlc				= "187th Aux Mod";
+	scopeCurator	= 2;
+	faction = "187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Special";
+	displayname = "BX Droid (Shield)";
+	scope = 2;
+	weapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
+	respawnWeapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
+	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
 	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
 };
 
 //BX Droid Sword
-class 187th_BX_Droid_E5_Shield_F: 187th_BX_Droid_E5_F
+class 187th_BX_Droid_E5_Sword_F: 187th_BX_Droid_E5_F
 {
 	author 			= "PraetorPanda";
 	dlc				= "187th Aux Mod";
 	scopeCurator	= 2;
 	uniformClass = "187th_BX_Droid_E5";
 	faction = "187th_CIS";
-	editorCategory = "187th_Test_Assets";
+	editorCategory = "187th_CIS_Assets";
 	editorSubcategory = "187th_Special";
 	displayname = "BX Droid (Sword)";
 	scope = 2;
@@ -452,9 +467,9 @@ class 187th_BX_Droid_Captain_E5_F: lsd_cis_bxCaptain_specops
 	scopeCurator	= 2;
 	uniformClass = "187th_BX_Droid_Captian_E5";
 	faction = "187th_CIS";
-	editorCategory = "187th_Test_Assets";
+	editorCategory = "187th_CIS_Assets";
 	editorSubcategory = "187th_Special";
-	displayname = "BX Droid Captain E5";
+	displayname = "BX Droid Captain (E5)";
 	scope = 2;
 	class HitPoints
 	{
@@ -645,8 +660,28 @@ class 187th_BX_Droid_Captain_E5_F: lsd_cis_bxCaptain_specops
 	class EventHandlers;
 	weapons[] = {"JLTS_E5","Throw","Put"};
 	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
-	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
 	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
+};
+
+class 187th_BX_Droid_Captain_Sword_F: 187th_BX_Droid_Captain_E5_F
+{
+	author 			= "PraetorPanda";
+	dlc				= "187th Aux Mod";
+	scopeCurator	= 2;
+	faction = "187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Special";
+	displayname = "BX Droid Captain (Sword)";
+	weapons[] = {"WBK_Dutch_Vibro","Throw","Put"};
+	respawnWeapons[] = {"WBK_Dutch_Vibro","Throw","Put"};
+	magazines[] = {};
+	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
+	class EventHandlers: DefaultEventhandlers{
+		class melee_init {
+			init = "_unit = _this select 0; if (local _unit) then {[_unit] execVM ""\WebKnight_StarWars_Mechanic\Ai_SW_Melee.sqf"";};";
+		};
+	};
 };
 //BX Droid Citidel - 212th_BX_DROID_CITADEL_F
 class lsd_cis_bxSecurity_specops;
@@ -657,9 +692,9 @@ class 187th_BX_Droid_Citadel_E5_F: lsd_cis_bxSecurity_specops
 	scopeCurator	= 2;
 	uniformClass = "187th_BX_Droid_Citadel_E5";
 	faction = "187th_CIS";
-	editorCategory = "187th_Test_Assets";
+	editorCategory = "187th_CIS_Assets";
 	editorSubcategory = "187th_Special";
-	displayname = "BX Droid Citadel E5 (Shield)";
+	displayname = "BX Droid Citadel (Shield)";
 	scope = 2;
 	class HitPoints
 	{
@@ -849,7 +884,44 @@ class 187th_BX_Droid_Citadel_E5_F: lsd_cis_bxSecurity_specops
 	explosionShielding = 0.5;
 	weapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
 	respawnWeapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
-	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
+	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
+};
+class 187th_BX_Droid_Citadel_Sword_F: 187th_BX_Droid_Citadel_E5_F
+{
+	author 			= "PraetorPanda";
+	dlc				= "187th Aux Mod";
+	scopeCurator	= 2;
+	uniformClass = "187th_BX_Droid_Citadel_E5";
+	faction = "187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Special";
+	displayname = "BX Droid Citadel (Sword)";
+	scope = 2;
+	weapons[] = {"WBK_Dutch_Vibro","Throw","Put"};
+	respawnWeapons[] = {"WBK_Dutch_Vibro","Throw","Put"};
+	magazines[] = {};
+	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
+	class EventHandlers: DefaultEventhandlers{
+		class melee_init {
+			init = "_unit = _this select 0; if (local _unit) then {[_unit] execVM ""\WebKnight_StarWars_Mechanic\Ai_SW_Melee.sqf"";};";
+		};
+	};
+};
+class 187th_BX_Droid_Citadel_E5NoShield_F: 187th_BX_Droid_Citadel_E5_F
+{
+	author 			= "PraetorPanda";
+	dlc				= "187th Aux Mod";
+	scopeCurator	= 2;
+	uniformClass = "187th_BX_Droid_Citadel_E5";
+	faction = "187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Special";
+	displayname = "BX Droid Citadel (E5)";
+	scope = 2;
+	weapons[] = {"JLTS_E5","Throw","Put"};
+	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
+	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
 	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
 };
 //BX Droid Diplomat - 212th_BX_DROID_DIPLOMAT_F
@@ -861,9 +933,9 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 	scopeCurator	= 2;
 	uniformClass = "187th_BX_Droid_Diplomat_E5";
 	faction = "187th_CIS";
-	editorCategory = "187th_Test_Assets";
+	editorCategory = "187th_CIS_Assets";
 	editorSubcategory = "187th_Special";
-	displayname = "BX Droid Diplomat E5";
+	displayname = "BX Droid Diplomat (E5)";
 	scope = 2;
 	class HitPoints
 	{
@@ -1053,10 +1125,10 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 	explosionShielding = 0.5;
 	weapons[] = {"JLTS_E5","Throw","Put"};
 	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
-	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","SWOP_termDet_G","SWOP_termDet_G"};
+	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
 	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
 };
-class 187th_CIS_Dwarf_Spider_Droid_1_F:O_DBA_CIS_Dwarf_Spider_Droid_1_F
+/*class 187th_CIS_Dwarf_Spider_Droid_1_F:O_DBA_CIS_Dwarf_Spider_Droid_1_F
 {
 	author 			= "WiltonS048";
 	dlc				= "187th Aux Mod";
@@ -1067,4 +1139,4 @@ class 187th_CIS_Dwarf_Spider_Droid_1_F:O_DBA_CIS_Dwarf_Spider_Droid_1_F
 	displayName="Dwarf Spider Droid mk1";
 	crew="O_UAV_AI_F";
 	typicalCargo[]={"O_UAV_AI_F"};
-};
+};*/

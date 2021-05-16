@@ -107,3 +107,19 @@ class 187th_BX_Droid_Diplomat_E5: lsd_cis_bxDiplomat_uniform
  JLTS_hasEMPProtection = 0;
  JLTS_deathSounds = "DeathDroid";
 };
+
+// Sith Uniform Temp
+class ls_blueforUniform_base;
+class 187th_lsd_bodyglove_uniform: ls_blueforUniform_base
+    {
+        scope = 2;
+        displayName = "Body Glove";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+        class ItemInfo: ItemInfo
+        {
+            uniformModel = "-";
+            uniformClass = "187th_Sith_Base";
+            containerClass = "Supply100";
+            mass = 20;
+        };
+    };
