@@ -1,14 +1,13 @@
 // Uniforms
-class SWOP_B2_superdroid_F_Spec;
+class DBA_B2;
 class DefaultEventhandlers;
-class 187th_b2_Droid: SWOP_B2_superdroid_F_Spec
+class 187th_b2_Droid: DBA_B2
 {
     author 	= "PraetorPanda";
     dlc		= "187th Aux Mod";
     scope 	= 2;
     scopeCurator = 2;
     displayName = "B2 Droid Chassis";
-    picture = "\SWOP_droids\data\ico\B2ico.paa";
     model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
     class ItemInfo: UniformItem
     {
