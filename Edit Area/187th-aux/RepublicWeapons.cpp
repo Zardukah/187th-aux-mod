@@ -9,11 +9,38 @@ class JLTS_DC15X;
 
 class 187th_JLTS_DC15A_plastic: JLTS_DC15A_plastic
 {
-	displayName="DC-15A (plastic stock)";
-	scope=1;
-	class LinkedItems
-	{
-	};
+	displayName="[187th] DC-15A (plastic stock)";
+	scope=2;
+    
+	class OpticsModes
+        {
+            class sight
+            {
+                opticsID = 1;
+                useModelOptics = 1;
+                opticsPPEffects[] = {""};
+                opticsDisablePeripherialVision = 0;
+                opticsZoomMin = 0.25;
+                opticsZoomMax = 0.5;
+                opticsZoomInit = 0.75;
+                discreteInitIndex = 0;
+                distanceZoomMin = 200;
+                distanceZoomMax = 200;
+                memoryPointCamera = "eye";
+                visionMode[] = {};
+                opticsFlare = "false";
+                cameraDir = "";
+            };
+            class scope: sight
+            {
+                opticsID = 2;
+                opticsZoomMin = 0.125;
+                opticsZoomMax = 0.125;
+                opticsZoomInit = 0.125;
+                distanceZoomMin = 300;
+                distanceZoomMax = 300;
+            };
+        };
 };
 
 class 187th_JLTS_DC17SA_JLTS_DC17SA_flashlight: JLTS_DC17SA
@@ -32,8 +59,8 @@ class 187th_JLTS_DC17SA_JLTS_DC17SA_flashlight: JLTS_DC17SA
 
 class 187th_JLTS_DC15S: JLTS_DC15S
 {
-	displayName="DC-15S";
-	scope=1;
+	displayName="[187th] DC-15S";
+	scope=2;
 	class LinkedItems
 	{
 	};
@@ -41,11 +68,38 @@ class 187th_JLTS_DC15S: JLTS_DC15S
 
 class 187th_JLTS_DC15A_ugl_plastic: JLTS_DC15A_ugl_plastic
 {
-	displayName="DC-15A UGL (plastic stock)";
-	scope=1;
-	class LinkedItems
-	{
-	};
+	displayName="[187th] DC-15A UGL (plastic stock)";
+	scope=2;
+    
+    class OpticsModes
+        {
+            class sight
+            {
+                opticsID = 1;
+                useModelOptics = 1;
+                opticsPPEffects[] = {""};
+                opticsDisablePeripherialVision = 0;
+                opticsZoomMin = 0.25;
+                opticsZoomMax = 0.5;
+                opticsZoomInit = 0.75;
+                discreteInitIndex = 0;
+                distanceZoomMin = 200;
+                distanceZoomMax = 200;
+                memoryPointCamera = "eye";
+                visionMode[] = {};
+                opticsFlare = "false";
+                cameraDir = "";
+            };
+            class scope: sight
+            {
+                opticsID = 2;
+                opticsZoomMin = 0.125;
+                opticsZoomMax = 0.125;
+                opticsZoomInit = 0.125;
+                distanceZoomMin = 300;
+                distanceZoomMax = 300;
+            };
+        };
 };
 
 class 187th_JLTS_Z6: JLTS_Z6

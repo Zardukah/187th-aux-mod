@@ -16,9 +16,9 @@ class 3as_saber_m1G;
 class 3as_UTAT;
 class 212th_Bantha_MK1;
 class 3AS_Nuclass;
-class 615th_LAAT;
-class 615th_LAAT_MK2;
-class 615th_LAAT_MK2Light;
+class Purple_LAAT;
+class Purple_LAAT_MK2;
+class Purple_LAAT_MK2Light;
 class 3AS_HeavyRepeater_Unarmoured;
 class 3as_ATAP_base;
 class 3as_AV7;
@@ -815,13 +815,13 @@ class 187th_Nu_A_Class_Shuttle_Cargo : 3AS_Nuclass
 	};
 };
 
-class 187th_LAAT_mk_2: 615th_LAAT_MK2
+class 187th_LAAT_mk_2: Purple_LAAT_MK2
 {
 	displayname="LAAT MK 2";
 	faction="187th_Republic";
 	editorCategory = "187th_Rep_Assets";
 	editorSubcategory = "187th_Helicopter";
-	armor=700;
+	armor=800;
 	fuelCapacity=4000;
 	scope=2;
 	scopeCurator = 2;
@@ -855,6 +855,59 @@ class 187th_LAAT_mk_2: 615th_LAAT_MK2
 	tcw_afterburner_fuel_drag = 2000;
 	tcw_afterburner_fuel_multi = 4;
 	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+  class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName = "WFOV";
+					initAngleX = 0;
+					minAngleX = 0;
+					maxAngleX = 0;
+					initAngleY = 0;
+					minAngleY = 0;
+					maxAngleY = 0;
+					initFov = "(30 / 120)";
+					minFov = "(30 / 120)";
+					maxFov = "(30 / 120)";
+					directionStabilized = 1;
+					visionMode[] = {"Normal","Ti"};
+					thermalMode[] = {0,1};
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName = "MFOV";
+					initFov = "(15 / 120)";
+					minFov = "(15 / 120)";
+					maxFov = "(15 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov = "(3.75 / 120)";
+					minFov = "(3.75 / 120)";
+					maxFov = "(3.75 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics = 1;
+				showUAVViewInOptics = 0;
+				showSlingLoadManagerInOptics = 0;
+			};
+			minTurn = -120;
+			maxTurn = 120;
+			initTurn = 0;
+			minElev = -10;
+			maxElev = 90;
+			initElev = 0;
+			maxXRotSpeed = 0.3;
+			maxYRotSpeed = 0.3;
+			pilotOpticsShowCursor = 1;
+			controllable = 1;
+		};
 	class UserActions
 	{
 		class rampOpen
@@ -879,7 +932,7 @@ class 187th_LAAT_mk_2: 615th_LAAT_MK2
 			statement = "this animateSource ['ramp',0,1];";
 			onlyforplayer = 0;
 		};
-		class afterburners_turn_on
+    class afterburners_turn_on
 		{
 			showWindow = 0;
 			hideOnUse = 0;
@@ -908,13 +961,13 @@ class 187th_LAAT_mk_2: 615th_LAAT_MK2
 	};
 };
 
-class 187th_LAAT_mk_1: 615th_LAAT
+class 187th_LAAT_mk_1: Purple_LAAT
 {
 	displayname="LAAT MK 1";
 	faction="187th_Republic";
 	editorCategory = "187th_Rep_Assets";
 	editorSubcategory = "187th_Helicopter";
-	armor=700;
+	armor=800;
 	fuelCapacity=4000;
 	scope=2;
 	scopeCurator = 2;
@@ -948,6 +1001,59 @@ class 187th_LAAT_mk_1: 615th_LAAT
 	tcw_afterburner_fuel_drag = 2000;
 	tcw_afterburner_fuel_multi = 4;
 	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+   class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName = "WFOV";
+					initAngleX = 0;
+					minAngleX = 0;
+					maxAngleX = 0;
+					initAngleY = 0;
+					minAngleY = 0;
+					maxAngleY = 0;
+					initFov = "(30 / 120)";
+					minFov = "(30 / 120)";
+					maxFov = "(30 / 120)";
+					directionStabilized = 1;
+					visionMode[] = {"Normal","Ti"};
+					thermalMode[] = {0,1};
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName = "MFOV";
+					initFov = "(15 / 120)";
+					minFov = "(15 / 120)";
+					maxFov = "(15 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov = "(3.75 / 120)";
+					minFov = "(3.75 / 120)";
+					maxFov = "(3.75 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics = 1;
+				showUAVViewInOptics = 0;
+				showSlingLoadManagerInOptics = 0;
+			};
+			minTurn = -120;
+			maxTurn = 120;
+			initTurn = 0;
+			minElev = -10;
+			maxElev = 90;
+			initElev = 0;
+			maxXRotSpeed = 0.3;
+			maxYRotSpeed = 0.3;
+			pilotOpticsShowCursor = 1;
+			controllable = 1;
+		};
 	class UserActions
 	{
 		class rampOpen
@@ -972,7 +1078,7 @@ class 187th_LAAT_mk_1: 615th_LAAT
 			statement = "this animateSource ['ramp',0,1];";
 			onlyforplayer = 0;
 		};
-		class afterburners_turn_on
+    class afterburners_turn_on
 		{
 			showWindow = 0;
 			hideOnUse = 0;
@@ -1001,13 +1107,13 @@ class 187th_LAAT_mk_1: 615th_LAAT
 	};
 };
 
-class 187th_LAAT_Floodlights: 615th_LAAT_MK2Light
+class 187th_LAAT_Floodlights: Purple_LAAT_MK2Light
 {
 	displayname="LAAT (Floodlights)";
 	faction="187th_Republic";
 	editorCategory = "187th_Rep_Assets";
 	editorSubcategory = "187th_Helicopter";
-	armor=700;
+	armor=800;
 	fuelCapacity=4000;
 	scope=2;
 	scopeCurator = 2;
@@ -1041,6 +1147,59 @@ class 187th_LAAT_Floodlights: 615th_LAAT_MK2Light
 	tcw_afterburner_fuel_drag = 2000;
 	tcw_afterburner_fuel_multi = 4;
 	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+  class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName = "WFOV";
+					initAngleX = 0;
+					minAngleX = 0;
+					maxAngleX = 0;
+					initAngleY = 0;
+					minAngleY = 0;
+					maxAngleY = 0;
+					initFov = "(30 / 120)";
+					minFov = "(30 / 120)";
+					maxFov = "(30 / 120)";
+					directionStabilized = 1;
+					visionMode[] = {"Normal","Ti"};
+					thermalMode[] = {0,1};
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName = "MFOV";
+					initFov = "(15 / 120)";
+					minFov = "(15 / 120)";
+					maxFov = "(15 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov = "(3.75 / 120)";
+					minFov = "(3.75 / 120)";
+					maxFov = "(3.75 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics = 1;
+				showUAVViewInOptics = 0;
+				showSlingLoadManagerInOptics = 0;
+			};
+			minTurn = -120;
+			maxTurn = 120;
+			initTurn = 0;
+			minElev = -10;
+			maxElev = 90;
+			initElev = 0;
+			maxXRotSpeed = 0.3;
+			maxYRotSpeed = 0.3;
+			pilotOpticsShowCursor = 1;
+			controllable = 1;
+		};
 	class UserActions
 	{
 		class rampOpen
@@ -1065,7 +1224,7 @@ class 187th_LAAT_Floodlights: 615th_LAAT_MK2Light
 			statement = "this animateSource ['ramp',0,1];";
 			onlyforplayer = 0;
 		};
-		class afterburners_turn_on
+    class afterburners_turn_on
 		{
 			showWindow = 0;
 			hideOnUse = 0;
