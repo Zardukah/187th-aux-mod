@@ -4,13 +4,12 @@ _loaded = false;
 
 switch true do {
 
-	case (_veh isKindOf "OPTRE_M808B_base") : {
-		_veh attachTo [_shuttle,[0,-7.2, -0.37105]];
-		_veh setDir 180;
+	case (_veh isKindOf "187th_Saber_Tank") or (_veh isKindOf "187th_Saber_Tank_Recon") or (_veh isKindOf "187th_Saber_Tank_Super") or (_veh isKindOf "187th_Saber_Tank_GL") : {
+		_veh attachTo [_shuttle,[0.15,0,0.65]];
 		_loaded = true;
 	};
 	case (_veh isKindOf "187th_bantha_mk1") : {
-		_veh attachTo [_shuttle,[0,0.75,4.4]];
+		_veh attachTo [_shuttle,[0.15,0.75,4.4]];
 		//0 = [vehicle player, 15, 0] call BIS_fnc_setPitchBank;
 		_loaded = true;
 	};
@@ -22,12 +21,8 @@ switch true do {
 		_veh attachTo [_shuttle,[0,-3.6,0.30]];
 		_loaded = true;
 	};
-	/*case (_veh isKindOf "OPTRE_falcon_base") : {
-		_veh attachTo [_shuttle,[0,-4.8,-0.1]];
-		_loaded = true;
-	};
-	case (_veh isKindOf "optre_hornet_base") : {
-		_veh attachTo [_shuttle,[0,-5,-0.35]];
+	/*case (_veh isKindOf "NAME") : {
+		_veh attachTo [_shuttle,[X,Y,Z]]; //X - Left/Right , Y - Up/Down , Z - Forward/Back
 		_loaded = true;
 	};*/
 };
