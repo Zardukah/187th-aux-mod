@@ -59,8 +59,8 @@ class 187th_JLTS_DC17SA_JLTS_DC17SA_flashlight: JLTS_DC17SA
 
 class 187th_JLTS_DC15S: JLTS_DC15S
 {
-	displayName="DC-15S";
-	scope=1;
+	displayName="[187th] DC-15S";
+	scope=2;
 	class LinkedItems
 	{
 	};
