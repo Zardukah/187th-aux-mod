@@ -22,6 +22,13 @@ class CfgFunctions
 			class ShuttleLoadSupplyPodsMenuUnload{};
 			class ShuttleLoad_UnloadAllSupplyPods{};
 		};
+		class supplyLoadingSystem
+		{
+			file = "187th-aux\Functions\loadSupply";
+			class masterLoader{};
+			class supplyLoader{};
+			class supplyUnloader{};
+		};
 	};
 	class TAS
 	{

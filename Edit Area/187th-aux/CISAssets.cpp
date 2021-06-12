@@ -284,7 +284,7 @@ class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 			name = "spine2";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -295,7 +295,7 @@ class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 			name = "spine3";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -306,7 +306,7 @@ class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 			name = "body";
 			passThrough = 1;
 			radius = 0;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 			depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
@@ -404,9 +404,9 @@ class 187th_BX_Droid_E5_F: lsd_cis_bxDroid_base
 			depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 		};
 	};
-	armor = 100;
+	armor = 90;
 	armorStructural = 1;
-	explosionShielding = 0.5;
+	explosionShielding = 0.4;
 	weapons[] = {"JLTS_E5","Throw","Put"};
 	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
 	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
@@ -534,7 +534,7 @@ class 187th_BX_Droid_Captain_E5_F: lsd_cis_bxCaptain_specops
 			name = "spine2";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -545,7 +545,7 @@ class 187th_BX_Droid_Captain_E5_F: lsd_cis_bxCaptain_specops
 			name = "spine3";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -556,7 +556,7 @@ class 187th_BX_Droid_Captain_E5_F: lsd_cis_bxCaptain_specops
 			name = "body";
 			passThrough = 1;
 			radius = 0;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 			depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
@@ -654,9 +654,9 @@ class 187th_BX_Droid_Captain_E5_F: lsd_cis_bxCaptain_specops
 			depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 		};
 	};
-	armor = 100;
+	armor = 90;
 	armorStructural = 1;
-	explosionShielding = 0.5;
+	explosionShielding = 0.4;
 	class EventHandlers;
 	weapons[] = {"JLTS_E5","Throw","Put"};
 	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
@@ -759,7 +759,7 @@ class 187th_BX_Droid_Citadel_E5_F: lsd_cis_bxSecurity_specops
 			name = "spine2";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -770,7 +770,7 @@ class 187th_BX_Droid_Citadel_E5_F: lsd_cis_bxSecurity_specops
 			name = "spine3";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -781,7 +781,7 @@ class 187th_BX_Droid_Citadel_E5_F: lsd_cis_bxSecurity_specops
 			name = "body";
 			passThrough = 1;
 			radius = 0;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 			depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
@@ -879,9 +879,9 @@ class 187th_BX_Droid_Citadel_E5_F: lsd_cis_bxSecurity_specops
 			depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 		};
 	};
-	armor = 100;
+	armor = 90;
 	armorStructural = 1;
-	explosionShielding = 0.5;
+	explosionShielding = 0.4;
 	weapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
 	respawnWeapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
 	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
@@ -1000,7 +1000,7 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 			name = "spine2";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -1011,7 +1011,7 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 			name = "spine3";
 			passThrough = 0.44;
 			radius = 0.18;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 		};
@@ -1022,7 +1022,7 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 			name = "body";
 			passThrough = 1;
 			radius = 0;
-			explosionShielding = 1.5;
+			explosionShielding = 1;
 			visual = "injury_body";
 			minimalHit = 0.01;
 			depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
@@ -1120,9 +1120,9 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 			depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 		};
 	};
-	armor = 100;
+	armor = 90;
 	armorStructural = 1;
-	explosionShielding = 0.5;
+	explosionShielding = 0.4;
 	weapons[] = {"JLTS_E5","Throw","Put"};
 	respawnWeapons[] = {"JLTS_E5","Throw","Put"};
 	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
@@ -1140,3 +1140,146 @@ class 187th_BX_Droid_Diplomat_E5_F: lsd_cis_bxDiplomat_specops
 	crew="O_UAV_AI_F";
 	typicalCargo[]={"O_UAV_AI_F"};
 };*/
+
+
+//-------------------------------------------------------------------------------------------------------------
+//---------------------------------------------- Vehicles -----------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+class O_DBA_CIS_Argon_Ammo_F;
+class 187th_O_DBA_CIS_Argon_Ammo_F : O_DBA_CIS_Argon_Ammo_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Ammo Truck";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+class O_DBA_CIS_Argon_Device_F;
+class 187th_O_DBA_CIS_Argon_Device_F : O_DBA_CIS_Argon_Device_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Device Carrier";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+class O_DBA_CIS_Argon_Fuel_F;
+class 187th_O_DBA_CIS_Argon_Fuel_F : O_DBA_CIS_Argon_Fuel_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Fuel Truck";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+class O_DBA_CIS_Argon_Medical_F;
+class 187th_O_DBA_CIS_Argon_Medical_F : O_DBA_CIS_Argon_Medical_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Medical Truck";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+class O_DBA_CIS_Argon_Repair_F;
+class 187th_O_DBA_CIS_Argon_Repair_F : O_DBA_CIS_Argon_Repair_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Repair Truck";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+class O_DBA_CIS_Argon_Transport_F;
+class 187th_O_DBA_CIS_Argon_Transport_F : O_DBA_CIS_Argon_Transport_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Transport Truck";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+class O_DBA_CIS_Argon_Transport_Covered_F;
+class 187th_O_DBA_CIS_Argon_Transport_Covered_F : O_DBA_CIS_Argon_Transport_Covered_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Transport Truck (Covered)";
+    faction="187th_CIS";
+	editorCategory = "187th_CIS_Assets";
+	editorSubcategory = "187th_Car";
+};
+
+
+
+//-------------------------------------------------------------------------------------------------------------
+//---------------------------------------------- Turrets -----------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
+
+class O_DBA_CIS_DSD1_F;
+class 187th_O_DBA_CIS_DSD1_F : O_DBA_CIS_DSD1_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Dwarf Spider Droid";
+    faction="187th_CIS";
+	editorCategory = "187th_Test_Assets";
+	editorSubcategory = "187th_Turret";
+};
+
+class O_DBA_CIS_Dwarf_Spider_Droid_2_F;
+class 187th_O_DBA_CIS_Dwarf_Spider_Droid_2_F : O_DBA_CIS_Dwarf_Spider_Droid_2_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Dwarf Spider Droid Mk2";
+    faction="187th_CIS";
+	editorCategory = "187th_Test_Assets";
+	editorSubcategory = "187th_Turret";
+};
+
+class O_DBA_CIS_Crab_Droid_F;
+class 187th_O_DBA_CIS_Crab_Droid_F : O_DBA_CIS_Crab_Droid_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Crab Droid";
+    faction="187th_CIS";
+	editorCategory = "187th_Test_Assets";
+	editorSubcategory = "187th_Turret";
+};
+
+class O_DBA_CIS_Tri_Droid_F;
+class 187th_O_DBA_CIS_Tri_Droid_F : O_DBA_CIS_Tri_Droid_F
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Octuptarra Tri-Droid";
+    faction="187th_CIS";
+	editorCategory = "187th_Test_Assets";
+	editorSubcategory = "187th_Turret";
+};
+
+class 3AS_Advanced_DSD;
+class 187th_3AS_Advanced_DSD : 3AS_Advanced_DSD
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Advanced DSD";
+    faction="187th_CIS";
+	editorCategory = "187th_Test_Assets";
+	editorSubcategory = "187th_Turret";
+};

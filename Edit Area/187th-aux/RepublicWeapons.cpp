@@ -11,7 +11,7 @@ class 187th_JLTS_DC15A_plastic: JLTS_DC15A_plastic
 {
 	displayName="[187th] DC-15A (plastic stock)";
 	scope=2;
-    
+
 	class OpticsModes
         {
             class sight
@@ -70,7 +70,7 @@ class 187th_JLTS_DC15A_ugl_plastic: JLTS_DC15A_ugl_plastic
 {
 	displayName="[187th] DC-15A UGL (plastic stock)";
 	scope=2;
-    
+
     class OpticsModes
         {
             class sight
@@ -248,6 +248,26 @@ class 187_Clone_Helmet_Mountain: 187_Clone_Helmet
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Mountain.paa"};
 };
 
+class 187_Clone_Helmet_Locust: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Locust)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Locust.paa"};
+};
+
+class 187_Clone_Helmet_Raven: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Raven)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Raven.paa"};
+};
+
 class JLTS_CloneHelmetBARC;
 class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 {
@@ -296,14 +316,14 @@ class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 	};
 	allowedFacewear[] = {};
 };
-class 187_Clone_Helmet_Rogue: 187_Clone_Helmet_BARC
+class 187_Clone_Helmet_Tiberius: 187_Clone_Helmet_BARC
 {
 	author 	= "PraetorPanda";
 	dlc		= "187th Aux Mod";
 	scope 	= 2;
 	scopeCurator = 2;
-	displayName = "[187th] Clone Custom Helmet (Rogue)";
-	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Rogue.paa"};
+	displayName = "[187th] Clone Custom Helmet (Tiberius)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Tiberius.paa"};
 };
 
 //-------------------------------------------------------------------

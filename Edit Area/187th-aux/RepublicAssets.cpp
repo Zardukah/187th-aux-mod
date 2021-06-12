@@ -379,7 +379,7 @@ class 187th_Captain : JLTS_Clone_P2_lieutenant_187
 // Vehicles
 //---------------------------------------------------------------------
 
-class 187th_Juggernaut: 3as_Jug
+class 187th_Juggernaut : 3as_Jug
 {
 	faction="187th_Republic";
 	editorCategory="187th_Rep_Assets";
@@ -389,7 +389,7 @@ class 187th_Juggernaut: 3as_Jug
 	hiddenSelectionsTextures[]={};
 	crew="187th_Trooper_Crewman";
 	typicalCargo[]={"187th_Trooper_Crewman"};
-   ace_cargo_space = 200;  // Cargo space your vehicle has
+	ace_cargo_space = 200; // Cargo space your vehicle has
 };
 
 class 187th_RTT : 3as_RTT
@@ -621,7 +621,7 @@ class 187th_UT_AT : 3as_UTAT
 };
 
 class 3as_ATTE_Base;
-class 187th_ATTE: 3as_ATTE_Base
+class 187th_ATTE : 3as_ATTE_Base
 {
 	faction="187th_Republic";     editorCategory="187th_Test_Assets";     editorSubcategory="187th_Armor";
 	side=1;
@@ -643,219 +643,219 @@ class 187th_ATTE: 3as_ATTE_Base
 
    };*/
 
-class 187th_Nu_A_Class_Shuttle : 3AS_Nuclass
-{
+   class 187th_Nu_A_Class_Shuttle : 3AS_Nuclass
+   {
    	faction="187th_Republic";     editorCategory="187th_Rep_Assets";     editorSubcategory="187th_Helicopter";
    	side=1;
    	displayName="Nu-class Attack Shuttle";
    	hiddenSelectionsTextures[]={"3as\3as_nu\data\charger\exterior_co.paa","3as\3as_nu\data\charger\wings_co.paa","3as\3as_nu\data\charger\interior_co.paa","3as\3as_nu\data\charger\cockpit_doors_co.paa"};
    	crew="187th_Pilot";
    	typicalCargo[]={"187th_Pilot"};
-    extCameraPosition[] = {0,6,-28};
-};
+   	extCameraPosition[] = {0,6,-28};
+   };
 
-class 187th_Nu_A_Class_Shuttle_Cargo : 3AS_Nuclass
-{
-	faction="187th_Republic";     editorCategory="187th_Test_Assets";     editorSubcategory="187th_Helicopter";
-	side=1;
-	displayName="Nu-class Cargo Shuttle (Broken)";
-	hiddenSelectionsTextures[]={"3as\3as_nu\data\charger\exterior_co.paa","3as\3as_nu\data\charger\wings_co.paa","3as\3as_nu\data\charger\interior_co.paa","3as\3as_nu\data\charger\cockpit_doors_co.paa"};
-	crew="187th_Pilot";
-	typicalCargo[]={"187th_Pilot"};
+   class 187th_Nu_A_Class_Shuttle_Cargo : 3AS_Nuclass
+   {
+   	faction="187th_Republic";     editorCategory="187th_Test_Assets";     editorSubcategory="187th_Helicopter";
+   	side=1;
+   	displayName="Nu-class Cargo Shuttle (Broken)";
+   	hiddenSelectionsTextures[]={"3as\3as_nu\data\charger\exterior_co.paa","3as\3as_nu\data\charger\wings_co.paa","3as\3as_nu\data\charger\interior_co.paa","3as\3as_nu\data\charger\cockpit_doors_co.paa"};
+   	crew="187th_Pilot";
+   	typicalCargo[]={"187th_Pilot"};
 	// class VehicleTransport {}; //this disables ViV system
-	extCameraPosition[] = {0,6,-28};
-	class UserActions
-	{
-		/*class Load_Inside_Vehicle
-		{
-			userActionID = 6;
-			displayName = "Load Vehicle Inside";
-			displayNameDefault = "Load Vehicle Inside";
-			textToolTip = "Load Vehicle Inside";
-			position = "cargo_door_handle";
-			showWindow = 0;
-			radius = 20;
-			priority = 2;
-			onlyForPlayer = 0;
-			condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND (str (this getVariable [""OPTRE_shuttle_AttachedToVehiclesEffect"",[]]) == ""[]"") AND (vehicle player != player)";
-			statement = "0 = [this,vehicle player] spawn OES_fnc_ShuttleLoadinsideValidate;";
-		};
-		class Unload_Inside_Vehicle
-		{
-			userActionID = 7;
-			displayName = "Unload Inside Cargo";
-			displayNameDefault = "Unload Inside Cargo";
-			textToolTip = "Unload Inside Cargo";
-			showWindow = 0;
-			radius = 15;
-			priority = 3;
-			onlyForPlayer = 0;
-			condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_shuttle_AttachedToVehiclesEffect"",[]])) > 0)";
-			statement = "0 = [this] spawn OES_fnc_ShuttleUnLoadinsideValidate;";
-		};*/
-		class Load_Outside_Vehicle
-		{
-			userActionID = 6;
-			displayName = "Load Vehicle Outside";
-			displayNameDefault = "Load Vehicle Outside";
-			textToolTip = "Load Vehicle Outside";
-			position = "cargo_door_handle";
-			showWindow = 0;
-			radius = 30;
-			priority = 2;
-			onlyForPlayer = 0;
-			condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_shuttle_AttachedToVehiclesEffect"",[]])) > 0)";
-			statement = "0 = [this,vehicle player] spawn fn_ShuttleLoadOutsideValidate;";
-		};
-		class Unload_Outside_Vehicle
-		{
-			userActionID = 7;
-			displayName = "Unload Outside Cargo";
-			displayNameDefault = "Unload Outside Cargo";
-			textToolTip = "Unload Outside Cargo";
-			showWindow = 0;
-			radius = 30;
-			priority = 3;
-			onlyForPlayer = 0;
-			condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_shuttle_AttachedToVehiclesEffect"",[]])) > 0)";
-			statement = "0 = [this] spawn fn_ShuttleUnLoadOutsideValidate;";
-		};
-		/*class PelLift_LoadPodMenu
-		{
-			userActionID = 9;
-			displayName = "Load Supply Pods";
-			displayNameDefault = "Load Supply Pods";
-			textToolTip = "Load Supply Pods";
-			position = "cargo_door_handle";
-			showWindow = 0;
-			radius = 15;
-			priority = 2;
-			onlyForPlayer = 0;
-			condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
-			statement = "OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_PelicanLoadSupplyPods_Menu""; OPTRE_PelicanLoadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;  OPTRE_PelicanLoadSupplyPods_Menu_cam CamSetTarget OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject; OPTRE_PelicanLoadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_PelicanLoadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_PelicanLoadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
-		};
-		class PelLift_OpenDetachPodMenu
-		{
-			userActionID = 8;
-			displayName = "Detach Individual Supply Pod Menu";
-			displayNameDefault = "Detach Individual Supply Pod Menu";
-			textToolTip = "Detach Individual Supply Pod Menu";
-			position = "cargo_door_handle";
-			showWindow = 0;
-			radius = 5;
-			priority = 3;
-			onlyForPlayer = 0;
-			condition = "(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
-			statement = "0 = this spawn OPTRE_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
-		};*/
-		class afterburners_turn_on
-		{
-			showWindow = 0;
-			hideOnUse = 0;
-			priority = 9;
-			role = 0;
-			displayName = "Activate Impulse";
-			position = "pilotview";
-			radius = 12;
-			onlyforplayer = 0;
-			condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
-			statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
-		};
-		class afterburners_turn_off
-		{
-			showWindow = 0;
-			hideOnUse = 0;
-			priority = 9;
-			role = 0;
-			displayName = "Deactivate Impulse";
-			position = "pilotview";
-			radius = 12;
-			onlyforplayer = 0;
-			condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
-			statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
-		};
-		class rampOpen
-		{
-			displayName = "Cargo Ramp Open";
-			position = "cargoaction";
-			radius = 12;
-			condition = "(this animationSourcePhase 'ramp' ==0 AND (alive this))";
-			statement = "this animateSource ['ramp',1]";
-			onlyforplayer = 0;
-			role = 0;
-		};
-		class rampClose : rampOpen
-		{
-			displayName = "Cargo Ramp Close";
-			position = "cargoaction";
-			radius = 12;
-			condition = "(this animationSourcePhase 'ramp' ==1 AND (alive this))";
-			statement = "this animateSource ['ramp',0]";
-			onlyforplayer = 0;
-		};
-		class frontrampOpen
-		{
-			role = 0;
-			displayName = "Front Ramp Open";
-			position = "frontaction";
-			radius = 12;
-			condition = "(this animationSourcePhase 'rampfront' ==0 AND (alive this))";
-			statement = "this animateSource ['rampfront',1]";
-			onlyforplayer = 0;
-		};
-		class frontrampClose : frontrampOpen
-		{
-			displayName = "Front Ramp Close";
-			position = "frontaction";
-			radius = 12;
-			condition = "(this animationSourcePhase 'rampfront' ==1 AND (alive this))";
-			statement = "this animateSource ['rampfront',0]";
-			onlyforplayer = 0;
-		};
+   	extCameraPosition[] = {0,6,-28};
+   	class UserActions
+   	{
+	/*class Load_Inside_Vehicle
+	   {
+	        userActionID = 6;
+	        displayName = "Load Vehicle Inside";
+	        displayNameDefault = "Load Vehicle Inside";
+	        textToolTip = "Load Vehicle Inside";
+	        position = "cargo_door_handle";
+	        showWindow = 0;
+	        radius = 20;
+	        priority = 2;
+	        onlyForPlayer = 0;
+	        condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND (str (this getVariable [""OPTRE_shuttle_AttachedToVehiclesEffect"",[]]) == ""[]"") AND (vehicle player != player)";
+	        statement = "0 = [this,vehicle player] spawn OES_fnc_ShuttleLoadinsideValidate;";
+	   };
+	   class Unload_Inside_Vehicle
+	   {
+	        userActionID = 7;
+	        displayName = "Unload Inside Cargo";
+	        displayNameDefault = "Unload Inside Cargo";
+	        textToolTip = "Unload Inside Cargo";
+	        showWindow = 0;
+	        radius = 15;
+	        priority = 3;
+	        onlyForPlayer = 0;
+	        condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [""OPTRE_shuttle_AttachedToVehiclesEffect"",[]])) > 0)";
+	        statement = "0 = [this] spawn OES_fnc_ShuttleUnLoadinsideValidate;";
+	   };*/
+	        /*class Load_Outside_Vehicle
+	        {
+	        	userActionID = 6;
+	        	displayName = "Load Vehicle Outside";
+	        	displayNameDefault = "Load Vehicle Outside";
+	        	textToolTip = "Load Vehicle Outside";
+	        	position = "cargo_door_handle";
+	        	showWindow = 0;
+	        	radius = 30;
+	        	priority = 2;
+	        	onlyForPlayer = 0;
+	        	condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [" "OPTRE_shuttle_AttachedToVehiclesEffect" ",[]])) > 0)";
+	        	statement = "0 = [this,vehicle player] spawn fn_ShuttleLoadOutsideValidate;";
+	        };
+	        class Unload_Outside_Vehicle
+	        {
+	        	userActionID = 7;
+	        	displayName = "Unload Outside Cargo";
+	        	displayNameDefault = "Unload Outside Cargo";
+	        	textToolTip = "Unload Outside Cargo";
+	        	showWindow = 0;
+	        	radius = 30;
+	        	priority = 3;
+	        	onlyForPlayer = 0;
+	        	condition = "(player in [gunner this, driver this]) AND ((count (vehicle player getVariable [" "OPTRE_shuttle_AttachedToVehiclesEffect" ",[]])) > 0)";
+	        	statement = "0 = [this] spawn fn_ShuttleUnLoadOutsideValidate;";
+	        };*/
+	/*class PelLift_LoadPodMenu
+	   {
+	        userActionID = 9;
+	        displayName = "Load Supply Pods";
+	        displayNameDefault = "Load Supply Pods";
+	        textToolTip = "Load Supply Pods";
+	        position = "cargo_door_handle";
+	        showWindow = 0;
+	        radius = 15;
+	        priority = 2;
+	        onlyForPlayer = 0;
+	        condition = "!(player in [gunner this, driver this]) AND (player == driver vehicle player) AND ((vehicle player) isKindOf ""OPTRE_cart_base"")";
+	        statement = "OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject = this; createDialog ""OPTRE_PelicanLoadSupplyPods_Menu""; OPTRE_PelicanLoadSupplyPods_Menu_cam = ""camera"" CamCreate getPosATL OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject;  OPTRE_PelicanLoadSupplyPods_Menu_cam CamSetTarget OPTRE_PelicanLoadSupplyPods_Menu_PelicanObject; OPTRE_PelicanLoadSupplyPods_Menu_cam CameraEffect [""Internal"",""Back""]; OPTRE_PelicanLoadSupplyPods_Menu_cam camSetRelPos [4,-12,-2.4]; OPTRE_PelicanLoadSupplyPods_Menu_cam CamCommit 0; showCinemaBorder false; if (sunOrMoon == 0) then {camUseNVG true;};";
+	   };
+	   class PelLift_OpenDetachPodMenu
+	   {
+	        userActionID = 8;
+	        displayName = "Detach Individual Supply Pod Menu";
+	        displayNameDefault = "Detach Individual Supply Pod Menu";
+	        textToolTip = "Detach Individual Supply Pod Menu";
+	        position = "cargo_door_handle";
+	        showWindow = 0;
+	        radius = 5;
+	        priority = 3;
+	        onlyForPlayer = 0;
+	        condition = "(player in [gunner this, driver this]) AND (({_x isKindOf ""OPTRE_Ammo_SupplyPod_Empty""} count (this getVariable [""OPTRE_Pelican_AttachedToVehiclesEffect"",[]])) > 0)";
+	        statement = "0 = this spawn OPTRE_fnc_PelicanLoadSupplyPodMenuDetachMenu;";
+	   };*/
+	        class afterburners_turn_on
+	        {
+	        	showWindow = 0;
+	        	hideOnUse = 0;
+	        	priority = 9;
+	        	role = 0;
+	        	displayName = "Activate Impulse";
+	        	position = "pilotview";
+	        	radius = 12;
+	        	onlyforplayer = 0;
+	        	condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+	        	statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+	        };
+	        class afterburners_turn_off
+	        {
+	        	showWindow = 0;
+	        	hideOnUse = 0;
+	        	priority = 9;
+	        	role = 0;
+	        	displayName = "Deactivate Impulse";
+	        	position = "pilotview";
+	        	radius = 12;
+	        	onlyforplayer = 0;
+	        	condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+	        	statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+	        };
+	        class rampOpen
+	        {
+	        	displayName = "Cargo Ramp Open";
+	        	position = "cargoaction";
+	        	radius = 12;
+	        	condition = "(this animationSourcePhase 'ramp' ==0 AND (alive this))";
+	        	statement = "this animateSource ['ramp',1]";
+	        	onlyforplayer = 0;
+	        	role = 0;
+	        };
+	        class rampClose : rampOpen
+	        {
+	        	displayName = "Cargo Ramp Close";
+	        	position = "cargoaction";
+	        	radius = 12;
+	        	condition = "(this animationSourcePhase 'ramp' ==1 AND (alive this))";
+	        	statement = "this animateSource ['ramp',0]";
+	        	onlyforplayer = 0;
+	        };
+	        class frontrampOpen
+	        {
+	        	role = 0;
+	        	displayName = "Front Ramp Open";
+	        	position = "frontaction";
+	        	radius = 12;
+	        	condition = "(this animationSourcePhase 'rampfront' ==0 AND (alive this))";
+	        	statement = "this animateSource ['rampfront',1]";
+	        	onlyforplayer = 0;
+	        };
+	        class frontrampClose : frontrampOpen
+	        {
+	        	displayName = "Front Ramp Close";
+	        	position = "frontaction";
+	        	radius = 12;
+	        	condition = "(this animationSourcePhase 'rampfront' ==1 AND (alive this))";
+	        	statement = "this animateSource ['rampfront',0]";
+	        	onlyforplayer = 0;
+	        };
+	    };
 	};
-};
 
-class 187th_LAAT_mk_2: Purple_LAAT_MK2
-{
-	displayname="LAAT MK 2";
-	faction="187th_Republic";
-	editorCategory = "187th_Rep_Assets";
-	editorSubcategory = "187th_Helicopter";
-	armor=800;
-	fuelCapacity=4000;
-	scope=2;
-	scopeCurator = 2;
-	side=1;
-	maximumLoad = 10000;
-	crew="187th_Pilot";
-	weapons[]=
+	class 187th_LAAT_mk_2 : Purple_LAAT_MK2
 	{
-		"ParticleBeamCannon_F",
-		"3as_LAAT_Missile_AGM",
-		"3as_LAAT_Missile_AA",
-		"CMFlareLauncher"
-	};
-	magazines[]=
-	{
-		"Laser_Battery_F",
-		"3as_LAAT_8Rnd_Missile_AGM",
-		"3as_LAAT_8Rnd_Missile_AGM",
-		"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-		"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-		"240Rnd_CMFlare_Chaff_Magazine",
-		"240Rnd_CMFlare_Chaff_Magazine",
-		"240Rnd_CMFlare_Chaff_Magazine"
-	};
-	tcw_emp_protection = 1;
-	tcw_can_use_afterburner = 1;
-	tcw_afterburner_max_boost_speed = 650;
-	tcw_afterburner_min_boost_speed = 20;
-	tcw_afterburner_min_brake_speed = 20;
-	tcw_afterburner_increment = 10;
-	tcw_afterburner_fuel_drag = 2000;
-	tcw_afterburner_fuel_multi = 4;
-	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
-  class pilotCamera
+		displayname="LAAT MK 2";
+		faction="187th_Republic";
+		editorCategory = "187th_Rep_Assets";
+		editorSubcategory = "187th_Helicopter";
+		armor=800;
+		fuelCapacity=4000;
+		scope=2;
+		scopeCurator = 2;
+		side=1;
+		maximumLoad = 10000;
+		crew="187th_Pilot";
+		weapons[]=
+		{
+			"ParticleBeamCannon_F",
+			"3as_LAAT_Missile_AGM",
+			"3as_LAAT_Missile_AA",
+			"CMFlareLauncher"
+		};
+		magazines[]=
+		{
+			"Laser_Battery_F",
+			"3as_LAAT_8Rnd_Missile_AGM",
+			"3as_LAAT_8Rnd_Missile_AGM",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"3as_PylonMissile_LAAT_8Rnd_Missile_AA",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+		tcw_emp_protection = 1;
+		tcw_can_use_afterburner = 1;
+		tcw_afterburner_max_boost_speed = 650;
+		tcw_afterburner_min_boost_speed = 20;
+		tcw_afterburner_min_brake_speed = 20;
+		tcw_afterburner_increment = 10;
+		tcw_afterburner_fuel_drag = 2000;
+		tcw_afterburner_fuel_multi = 4;
+		tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
+		class pilotCamera
 		{
 			class OpticsIn
 			{
@@ -877,7 +877,7 @@ class 187th_LAAT_mk_2: Purple_LAAT_MK2
 					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
 					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
 				};
-				class Medium: Wide
+				class Medium : Wide
 				{
 					opticsDisplayName = "MFOV";
 					initFov = "(15 / 120)";
@@ -885,7 +885,7 @@ class 187th_LAAT_mk_2: Purple_LAAT_MK2
 					maxFov = "(15 / 120)";
 					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
 				};
-				class Narrow: Wide
+				class Narrow : Wide
 				{
 					opticsDisplayName = "NFOV";
 					initFov = "(3.75 / 120)";
@@ -908,60 +908,93 @@ class 187th_LAAT_mk_2: Purple_LAAT_MK2
 			pilotOpticsShowCursor = 1;
 			controllable = 1;
 		};
-	class UserActions
-	{
-		class rampOpen
+		class UserActions
 		{
-			available = 0;
-			showWindow = 0;
-			displayName = "Ramp Open";
-			position = "pilotview";
-			radius = 9;
-			condition = "this animationphase 'ramp' ==0";
-			statement = "this animateSource ['ramp',1,1];";
-			onlyforplayer = 0;
+			class rampOpen
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Open";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==0 AND (player == driver this)";
+				statement = "this animateSource ['ramp',1,1];";
+				onlyforplayer = 0;
+			};
+			class rampClose
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Close";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==1 AND (alive this) AND (player == driver this)";
+				statement = "this animateSource ['ramp',0,1];";
+				onlyforplayer = 0;
+			};
+			class afterburners_turn_on
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Activate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 0;
+				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+			};
+			class afterburners_turn_off
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Deactivate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 0;
+				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+			};
+			/*class load_supply
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 1;
+				role = 0;
+				displayName = "Load Supply";
+				position = "pilotview";
+				radius = 10;
+				onlyforplayer = 0;
+				// condition = "(alive this) AND (count (this nearEntities [['JLTS_Ammobox_ammo_GAR', 'JLTS_Ammobox_grenades_GAR', 'JLTS_Ammobox_launchers_GAR', 'JLTS_Ammobox_explosives_GAR', 'JLTS_Ammobox_support_GAR'], 20]) > 0)";
+				statement = "0 = [this] spawn OES_fnc_supplyLoader;";
+			};
+			class unload_supply
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 1;
+				role = 0;
+				displayName = "Unload Supply";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 0;
+				condition = "(alive this) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_supplyUnloader;";
+			};*/
 		};
-		class rampClose
+		/*class EventHandlers
 		{
-			available = 0;
-			showWindow = 0;
-			displayName = "Ramp Close";
-			position = "pilotview";
-			radius = 9;
-			condition = "this animationphase 'ramp' ==1";
-			statement = "this animateSource ['ramp',0,1];";
-			onlyforplayer = 0;
-		};
-    class afterburners_turn_on
-		{
-			showWindow = 0;
-			hideOnUse = 0;
-			priority = 9;
-			role = 0;
-			displayName = "Activate Impulse";
-			position = "pilotview";
-			radius = 6;
-			onlyforplayer = 1;
-			condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
-			statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
-		};
-		class afterburners_turn_off
-		{
-			showWindow = 0;
-			hideOnUse = 0;
-			priority = 9;
-			role = 0;
-			displayName = "Deactivate Impulse";
-			position = "pilotview";
-			radius = 6;
-			onlyforplayer = 1;
-			condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
-			statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
-		};
-	};
+			class masterLoader {
+			init = "0 = _this spawn OES_fnc_masterLoader;";
+			};
+			fired = "_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+		};*/
 };
 
-class 187th_LAAT_mk_1: Purple_LAAT
+class 187th_LAAT_mk_1 : Purple_LAAT
 {
 	displayname="LAAT MK 1";
 	faction="187th_Republic";
@@ -1001,59 +1034,59 @@ class 187th_LAAT_mk_1: Purple_LAAT
 	tcw_afterburner_fuel_drag = 2000;
 	tcw_afterburner_fuel_multi = 4;
 	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
-   class pilotCamera
+	class pilotCamera
+	{
+		class OpticsIn
 		{
-			class OpticsIn
+			class Wide
 			{
-				class Wide
-				{
-					opticsDisplayName = "WFOV";
-					initAngleX = 0;
-					minAngleX = 0;
-					maxAngleX = 0;
-					initAngleY = 0;
-					minAngleY = 0;
-					maxAngleY = 0;
-					initFov = "(30 / 120)";
-					minFov = "(30 / 120)";
-					maxFov = "(30 / 120)";
-					directionStabilized = 1;
-					visionMode[] = {"Normal","Ti"};
-					thermalMode[] = {0,1};
-					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
-				};
-				class Medium: Wide
-				{
-					opticsDisplayName = "MFOV";
-					initFov = "(15 / 120)";
-					minFov = "(15 / 120)";
-					maxFov = "(15 / 120)";
-					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
-				};
-				class Narrow: Wide
-				{
-					opticsDisplayName = "NFOV";
-					initFov = "(3.75 / 120)";
-					minFov = "(3.75 / 120)";
-					maxFov = "(3.75 / 120)";
-					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-				};
-				showMiniMapInOptics = 1;
-				showUAVViewInOptics = 0;
-				showSlingLoadManagerInOptics = 0;
+				opticsDisplayName = "WFOV";
+				initAngleX = 0;
+				minAngleX = 0;
+				maxAngleX = 0;
+				initAngleY = 0;
+				minAngleY = 0;
+				maxAngleY = 0;
+				initFov = "(30 / 120)";
+				minFov = "(30 / 120)";
+				maxFov = "(30 / 120)";
+				directionStabilized = 1;
+				visionMode[] = {"Normal","Ti"};
+				thermalMode[] = {0,1};
+				gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+				opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
 			};
-			minTurn = -120;
-			maxTurn = 120;
-			initTurn = 0;
-			minElev = -10;
-			maxElev = 90;
-			initElev = 0;
-			maxXRotSpeed = 0.3;
-			maxYRotSpeed = 0.3;
-			pilotOpticsShowCursor = 1;
-			controllable = 1;
+			class Medium : Wide
+			{
+				opticsDisplayName = "MFOV";
+				initFov = "(15 / 120)";
+				minFov = "(15 / 120)";
+				maxFov = "(15 / 120)";
+				gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+			};
+			class Narrow : Wide
+			{
+				opticsDisplayName = "NFOV";
+				initFov = "(3.75 / 120)";
+				minFov = "(3.75 / 120)";
+				maxFov = "(3.75 / 120)";
+				gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+			};
+			showMiniMapInOptics = 1;
+			showUAVViewInOptics = 0;
+			showSlingLoadManagerInOptics = 0;
 		};
+		minTurn = -120;
+		maxTurn = 120;
+		initTurn = 0;
+		minElev = -10;
+		maxElev = 90;
+		initElev = 0;
+		maxXRotSpeed = 0.3;
+		maxYRotSpeed = 0.3;
+		pilotOpticsShowCursor = 1;
+		controllable = 1;
+	};
 	class UserActions
 	{
 		class rampOpen
@@ -1078,7 +1111,7 @@ class 187th_LAAT_mk_1: Purple_LAAT
 			statement = "this animateSource ['ramp',0,1];";
 			onlyforplayer = 0;
 		};
-    class afterburners_turn_on
+		class afterburners_turn_on
 		{
 			showWindow = 0;
 			hideOnUse = 0;
@@ -1107,7 +1140,7 @@ class 187th_LAAT_mk_1: Purple_LAAT
 	};
 };
 
-class 187th_LAAT_Floodlights: Purple_LAAT_MK2Light
+class 187th_LAAT_Floodlights : Purple_LAAT_MK2Light
 {
 	displayname="LAAT (Floodlights)";
 	faction="187th_Republic";
@@ -1147,59 +1180,59 @@ class 187th_LAAT_Floodlights: Purple_LAAT_MK2Light
 	tcw_afterburner_fuel_drag = 2000;
 	tcw_afterburner_fuel_multi = 4;
 	tcw_afterburner_force_array[] = {{0,100,2562500},{100,316,4562500},{316,650,8750000}};
-  class pilotCamera
+	class pilotCamera
+	{
+		class OpticsIn
 		{
-			class OpticsIn
+			class Wide
 			{
-				class Wide
-				{
-					opticsDisplayName = "WFOV";
-					initAngleX = 0;
-					minAngleX = 0;
-					maxAngleX = 0;
-					initAngleY = 0;
-					minAngleY = 0;
-					maxAngleY = 0;
-					initFov = "(30 / 120)";
-					minFov = "(30 / 120)";
-					maxFov = "(30 / 120)";
-					directionStabilized = 1;
-					visionMode[] = {"Normal","Ti"};
-					thermalMode[] = {0,1};
-					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
-				};
-				class Medium: Wide
-				{
-					opticsDisplayName = "MFOV";
-					initFov = "(15 / 120)";
-					minFov = "(15 / 120)";
-					maxFov = "(15 / 120)";
-					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
-				};
-				class Narrow: Wide
-				{
-					opticsDisplayName = "NFOV";
-					initFov = "(3.75 / 120)";
-					minFov = "(3.75 / 120)";
-					maxFov = "(3.75 / 120)";
-					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-				};
-				showMiniMapInOptics = 1;
-				showUAVViewInOptics = 0;
-				showSlingLoadManagerInOptics = 0;
+				opticsDisplayName = "WFOV";
+				initAngleX = 0;
+				minAngleX = 0;
+				maxAngleX = 0;
+				initAngleY = 0;
+				minAngleY = 0;
+				maxAngleY = 0;
+				initFov = "(30 / 120)";
+				minFov = "(30 / 120)";
+				maxFov = "(30 / 120)";
+				directionStabilized = 1;
+				visionMode[] = {"Normal","Ti"};
+				thermalMode[] = {0,1};
+				gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+				opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur2"};
 			};
-			minTurn = -120;
-			maxTurn = 120;
-			initTurn = 0;
-			minElev = -10;
-			maxElev = 90;
-			initElev = 0;
-			maxXRotSpeed = 0.3;
-			maxYRotSpeed = 0.3;
-			pilotOpticsShowCursor = 1;
-			controllable = 1;
+			class Medium : Wide
+			{
+				opticsDisplayName = "MFOV";
+				initFov = "(15 / 120)";
+				minFov = "(15 / 120)";
+				maxFov = "(15 / 120)";
+				gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+			};
+			class Narrow : Wide
+			{
+				opticsDisplayName = "NFOV";
+				initFov = "(3.75 / 120)";
+				minFov = "(3.75 / 120)";
+				maxFov = "(3.75 / 120)";
+				gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+			};
+			showMiniMapInOptics = 1;
+			showUAVViewInOptics = 0;
+			showSlingLoadManagerInOptics = 0;
 		};
+		minTurn = -120;
+		maxTurn = 120;
+		initTurn = 0;
+		minElev = -10;
+		maxElev = 90;
+		initElev = 0;
+		maxXRotSpeed = 0.3;
+		maxYRotSpeed = 0.3;
+		pilotOpticsShowCursor = 1;
+		controllable = 1;
+	};
 	class UserActions
 	{
 		class rampOpen
@@ -1224,7 +1257,7 @@ class 187th_LAAT_Floodlights: Purple_LAAT_MK2Light
 			statement = "this animateSource ['ramp',0,1];";
 			onlyforplayer = 0;
 		};
-    class afterburners_turn_on
+		class afterburners_turn_on
 		{
 			showWindow = 0;
 			hideOnUse = 0;
@@ -1254,23 +1287,23 @@ class 187th_LAAT_Floodlights: Purple_LAAT_MK2Light
 };
 
 class 3AS_Patrol_LAAT_Republic;
-class 187th_LAAT_LE: 3AS_Patrol_LAAT_Republic
+class 187th_LAAT_LE : 3AS_Patrol_LAAT_Republic
 {
 	faction="187th_Republic";     editorCategory="187th_Rep_Assets";     editorSubcategory="187th_Helicopter";
 	side=1;
 	displayName="LAAT/LE";
 	crew="187th_Pilot";
-    typicalCargo[]={"187th_Pilot"};
+	typicalCargo[]={"187th_Pilot"};
 };
 
 class 3as_V19_base;
-class 187th_V_19_Torrent: 3as_V19_base
+class 187th_V_19_Torrent : 3as_V19_base
 {
 	faction="187th_Republic";     editorCategory="187th_Rep_Assets";     editorSubcategory="187th_Plane";
 	side=1;
 	displayName="V-19 Torrent";
 	crew="187th_Pilot";
-    typicalCargo[]={"187th_Pilot"};
+	typicalCargo[]={"187th_Pilot"};
 };
 
 class 187th_Heavy_Repeater : 3AS_HeavyRepeater_Unarmoured
@@ -1319,6 +1352,99 @@ class 187th_Stationary_Turret : 3AS_StationaryTurret
 	side=1;
 	displayName="Stationary Turret";
 	hiddenSelectionsTextures[]={};
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+// Argon Transports
+
+class 442_argon_ammo;
+class 187th_442_argon_ammo : 442_argon_ammo
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Ammo Truck";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+class 442_argon_device;
+class 187th_442_argon_device : 442_argon_device
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Device Carrier";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+class 442_argon_fuel;
+class 187th_442_argon_fuel : 442_argon_fuel
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Fuel Truck";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+class 442_argon_medical;
+class 187th_442_argon_medical : 442_argon_medical
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Medical Truck";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+class 442_argon_repair;
+class 187th_442_argon_repair : 442_argon_repair
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Repair Truck";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+class 442_argon_transport;
+class 187th_442_argon_transport : 442_argon_transport
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Transport Truck";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
+	crew="187th_Trooper";
+	typicalCargo[]={"187th_Trooper"};
+};
+
+class 442_argon_covered;
+class 187th_442_argon_covered : 442_argon_covered
+{
+	scope = 2;
+    scopeCurator = 2;
+    displayName = "Argon Transport Truck (Covered)";
+    faction="187th_Republic";
+	editorCategory = "187th_Rep_Assets";
+	editorSubcategory = "187th_Car";
 	crew="187th_Trooper";
 	typicalCargo[]={"187th_Trooper"};
 };
