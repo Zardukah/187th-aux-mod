@@ -433,15 +433,15 @@ class 187th_BACR_Speeder_Sidecar : 3AS_BarcSideCar
 	typicalCargo[]={"187th_Trooper"};
 };
 
-class 3as_arc_170_base;
-class 187th_ARC_170 : 3as_arc_170_base
+class 3as_arc_170_red;
+class 187th_ARC_170 : 3as_arc_170_red
 {
 	faction="187th_Republic";
 	editorCategory="187th_Rep_Assets";
 	editorSubcategory="187th_Plane";
 	side=1;
 	scope=2;
-	displayName="ARC 170";
+	displayName="ARC-170";
 	crew="187th_Pilot";
 	typicalCargo[]={"187th_Pilot"};
 	class pilotCamera
