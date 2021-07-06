@@ -440,7 +440,6 @@ class 187th_ARC_170 : 3as_arc_170_red
 	editorCategory="187th_Rep_Assets";
 	editorSubcategory="187th_Plane";
 	side=1;
-	scope=2;
 	displayName="ARC-170";
 	crew="187th_Pilot";
 	typicalCargo[]={"187th_Pilot"};
