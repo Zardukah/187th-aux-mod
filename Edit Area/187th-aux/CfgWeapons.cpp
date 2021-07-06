@@ -404,6 +404,8 @@ class CfgWeapons
    			};
    		};
    	};
+      ace_hearing_protection = 5.0;
+      ace_hearing_lowerVolume = 0.35;
    	allowedFacewear[] = {};
    	subItems[] = {"187th_NVG_Chip"};
    };
@@ -445,6 +447,8 @@ class CfgWeapons
    			};
    		};
    	};
+      ace_hearing_protection = 5.0;
+      ace_hearing_lowerVolume = 0.35;
    	allowedFacewear[] = {};
    	subItems[] = {"187th_NVG_Chip"};
 

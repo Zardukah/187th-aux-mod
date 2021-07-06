@@ -7,7 +7,7 @@ class 3as_Jug;
 class 3as_RTT;
 class 3AS_Barc;
 class 3AS_BarcSideCar;
-class 3as_arc_170_Purple;
+//class 3as_arc_170_Purple; missing from 3AS *sad panda noises*
 class 3as_Z95_Republic;
 class 3as_saber_m1;
 class 3as_saber_m1Recon;
@@ -433,14 +433,15 @@ class 187th_BACR_Speeder_Sidecar : 3AS_BarcSideCar
 	typicalCargo[]={"187th_Trooper"};
 };
 
-class 187th_ARC_170 : 3as_arc_170_Purple
+class 3as_arc_170_base;
+class 187th_ARC_170 : 3as_arc_170_base
 {
 	faction="187th_Republic";
 	editorCategory="187th_Rep_Assets";
 	editorSubcategory="187th_Plane";
 	side=1;
+	scope=2;
 	displayName="ARC 170";
-	hiddenSelectionsTextures[]={"3as\3as_arc170\data\units\615th_main_frame_co.paa","3as\3as_arc170\data\units\615th_wings_engines_co.paa","3as\3as_arc170\data\units\615th_guns_co.paa"};
 	crew="187th_Pilot";
 	typicalCargo[]={"187th_Pilot"};
 	class pilotCamera
@@ -815,7 +816,8 @@ class 187th_ATTE : 3as_ATTE_Base
 	    };
 	};
 
-	class 187th_LAAT_mk_2 : Purple_LAAT_MK2
+	class 3as_LAAT_Mk2;
+	class 187th_LAAT_mk_2 : 3as_LAAT_Mk2
 	{
 		displayname="LAAT MK 2";
 		faction="187th_Republic";
@@ -958,43 +960,16 @@ class 187th_ATTE : 3as_ATTE_Base
 				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
 				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
 			};
-			/*class load_supply
-			{
-				showWindow = 0;
-				hideOnUse = 0;
-				priority = 1;
-				role = 0;
-				displayName = "Load Supply";
-				position = "pilotview";
-				radius = 10;
-				onlyforplayer = 0;
-				// condition = "(alive this) AND (count (this nearEntities [['JLTS_Ammobox_ammo_GAR', 'JLTS_Ammobox_grenades_GAR', 'JLTS_Ammobox_launchers_GAR', 'JLTS_Ammobox_explosives_GAR', 'JLTS_Ammobox_support_GAR'], 20]) > 0)";
-				statement = "0 = [this] spawn OES_fnc_supplyLoader;";
-			};
-			class unload_supply
-			{
-				showWindow = 0;
-				hideOnUse = 0;
-				priority = 1;
-				role = 0;
-				displayName = "Unload Supply";
-				position = "pilotview";
-				radius = 6;
-				onlyforplayer = 0;
-				condition = "(alive this) AND (player == driver this)";
-				statement = "0 = this spawn OES_fnc_supplyUnloader;";
-			};*/
 		};
-		/*class EventHandlers
+		class EventHandlers
 		{
-			class masterLoader {
-			init = "0 = _this spawn OES_fnc_masterLoader;";
-			};
+			init = "(_this select 0) execVM '\187th-aux\Functions\loadSupply\fn_masterLoader.sqf';";
 			fired = "_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
-		};*/
+		};
 };
 
-class 187th_LAAT_mk_1 : Purple_LAAT
+class 3as_LAAT_Mk1;
+class 187th_LAAT_mk_1 : 3as_LAAT_Mk1
 {
 	displayname="LAAT MK 1";
 	faction="187th_Republic";
@@ -1138,9 +1113,15 @@ class 187th_LAAT_mk_1 : Purple_LAAT
 			statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
 		};
 	};
+	class EventHandlers
+	{
+		init = "(_this select 0) execVM '\187th-aux\Functions\loadSupply\fn_masterLoader.sqf';";
+		fired = "_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+	};
 };
 
-class 187th_LAAT_Floodlights : Purple_LAAT_MK2Light
+class 3as_LAAT_Mk2Lights;
+class 187th_LAAT_Floodlights : 3as_LAAT_Mk2Lights
 {
 	displayname="LAAT (Floodlights)";
 	faction="187th_Republic";
@@ -1242,7 +1223,7 @@ class 187th_LAAT_Floodlights : Purple_LAAT_MK2Light
 			displayName = "Ramp Open";
 			position = "pilotview";
 			radius = 9;
-			condition = "this animationphase 'ramp' ==0";
+			condition = "(this animationphase 'ramp' ==0) AND (player == driver this)";
 			statement = "this animateSource ['ramp',1,1];";
 			onlyforplayer = 0;
 		};
@@ -1253,7 +1234,7 @@ class 187th_LAAT_Floodlights : Purple_LAAT_MK2Light
 			displayName = "Ramp Close";
 			position = "pilotview";
 			radius = 9;
-			condition = "this animationphase 'ramp' ==1";
+			condition = "this animationphase 'ramp' ==1 AND (player == driver this)";
 			statement = "this animateSource ['ramp',0,1];";
 			onlyforplayer = 0;
 		};
@@ -1284,6 +1265,99 @@ class 187th_LAAT_Floodlights : Purple_LAAT_MK2Light
 			statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
 		};
 	};
+	class EventHandlers
+	{
+		init = "(_this select 0) execVM '\187th-aux\Functions\loadSupply\fn_masterLoader.sqf';";
+		fired = "_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+	};
+};
+
+class 187th_LAAT_TEST : 187th_LAAT_mk_2
+{
+	faction="187th_Republic";     editorCategory="187th_Test_Assets";     editorSubcategory="187th_Helicopter";
+	displayname="Test LAAT"
+	class UserActions
+		{
+			class rampOpen
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Open";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==0 AND (player == driver this)";
+				statement = "this animateSource ['ramp',1,1];";
+				onlyforplayer = 0;
+			};
+			class rampClose
+			{
+				available = 0;
+				showWindow = 0;
+				displayName = "Ramp Close";
+				position = "pilotview";
+				radius = 9;
+				condition = "this animationphase 'ramp' ==1 AND (alive this) AND (player == driver this)";
+				statement = "this animateSource ['ramp',0,1];";
+				onlyforplayer = 0;
+			};
+			class afterburners_turn_on
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Activate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 0;
+				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
+			};
+			class afterburners_turn_off
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 9;
+				role = 0;
+				displayName = "Deactivate Impulse";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 0;
+				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
+			};
+			/*class load_supply
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 1;
+				role = 0;
+				displayName = "Load Supply";
+				position = "pilotview";
+				radius = 10;
+				onlyforplayer = 0;
+				// condition = "(alive this) AND (count (this nearEntities [['JLTS_Ammobox_ammo_GAR', 'JLTS_Ammobox_grenades_GAR', 'JLTS_Ammobox_launchers_GAR', 'JLTS_Ammobox_explosives_GAR', 'JLTS_Ammobox_support_GAR'], 20]) > 0)";
+				statement = "0 = [this] spawn OES_fnc_supplyLoader;";
+			};
+			class unload_supply
+			{
+				showWindow = 0;
+				hideOnUse = 0;
+				priority = 1;
+				role = 0;
+				displayName = "Unload Supply";
+				position = "pilotview";
+				radius = 6;
+				onlyforplayer = 0;
+				condition = "(alive this) AND (player == driver this)";
+				statement = "0 = this spawn OES_fnc_supplyUnloader;";
+			};*/
+		};
+		class EventHandlers
+		{
+			init = "(_this select 0) execVM '\187th-aux\Functions\loadSupply\fn_masterLoader.sqf';";
+			fired = "_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+		};
 };
 
 class 3AS_Patrol_LAAT_Republic;
