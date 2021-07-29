@@ -71,7 +71,7 @@ class CfgWeapons
    	dlc             = "187th Aux Mod";
    	scope   = 2;
    	scopeCurator = 2;
-   	displayName = "[187th] Clone Armor (Airborne)";
+   	displayName = "[187th] Airborne Clone Armor";
    	picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
    	class ItemInfo : UniformItem
    	{
@@ -80,6 +80,40 @@ class CfgWeapons
    		containerClass  = "Supply150";
    		mass = 40;
    	};
+   };
+
+   class 187th_Clone_Airborne_EOD : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Airborne Clone Armor (EOD)";
+      picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Airborne_EOD";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
+   };
+
+   class 187th_Clone_Airborne_Medic : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Airborne Clone Armor (Medic)";
+      picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Airborne_Medic";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
    };
 
    class 187th_Clone_EOD : JLTS_CloneArmor
@@ -99,6 +133,20 @@ class CfgWeapons
    	};
    };
 
+   class lsd_gar_jediCommander_uniform;
+   class 187th_lsd_gar_jediCommander_uniform: lsd_gar_jediCommander_uniform
+    {
+      scope = 2;
+      displayName = "[187th] Jedi Commander Armor";
+      class ItemInfo: UniformItem
+      {
+        uniformModel = "-";
+        uniformClass = "187th_lsd_gar_jediCommander_base";
+        containerClass = "Supply150";
+        mass = 40;
+      };
+    };
+
 
 /***********************************************************************************************************
    --------------------------------------------------------------Vests------------------------------------------
@@ -107,9 +155,9 @@ class CfgWeapons
    class VestItem;
    class 187_Clone_Holster : JLTS_CloneVestHolster
    {
-   	author  = "PraetorPanda";
-   	dlc             = "187th Aux Mod";
-   	scope   = 2;
+   	author = "PraetorPanda";
+   	dlc = "187th Aux Mod";
+   	scope = 2;
    	scopeCurator = 2;
    	displayname = "[187th] Sidearm Holster";
    	picture = "\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
@@ -246,6 +294,56 @@ class CfgWeapons
    		mass=80;
    	};
    };
+
+   class JLTS_CloneVestAirborne;
+   class 187th_JLTS_CloneVestAirborne: JLTS_CloneVestAirborne
+   {
+      displayName = "[187th] Airborne Clone Vest";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      hiddenSelections[] = {"camo1","camo2"};
+      hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa","MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};
+      class ItemInfo: VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1","camo2"};
+         mass = 80;
+      };
+   };
+
+   class 187th_JLTS_CloneVestAirborne_Stripe: JLTS_CloneVestAirborne
+   {
+      displayName = "[187th] Airborne Clone Vest (Stripe)";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      hiddenSelections[] = {"camo1","camo2"};
+      hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa","187th-aux\Data\Vests\Clone_187thABRecon_vest_co.paa"};
+      class ItemInfo: VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1","camo2"};
+         mass = 80;
+      };
+   };
+
+   class JLTS_CloneVestAirborneNCO;
+   class 187th_JLTS_CloneVestAirborneNCO: JLTS_CloneVestAirborneNCO
+   {
+      displayName = "[187th] Airborne Clone Vest (NCO)";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      class ItemInfo: VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1","camo2"};
+         mass = 80;
+      };
+   };
+
+
 
 
 /***********************************************************************************************************

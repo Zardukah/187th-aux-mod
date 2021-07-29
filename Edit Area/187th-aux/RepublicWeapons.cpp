@@ -268,6 +268,36 @@ class 187_Clone_Helmet_Raven: 187_Clone_Helmet
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Raven.paa"};
 };
 
+class 187_Clone_Helmet_Circles: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Circles)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Circles.paa"};
+};
+
+class 187_Clone_Helmet_Odissis: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Odissis)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Odissis.paa"};
+};
+
+class 187_Clone_Helmet_Pottan: 187_Clone_Helmet
+{
+	author 	= "PraetorPanda";
+	dlc		= "187th Aux Mod";
+	scope 	= 2;
+	scopeCurator = 2;
+	displayName = "[187th] Clone Custom Helmet (Pottan)";
+	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Pottan.paa"};
+};
+
 class JLTS_CloneHelmetBARC;
 class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 {
