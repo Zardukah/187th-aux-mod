@@ -1,4 +1,3 @@
-
 //Guns
 class JLTS_DC15A_plastic;
 class JLTS_DC17SA;
@@ -6,6 +5,18 @@ class JLTS_DC15S;
 class JLTS_DC15A_ugl_plastic;
 class JLTS_Z6;
 class JLTS_DC15X;
+
+class 187th_Z6: JLTS_Z6
+{
+	displayName="[187th] Z6";
+	scope = 2;
+	baseweapon="187th_Z6";
+	magazines[]=
+	{
+		"JLTS_Z6_mag",
+		"187th_Z6_charged_mag"
+	};
+};
 
 class 187th_JLTS_DC15A_plastic: JLTS_DC15A_plastic
 {
@@ -100,15 +111,6 @@ class 187th_JLTS_DC15A_ugl_plastic: JLTS_DC15A_ugl_plastic
                 distanceZoomMax = 300;
             };
         };
-};
-
-class 187th_JLTS_Z6: JLTS_Z6
-{
-	displayName="Z-6";
-	scope=1;
-	class LinkedItems
-	{
-	};
 };
 
 class 187th_JLTS_RPS6: JLTS_RPS6
