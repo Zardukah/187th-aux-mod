@@ -4,3 +4,4 @@ echo Building
 echo Finished
 DEL ".\@187th TestAuxMod\addons\187th-aux.pbo.bak"
 echo Removing Bak
+pause
