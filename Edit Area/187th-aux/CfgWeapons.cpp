@@ -343,9 +343,9 @@ class CfgWeapons
       };
    };
 
-   class 187th_JLTS_CloneVestAirborneCSM: JLTS_CloneVestAirborneNCO
+   class 187th_JLTS_CloneVestAirborneSGT: JLTS_CloneVestAirborneNCO
    {
-      displayName = "[187th] Airborne Clone Vest (CSM)";
+      displayName = "[187th] Airborne Clone Vest (SGT)";
       model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
       picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
       hiddenSelections[] = {"camo1","camo2"};
