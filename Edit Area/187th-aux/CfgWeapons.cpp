@@ -331,9 +331,25 @@ class CfgWeapons
    class JLTS_CloneVestAirborneNCO;
    class 187th_JLTS_CloneVestAirborneNCO: JLTS_CloneVestAirborneNCO
    {
-      displayName = "[187th] Airborne Clone Vest (NCO)";
+      displayName = "[187th] Airborne Clone Vest (Corporal)";
       model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
       picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      class ItemInfo: VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1","camo2"};
+         mass = 80;
+      };
+   };
+
+   class 187th_JLTS_CloneVestAirborneCSM: JLTS_CloneVestAirborneNCO
+   {
+      displayName = "[187th] Airborne Clone Vest (CSM)";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      hiddenSelections[] = {"camo1","camo2"};
+      hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa","187th-aux\Data\Vests\Clone_vest_heavy_sgtmjr.paa"};
       class ItemInfo: VestItem
       {
          uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
