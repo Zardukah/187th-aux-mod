@@ -423,8 +423,8 @@ class 187th_BX_Droid_E5Shield_F: 187th_BX_Droid_E5_F
 	editorSubcategory = "187th_Special";
 	displayname = "BX Droid (Shield)";
 	scope = 2;
-	weapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
-	respawnWeapons[] = {"JLTS_212th_E5_shield","Throw","Put"};
+	weapons[] = {"187th_JLTS_E5_shield","Throw","Put"};
+	respawnWeapons[] = {"187th_JLTS_E5_shield","Throw","Put"};
 	magazines[] = {"JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag","JLTS_E5_mag"};
 	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1","JLTS_droid_comlink"};
 };

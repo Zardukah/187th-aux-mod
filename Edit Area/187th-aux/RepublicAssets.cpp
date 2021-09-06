@@ -19,6 +19,7 @@ class 3AS_Nuclass;
 class Purple_LAAT;
 class Purple_LAAT_MK2;
 class Purple_LAAT_MK2Light;
+class lsd_heli_laatc;
 class 3AS_HeavyRepeater_Unarmoured;
 class 3as_ATAP_base;
 class 3as_AV7;
@@ -757,6 +758,7 @@ class 187th_ATTE : 3as_ATTE_Base
 	        	displayName = "Activate Impulse";
 	        	position = "pilotview";
 	        	radius = 12;
+                shortcut = "User13";
 	        	onlyforplayer = 0;
 	        	condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
 	        	statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
@@ -770,6 +772,7 @@ class 187th_ATTE : 3as_ATTE_Base
 	        	displayName = "Deactivate Impulse";
 	        	position = "pilotview";
 	        	radius = 12;
+                shortcut = "User14";
 	        	onlyforplayer = 0;
 	        	condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
 	        	statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
@@ -942,6 +945,7 @@ class 187th_ATTE : 3as_ATTE_Base
 				displayName = "Activate Impulse";
 				position = "pilotview";
 				radius = 6;
+                shortcut = "User13";
 				onlyforplayer = 0;
 				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
 				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
@@ -955,6 +959,7 @@ class 187th_ATTE : 3as_ATTE_Base
 				displayName = "Deactivate Impulse";
 				position = "pilotview";
 				radius = 6;
+                shortcut = "User14";
 				onlyforplayer = 0;
 				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
 				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
@@ -1094,6 +1099,7 @@ class 187th_LAAT_mk_1 : 3as_LAAT_Mk1
 			displayName = "Activate Impulse";
 			position = "pilotview";
 			radius = 6;
+            shortcut = "User13";
 			onlyforplayer = 1;
 			condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
 			statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
@@ -1107,6 +1113,7 @@ class 187th_LAAT_mk_1 : 3as_LAAT_Mk1
 			displayName = "Deactivate Impulse";
 			position = "pilotview";
 			radius = 6;
+            shortcut = "User14";
 			onlyforplayer = 1;
 			condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
 			statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
@@ -1246,6 +1253,7 @@ class 187th_LAAT_Floodlights : 3as_LAAT_Mk2Lights
 			displayName = "Activate Impulse";
 			position = "pilotview";
 			radius = 6;
+            shortcut = "User13";
 			onlyforplayer = 1;
 			condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
 			statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
@@ -1259,6 +1267,7 @@ class 187th_LAAT_Floodlights : 3as_LAAT_Mk2Lights
 			displayName = "Deactivate Impulse";
 			position = "pilotview";
 			radius = 6;
+            shortcut = "User14";
 			onlyforplayer = 1;
 			condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
 			statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
@@ -1308,6 +1317,7 @@ class 187th_LAAT_TEST : 187th_LAAT_mk_2
 				displayName = "Activate Impulse";
 				position = "pilotview";
 				radius = 6;
+                shortcut = "User13";
 				onlyforplayer = 0;
 				condition = "(alive this) AND (player == driver this) AND (isEngineOn this)";
 				statement = "0 = this spawn OES_fnc_afterburners_turn_on;";
@@ -1321,6 +1331,7 @@ class 187th_LAAT_TEST : 187th_LAAT_mk_2
 				displayName = "Deactivate Impulse";
 				position = "pilotview";
 				radius = 6;
+                shortcut = "User14";
 				onlyforplayer = 0;
 				condition = "(alive this) AND ((speed this) > 50) AND (player == driver this)";
 				statement = "0 = this spawn OES_fnc_afterburners_turn_off;";
@@ -1365,6 +1376,15 @@ class 187th_LAAT_LE : 3AS_Patrol_LAAT_Republic
 	faction="187th_Republic";     editorCategory="187th_Rep_Assets";     editorSubcategory="187th_Helicopter";
 	side=1;
 	displayName="LAAT/LE";
+	crew="187th_Pilot";
+	typicalCargo[]={"187th_Pilot"};
+};
+
+class 187th_LAATc : lsd_heli_laatc
+{
+	faction="187th_Republic";     editorCategory="187th_Rep_Assets";     editorSubcategory="187th_Helicopter";
+	side=1;
+	displayName="LAAT/c";
 	crew="187th_Pilot";
 	typicalCargo[]={"187th_Pilot"};
 };

@@ -122,3 +122,20 @@ class 187th_lsd_bodyglove_uniform: ls_blueforUniform_base
             mass = 20;
         };
     };
+
+// E5 with Shield
+class JLTS_E5_shield;
+class 187th_JLTS_E5_shield: JLTS_E5_shield
+{
+    displayName = "[187th] E5 (Shield)"
+    scope = 1;
+    baseWeapon = "187th_JLTS_E5_shield";
+    class LinkedItems
+    {
+        class LinkedItemsUnder
+        {
+            slot = "UnderBarrelSlot";
+            item = "JLTS_riot_shield_droid_attachment";
+        };
+    };
+};
