@@ -222,7 +222,7 @@ class 187_Clone_Helmet_Panda: 187_Clone_Helmet
 	displayName = "[187th] Clone Custom Helmet (Panda)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Panda.paa"};
 };
-class 187_Clone_Helmet_Warren: 187_Clone_Helmet
+/*class 187_Clone_Helmet_Warren: 187_Clone_Helmet //Left the unit
 {
 	author 	= "PraetorPanda";
 	dlc		= "187th Aux Mod";
@@ -230,7 +230,7 @@ class 187_Clone_Helmet_Warren: 187_Clone_Helmet
 	scopeCurator = 2;
 	displayName = "[187th] Clone Custom Helmet (Warren)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Warren.paa"};
-};
+};*/
 class 187_Clone_Helmet_Badger: 187_Clone_Helmet
 {
 	author 	= "PraetorPanda";
@@ -348,7 +348,7 @@ class 187_Clone_Helmet_BARC: JLTS_CloneHelmetBARC
 	};
 	allowedFacewear[] = {};
 };
-class 187_Clone_Helmet_Tiberius: 187_Clone_Helmet_BARC
+/*class 187_Clone_Helmet_Tiberius: 187_Clone_Helmet_BARC // Left the Unit
 {
 	author 	= "PraetorPanda";
 	dlc		= "187th Aux Mod";
@@ -356,7 +356,7 @@ class 187_Clone_Helmet_Tiberius: 187_Clone_Helmet_BARC
 	scopeCurator = 2;
 	displayName = "[187th] Clone Custom Helmet (Tiberius)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Tiberius.paa"};
-};
+};*/
 
 //-------------------------------------------------------------------
 // Equipment

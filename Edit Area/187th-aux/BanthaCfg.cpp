@@ -35,7 +35,7 @@ class Wheeled_APC_F: Car_F
 	};
 };
 
-class 212th_APC_Wheeled_01_base_F: Wheeled_APC_F
+class 187th_212th_APC_Wheeled_01_base_F: Wheeled_APC_F
 {
 	features = "Randomization: No      <br />Camo selections: 3 - top of hull, bottom of hull, turret      <br />Script door sources: None      <br />Script animations: HideTurret      <br />Executed scripts: None       <br />Firing from vehicles: No      <br />Slingload: No      <br />Cargo proxy indexes: 1 to 8";
 	author = "Six, Dutch, Lark, Cut";
@@ -1177,7 +1177,7 @@ class 212th_APC_Wheeled_01_base_F: Wheeled_APC_F
 		};
 	};
 };
-class 212th_B_APC_Wheeled_01_base_F: 212th_APC_Wheeled_01_base_F
+class 187th_212th_B_APC_Wheeled_01_base_F: 187th_212th_APC_Wheeled_01_base_F
 {
 	author = "Six Consolidated Industries";
 	_generalMacro = "B_APC_Wheeled_01_base_F";
@@ -1186,7 +1186,7 @@ class 212th_B_APC_Wheeled_01_base_F: 212th_APC_Wheeled_01_base_F
 	crew = "B_crew_F";
 	typicalCargo[] = {"B_soldier_F"};
 };
-class 212th_B_APC_Wheeled_01_cannon_F: 212th_B_APC_Wheeled_01_base_F
+class 187th_212th_B_APC_Wheeled_01_cannon_F: 187th_212th_B_APC_Wheeled_01_base_F
 {
 	author = "Six, Cut, Dutch, Lark & Poly";
 	class SimpleObject
@@ -1234,7 +1234,7 @@ class 212th_B_APC_Wheeled_01_cannon_F: 212th_B_APC_Wheeled_01_base_F
 	};
 };
 
-    class 187th_bantha_mk1 : 212th_B_APC_Wheeled_01_cannon_F // This class is the only change made by the 187th Aux Mod team. Adding what we want
+    class 187th_bantha_mk1 : 187th_212th_B_APC_Wheeled_01_cannon_F // This class is the only change made by the 187th Aux Mod team. Adding what we want
     {
     	author="PraetorPanda";
     	faction="187th_Republic";
@@ -1243,6 +1243,7 @@ class 212th_B_APC_Wheeled_01_cannon_F: 212th_B_APC_Wheeled_01_base_F
     	displayName="Bantha";
     	crew="187th_Trooper_Crewman";
     	armor=1220;
+    	ace_cargo_space = 20;
 
     	class Turrets: Turrets
     	{
