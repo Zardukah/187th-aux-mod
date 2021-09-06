@@ -52,9 +52,9 @@ class CfgVehicles
 /***********************************************************************************************************
 --------------------------------------------------------------Uniforms------------------------------------------
 ************************************************************************************************************/
-class O_Soldier_F;
+class JLTS_Clone_P2_DC15A_187;
 
-class 187_Base_Uniform: O_Soldier_F
+class 187_Base_Uniform: JLTS_Clone_P2_DC15A_187
 	{// Base Uniform stats for more options with other uniforms...
 		class HitPoints
 		{
