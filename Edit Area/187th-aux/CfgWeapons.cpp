@@ -17,10 +17,9 @@ class CfgWeapons
    	author  = "PraetorPanda";
    	dlc             = "187th Aux Mod";
    	scope   = 2;
-   	scopeCurator = 2;
-   	scopeArsenal = 2;
    	displayName = "[187th] Clone Armor (Recruit)";
-   	picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
    	class ItemInfo : UniformItem
    	{
    		uniformModel = "-";
@@ -46,6 +45,57 @@ class CfgWeapons
    		containerClass  = "Supply150";
    		mass = 40;
    	};
+   };
+
+   class 187th_Clone_Lance_Trooper : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Clone Armor (Lance Trooper)";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Lance_Trooper";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
+   };
+
+   class 187th_Clone_Lance_Trooper_Medic : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Clone Armor (Lance Medic)";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Lance_Trooper_Medic";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
+   };
+
+   class 187th_Clone_Lance_Trooper_EOD : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Clone Armor (Lance EOD)";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Lance_Trooper_EOD";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
    };
 
    class 187th_Clone_Medic : JLTS_CloneArmor
