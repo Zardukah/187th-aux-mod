@@ -242,6 +242,27 @@ class CfgWeapons
    		mass = 80;
    	};
    };
+
+   class JLTS_CloneVestRecon;
+   class 187_Clone_Vest_Lance : JLTS_CloneVestRecon
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayname = "[187th] Clone Vest (Lance Trooper)";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      hiddenSelections[] = {"camo2"};
+      hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};
+      class ItemInfo : VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1"};
+         mass = 80;
+      };
+   };
    class JLTS_CloneVestReconOfficer;
    class 187_Clone_Vest_SGT : JLTS_CloneVestReconOfficer
    {
@@ -537,7 +558,7 @@ class CfgWeapons
    	scope   = 2;
    	scopeCurator = 2;
    	displayName = "[187th] Pilot Helmet (P2)";
-   	picture = "3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
+      picture = "\212th\Armor\212th_Helms\IconPilot";
    	hiddenSelections[] = {"camo"};
 	   hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Pilot.paa"};
    	class ItemInfo : HeadgearItem
@@ -581,8 +602,9 @@ class CfgWeapons
    	scopeCurator = 2;
    	displayName = "[187th] Pilot Helmet (P1)";
    	model = "\3AS\3AS_Characters\Clones\Headgear\3AS_P1_Pilot.p3d";
+      picture = "\212th\Armor\212th_Helms\IconPilot";
    	hiddenSelections[] = {"camo"};
-   	hiddenSelectionsTextures[] = {"3AS\3AS_Characters\Clones\Headgear\Textures\Phase1\Helmet_CO.paa"};
+      hiddenSelectionsTextures[] = {"3AS\3AS_Characters\Clones\Headgear\Textures\Phase1\Helmet_CO.paa"};
    	class ItemInfo : HeadgearItem
    	{
    		mass = 30;

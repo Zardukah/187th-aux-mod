@@ -1117,6 +1117,45 @@ class 187th_ATTE : 3as_ATTE_Base
 		};
 };
 
+/*class Wreck_base_F;
+class Helicopter{};
+class 187Helicopter_Base_F: Helicopter
+{
+	class Turrets;
+	class HitPoints;
+};
+class 187Heli_Attack_01_base_F: 187Helicopter_Base_F
+{
+	class Turrets: Turrets
+	{
+		class CopilotTurret;
+		class MainTurret;
+	};
+	class HitPoints: HitPoints
+	{
+		class HitHull;
+		class HitFuel;
+		class HitEngine;
+		class HitAvionics;
+		class HitVRotor;
+		class HitHRotor;
+		class HitGlass1;
+		class HitGlass2;
+		class HitGlass3;
+		class HitGlass4;
+		class HitGlass5;
+	};
+	class AnimationSources;
+	class ViewPilot;
+	class ViewOptics;
+	class components;
+	class RotorLibHelicopterProperties;
+};
+class 187B_Heli_Attack_01_base_F: 187Heli_Attack_01_base_F
+{
+	class CargoTurret;
+};*/
+
 class 3as_LAAT_Mk1;
 class 187th_LAAT_mk_1 : 3as_LAAT_Mk1
 {
@@ -1131,6 +1170,7 @@ class 187th_LAAT_mk_1 : 3as_LAAT_Mk1
 	side=1;
 	maximumLoad = 10000;
 	crew="187th_Pilot";
+	attendant = 1;
 	weapons[]=
 	{
 		"ParticleBeamCannon_F",
@@ -1211,6 +1251,7 @@ class 187th_LAAT_mk_1 : 3as_LAAT_Mk1
 		pilotOpticsShowCursor = 1;
 		controllable = 1;
 	};
+
 	class UserActions
 	{
 		class rampOpen
