@@ -310,7 +310,7 @@ class 187_Clone_Helmet_Crys: 187_Clone_Helmet
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Crys.paa"};
 };
 
-class 187_Clone_Helmet_Tic: 187_Clone_Helmet
+/*class 187_Clone_Helmet_Tic: 187_Clone_Helmet // No Jaig Eyes!!!!!
 {
 	author 	= "PraetorPanda";
 	dlc		= "187th Aux Mod";
@@ -318,7 +318,7 @@ class 187_Clone_Helmet_Tic: 187_Clone_Helmet
 	scopeCurator = 2;
 	displayName = "[187th] Clone Custom Helmet (Tic)";
 	hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Tic.paa"};
-};
+};*/
 
 class 187_Clone_Helmet_Insomniac: 187_Clone_Helmet
 {
