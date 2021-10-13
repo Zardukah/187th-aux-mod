@@ -1,5 +1,6 @@
 //Guns
 class JLTS_DC15A_plastic;
+class UGL_F;
 class JLTS_DC17SA;
 class JLTS_DC15S;
 class JLTS_DC15A_ugl_plastic;
@@ -82,35 +83,86 @@ class 187th_JLTS_DC15A_ugl_plastic: JLTS_DC15A_ugl_plastic
 	displayName="[187th] DC-15A UGL (plastic stock)";
 	scope=2;
 
-    class OpticsModes
+
+	class EGLM: UGL_F
+	{
+		displayName="187th UGL";
+		magazines[]=
+		{
+			"1Rnd_HE_Grenade_shell",
+			"UGL_FlareWhite_F",
+			"UGL_FlareGreen_F",
+			"UGL_FlareRed_F",
+			"UGL_FlareYellow_F",
+			"UGL_FlareCIR_F",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeGreen_Grenade_shell",
+			"1Rnd_SmokeYellow_Grenade_shell",
+			"1Rnd_SmokePurple_Grenade_shell",
+			"1Rnd_SmokeBlue_Grenade_shell",
+			"1Rnd_SmokeOrange_Grenade_shell",
+			"3Rnd_HE_Grenade_shell",
+			"3Rnd_UGL_FlareWhite_F",
+			"3Rnd_UGL_FlareGreen_F",
+			"3Rnd_UGL_FlareRed_F",
+			"3Rnd_UGL_FlareYellow_F",
+			"3Rnd_UGL_FlareCIR_F",
+			"3Rnd_Smoke_Grenade_shell",
+			"3Rnd_SmokeRed_Grenade_shell",
+			"3Rnd_SmokeGreen_Grenade_shell",
+			"3Rnd_SmokeYellow_Grenade_shell",
+			"3Rnd_SmokePurple_Grenade_shell",
+			"3Rnd_SmokeBlue_Grenade_shell",
+			"3Rnd_SmokeOrange_Grenade_shell",
+			"187th_HEDP_Grenade_Shell",
+		};
+
+		descriptionShort="187th UGL";
+		useModelOptics=0;
+		useExternalOptic=0;
+		cameraDir="OP_look";
+		discreteDistance[]={100,200,300,400};
+		discreteDistanceCameraPoint[]=
+		{
+			"OP_eye",
+			"OP_eye2",
+			"OP_eye3",
+			"OP_eye4"
+		};
+		discreteDistanceInitIndex=0;
+	};
+
+	class OpticsModes
         {
-            class sight
-            {
-                opticsID = 1;
-                useModelOptics = 1;
-                opticsPPEffects[] = {""};
-                opticsDisablePeripherialVision = 0;
-                opticsZoomMin = 0.25;
-                opticsZoomMax = 0.5;
-                opticsZoomInit = 0.75;
-                discreteInitIndex = 0;
-                distanceZoomMin = 200;
-                distanceZoomMax = 200;
-                memoryPointCamera = "eye";
-                visionMode[] = {};
-                opticsFlare = "false";
-                cameraDir = "";
-            };
-            class scope: sight
-            {
-                opticsID = 2;
-                opticsZoomMin = 0.125;
-                opticsZoomMax = 0.125;
-                opticsZoomInit = 0.125;
-                distanceZoomMin = 300;
-                distanceZoomMax = 300;
-            };
+		class sight
+		{
+		    opticsID = 1;
+		    useModelOptics = 1;
+		    opticsPPEffects[] = {""};
+		    opticsDisablePeripherialVision = 0;
+		    opticsZoomMin = 0.25;
+		    opticsZoomMax = 0.5;
+		    opticsZoomInit = 0.75;
+		    discreteInitIndex = 0;
+		    distanceZoomMin = 200;
+		    distanceZoomMax = 200;
+		    memoryPointCamera = "eye";
+		    visionMode[] = {};
+		    opticsFlare = "false";
+		    cameraDir = "";
+		};
+		class scope: sight
+		{
+		    opticsID = 2;
+		    opticsZoomMin = 0.125;
+		    opticsZoomMax = 0.125;
+		    opticsZoomInit = 0.125;
+		    distanceZoomMin = 300;
+		    distanceZoomMax = 300;
+		};
         };
+
 };
 
 class 187th_JLTS_RPS6: JLTS_RPS6
