@@ -17,10 +17,9 @@ class CfgWeapons
    	author  = "PraetorPanda";
    	dlc             = "187th Aux Mod";
    	scope   = 2;
-   	scopeCurator = 2;
-   	scopeArsenal = 2;
    	displayName = "[187th] Clone Armor (Recruit)";
-   	picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
    	class ItemInfo : UniformItem
    	{
    		uniformModel = "-";
@@ -46,6 +45,57 @@ class CfgWeapons
    		containerClass  = "Supply150";
    		mass = 40;
    	};
+   };
+
+   class 187th_Clone_Lance_Trooper : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Clone Armor (Lance Trooper)";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Lance_Trooper";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
+   };
+
+   class 187th_Clone_Lance_Trooper_Medic : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Clone Armor (Lance Medic)";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Lance_Trooper_Medic";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
+   };
+
+   class 187th_Clone_Lance_Trooper_EOD : JLTS_CloneArmor
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayName = "[187th] Clone Armor (Lance EOD)";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+      class ItemInfo : UniformItem
+      {
+         uniformModel = "-";
+         uniformClass = "187th_CloneArmor_Lance_Trooper_EOD";
+         containerClass  = "Supply150";
+         mass = 40;
+      };
    };
 
    class 187th_Clone_Medic : JLTS_CloneArmor
@@ -192,6 +242,27 @@ class CfgWeapons
    		mass = 80;
    	};
    };
+
+   class JLTS_CloneVestRecon;
+   class 187_Clone_Vest_Lance : JLTS_CloneVestRecon
+   {
+      author  = "PraetorPanda";
+      dlc             = "187th Aux Mod";
+      scope   = 2;
+      scopeCurator = 2;
+      displayname = "[187th] Clone Vest (Lance Trooper)";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      hiddenSelections[] = {"camo2"};
+      hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};
+      class ItemInfo : VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1"};
+         mass = 80;
+      };
+   };
    class JLTS_CloneVestReconOfficer;
    class 187_Clone_Vest_SGT : JLTS_CloneVestReconOfficer
    {
@@ -331,9 +402,25 @@ class CfgWeapons
    class JLTS_CloneVestAirborneNCO;
    class 187th_JLTS_CloneVestAirborneNCO: JLTS_CloneVestAirborneNCO
    {
-      displayName = "[187th] Airborne Clone Vest (NCO)";
+      displayName = "[187th] Airborne Clone Vest (Corporal)";
       model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
       picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      class ItemInfo: VestItem
+      {
+         uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+         containerClass = "Supply100";
+         hiddenSelections[] = {"camo1","camo2"};
+         mass = 80;
+      };
+   };
+
+   class 187th_JLTS_CloneVestAirborneSGT: JLTS_CloneVestAirborneNCO
+   {
+      displayName = "[187th] Airborne Clone Vest (SGT)";
+      model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
+      picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+      hiddenSelections[] = {"camo1","camo2"};
+      hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa","187th-aux\Data\Vests\Clone_vest_heavy_sgtmjr.paa"};
       class ItemInfo: VestItem
       {
          uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
@@ -471,7 +558,7 @@ class CfgWeapons
    	scope   = 2;
    	scopeCurator = 2;
    	displayName = "[187th] Pilot Helmet (P2)";
-   	picture = "3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
+      picture = "\212th\Armor\212th_Helms\IconPilot";
    	hiddenSelections[] = {"camo"};
 	   hiddenSelectionsTextures[] = {"\187th-aux\Data\Helmets\187thHelmet_Pilot.paa"};
    	class ItemInfo : HeadgearItem
@@ -515,8 +602,9 @@ class CfgWeapons
    	scopeCurator = 2;
    	displayName = "[187th] Pilot Helmet (P1)";
    	model = "\3AS\3AS_Characters\Clones\Headgear\3AS_P1_Pilot.p3d";
+      picture = "\212th\Armor\212th_Helms\IconPilot";
    	hiddenSelections[] = {"camo"};
-   	hiddenSelectionsTextures[] = {"3AS\3AS_Characters\Clones\Headgear\Textures\Phase1\Helmet_CO.paa"};
+      hiddenSelectionsTextures[] = {"3AS\3AS_Characters\Clones\Headgear\Textures\Phase1\Helmet_CO.paa"};
    	class ItemInfo : HeadgearItem
    	{
    		mass = 30;

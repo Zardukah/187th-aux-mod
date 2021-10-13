@@ -1223,6 +1223,23 @@ class 187th_O_DBA_CIS_Argon_Transport_Covered_F : O_DBA_CIS_Argon_Transport_Cove
 	editorSubcategory = "187th_Car";
 };
 
+class 187th_HAAT_TEST: 187th_AAT
+{
+  faction="187th_CIS";
+  editorCategory = "187th_CIS_Assets";
+  editorSubcategory = "187th_Armor";
+  side=0;
+  displayName="AAT (HAAT TEST))";
+  crew="187th_B1_Droid_Crew";
+  typicalCargo[]={"187th_B1_Droid_Crew"};
+    armorHull = 2.0;
+    armorTurret = 1.6;
+    armorEngine = 1.6;
+    armorTracks = 1.2;
+    armor = 900;
+};
+
+
 
 
 //-------------------------------------------------------------------------------------------------------------

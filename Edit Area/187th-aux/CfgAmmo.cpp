@@ -11,7 +11,7 @@ class CfgAmmo
 		dangerRadiusBulletClose = 9;
 		dangerRadiusHit = 12;
 		suppressionRadiusBulletClose = 6;
-		caliber = 2.8;
+		caliber = 2.7;
 		typicalSpeed = 1300;
 		hit = 16;
 		maxSpeed = 1300;
@@ -39,8 +39,8 @@ class CfgMagazines
 		count = 100;
 		displayName = "Z6-C mag";
 		displayNameShort = "Over Clocked Mag";
-		initSpeed = 1300; // -1.2 multiply by 120% original value. Neg value is multiplier, see documentation
-		mass = 30;
+		initSpeed = 1250; // -1.2 multiply by 120% original value. Neg value is multiplier, see documentation
+		mass = 25;
 		ammo = "187th_bullet_charged_carbine_blue";
 
 	};
@@ -55,5 +55,5 @@ class CfgMagazines
 		displayNameShort="HEDP";
 		mass=12;
 	};
-	
+
 }
