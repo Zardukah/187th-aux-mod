@@ -17,11 +17,13 @@ class cfgPatches
 
 		ammo[] =
 		{
-			"187th_bullet_charged_carbine_blue"
+			"187th_bullet_charged_carbine_blue",
+			"187th_HEDP"
 		};
 
 		magazines[] = {
-			"187th_Z6_charged_mag"
+			"187th_Z6_charged_mag",
+			"18th_HEDP_Grenade_Shell",
 		};
 
 		weapons = {"187th_JLTS_E5","187th_JLTS_RG4D","187th_JLTS_RPS6","187th_JLTS_E5S","187th_JLTS_DP23","187th_WBK_Dutch_Vibro","187th_DpSword","187th_WBK_lightsaber_sith","187th_JLTS_DW32S","187th_JLTS_212th_E5_shield_JLTS_riot_shield_droid_attachment","187th_Stimpack","187th_Bacta_Spray"/*BREAK*/,"187th_JLTS_DC15S","187th_JLTS_DC17SA","187th_JLTS_DC15A_plastic","187th_JLTS_DC15A_ugl_plastic","187th_Z6","187th_JLTS_RPS6","187th_JLTS_DC15X_JLTS_DC15X_scope","187_Clone_Helmet_Sparrow","187th_b2_Droid","187th_BX_Droid_E5","187th_BX_Droid_Captain_E5","187th_BX_Droid_Citadel_E5","187th_BX_Droid_Diplomat_E5","187th_BX_Droid_Training_E5","187th_lsd_bodyglove_uniform","187th_JLTS_E5_shield"};
