@@ -4761,7 +4761,7 @@ class 187th_ATTE : 3as_ATTE_Base
 			init = "(_this select 0) execVM '\187th-aux\Functions\loadSupply\fn_masterLoader.sqf';";
 			fired = "_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
 		};
-};
+	};
 
 
 
